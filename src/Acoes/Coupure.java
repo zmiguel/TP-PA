@@ -22,6 +22,7 @@ public class Coupure {
            
            if(valor + drm.getCompureAction() > 4){
                ST.setWall(ST.getWall() + 1);
+               System.out.println("Wall restored");
            }
              
         }
