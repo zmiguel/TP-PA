@@ -88,6 +88,37 @@ public class StatusTrack {
         setMorale(getMorale() - 1);
         setTunnel(0);
     }
+
+    public void saveRaided(){
+        if(supplies < 4){
+            supplies += stolenSupplies;
+        }
+        if(supplies > 4){
+            supplies = 4;
+        }
+        stolenSupplies = 0;
+    }
+
+    public void TunnelFree(){
+        if(sairTunnel){
+            if(tunnel == 1){
+                tunnel++;
+            }else if(tunnel == 2){
+                tunnel++;
+                sairTunnel = false;
+            }
+        }else{
+            if(tunnel == 2){
+                tunnel--;
+            }else if(tunnel == 1){
+                tunnel--;
+                sairTunnel = true;
+            }
+        }
+        if(tunnel==0){
+            saveRaided();
+        }
+    }
     
     
      @Override

@@ -26,6 +26,7 @@ public class TunnelMovement {
             }else if(ST.getTunnel()==1 || ST.getTunnel() == 2){
                 ST.setTunnel(0);
                 ST.setSairTunnel(true);
+                ST.saveRaided();
             }
         }
     }
