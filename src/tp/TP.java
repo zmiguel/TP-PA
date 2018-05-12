@@ -43,7 +43,9 @@ public class TP {
         StatusTrack ST = new StatusTrack();
         ArrayList<Cartas> Baralho = new ArrayList<>();
         boolean sair = false;
-        
+        DRM drm = new DRM();
+
+
         Contexto c1 = new Contexto();
         
         //CRIAR CARTAS  
@@ -90,7 +92,7 @@ public class TP {
                          doal.evento(ST);
                      }else if(Baralho.get(0).sss().equals("Volley of Arrows")){
                          VolleyOfArrows voa = new VolleyOfArrows();
-                         voa.evento(Baralho, ET);
+                         voa.evento(drm);
                      }else if(Baralho.get(0).sss().equals("Cover Of Darkness")){
                          CoverOfDarkness cod = new CoverOfDarkness();
                          cod.evento(Baralho, ST,ET);
@@ -177,7 +179,7 @@ public class TP {
 
                     switch (choice) {
                         case 1:  ArchersAttack at = new ArchersAttack();
-                                 at.acao(ET);
+                                 at.acao(ET,drm);
                                  break;
                         case 2: if(ET.getPosLadder() != 1 && ET.getPosBatteringRam() != 1 && ET.getPosSiegeTower() != 1){
                                 }else{ 
@@ -221,6 +223,4 @@ public class TP {
         Scanner sc = new Scanner(System.in);
         return sc.nextInt();
     }
-    
-    
 }

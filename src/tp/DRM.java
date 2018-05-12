@@ -10,36 +10,43 @@ package tp;
  * @author Ricardo Marques
  */
 public class DRM {
-    private int Ladders = 0;
-    private int BatteringRam = 0;
-    private int SiegeTower = 0;
-    
-    public int getDRM(String nome){
-        if("Ladders".equals(nome)){
-            return Ladders;
-        }
-        
-        if("BatteringRam".equals(nome)){
-            return BatteringRam;
-        }
-        
-        if("SiegeTower".equals(nome)){
-            return SiegeTower;
-        }
-        return 0;
+    private int Ladders;
+    private int BatteringRam;
+    private int SiegeTower;
+
+    DRM(){
+        this.Ladders = 0;
+        this.BatteringRam = 0;
+        this.SiegeTower = 0;
+
     }
     
-    public void setDRMLadders(int l){
+    public int getLadders(){
+        return Ladders;
+    }
+
+    public int getBatteringRam(){
+        return BatteringRam;
+    }
+
+    public int getSiegeTower(){
+        return SiegeTower;
+    }
+
+    public void setLadders(int l){
         Ladders = l;
     }
-    
-    public void setDRMBatteringRam(int br){
+
+    public void setBatteringRam(int br){
         BatteringRam = br;
     }
-    
-    public void setDRMSiegeTower(int st){
+
+    public void setSiegeTower(int st){
         SiegeTower = st;
     }
-    
+
+    public void resetDRM(){
+        Ladders = SiegeTower = BatteringRam = 0;
+    }
     
 }

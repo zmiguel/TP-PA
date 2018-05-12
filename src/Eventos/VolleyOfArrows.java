@@ -5,24 +5,19 @@
  */
 package Eventos;
 
-import java.util.ArrayList;
-import tp.Cartas;
-import tp.EnemyTrack;
+import tp.DRM;
 
 /**
  *
  * @author Ricardo Marques
  */
 public class VolleyOfArrows {
-     public void evento(ArrayList<Cartas> Baralho, EnemyTrack ET){
-           
-        ET.setStrenghtBatteringRam(ET.getStrenghtBatteringRam() + 1);
-        ET.setStrenghtLadder(ET.getStrenghtLadder() + 1);
-        ET.setStrenghtSiegeTower(ET.getStrenghtSiegeTower() + 1);
-        
-        System.out.print("\nBattering Ram Strenght: " + ET.getStrenghtBatteringRam() 
-                + "\nLadder Strenght: " + ET.getStrenghtLadder()
-                + "\nSiege Tower Strenght: " + ET.getStrenghtSiegeTower());
 
-    } 
+    public void evento(DRM drm){
+        drm.setSiegeTower(1);
+        drm.setBatteringRam(1);
+        drm.setLadders(1);
+    }
+
+
 }
