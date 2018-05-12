@@ -2,16 +2,16 @@
 package tp;
 
 
-import java.util.Random;
+import java.security.SecureRandom;
 /**
  *
  * @author me
  */
 public class Dado {
-    private final Random random;
+    private final SecureRandom random;
 
     public Dado(){
-        random = new Random();
+        random = new SecureRandom();
     }
     
     

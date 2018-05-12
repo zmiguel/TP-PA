@@ -60,7 +60,7 @@ public class TP {
     
         while(getInput() != 1){}
 
-            Collections.shuffle(Baralho);   
+            Collections.shuffle(Baralho);
 
             while(!sair){
                 
