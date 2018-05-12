@@ -14,7 +14,6 @@ public class StatusTrack {
     private int morale;
     private int supplies;
     private int tunnel;
-    private int raidedsupplies;
     private boolean badWeather = false;
     private int stolenSupplies;
     private boolean sairTunnel;
@@ -24,7 +23,7 @@ public class StatusTrack {
         this.morale = 4;
         this.supplies = 4;   
         this.tunnel = 0;
-        this.raidedsupplies = 0;
+        this.stolenSupplies = 0;
         this.sairTunnel = true;
     }
     
@@ -67,14 +66,6 @@ public class StatusTrack {
     public void setBadWeather(boolean cena){
         badWeather = cena;
     }
-
-    public int getRaidedSupplies(){
-        return raidedsupplies;
-    }
-    
-    public void setRaidedSupplies(int rs){
-        raidedsupplies = rs;
-    }
     
     public int getStolenSupplies(){
         return stolenSupplies;
@@ -101,7 +92,7 @@ public class StatusTrack {
     
      @Override
     public String toString(){
-        return ("\nSTATUS TRACK\nWall: " + wall + "\nMorale: " + morale + "\nSupplies: " + supplies + "\nTunnel: " + tunnel + "\nRaided Supplies: " + raidedsupplies + "\n");
+        return ("\nSTATUS TRACK\nWall: " + wall + "\nMorale: " + morale + "\nSupplies: " + supplies + "\nTunnel: " + tunnel + "\nRaided Supplies: " + stolenSupplies + "\n");
     }
     
 }

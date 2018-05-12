@@ -188,11 +188,11 @@ public class TP {
                     switch (choice) {
                         case 1: if(ET.getPosLadder() == 4 && ET.getPosBatteringRam() == 4 && ET.getPosSiegeTower() == 4){
                                     
-                        }else{
+                                }else{
                                     ArchersAttack at = new ArchersAttack();
                                     at.acao(ET, drm);
                                     break;
-                        } 
+                                } 
                             
                                 
                         case 2: if(ET.getPosLadder() != 1 && ET.getPosBatteringRam() != 1 && ET.getPosSiegeTower() != 1){
