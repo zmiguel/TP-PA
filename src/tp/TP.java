@@ -167,6 +167,8 @@ public class TP {
                                     ET.setPosBatteringRam(ET.getPosBatteringRam() - 1);
                             }
                      }
+
+                     ST.TunnelFree();
   
                      for(int n = 0;n < Baralho.get(0).getNumActions(); n++){
                          
