@@ -41,8 +41,7 @@ public class TP {
     public static void main(String[] args) {
         EnemyTrack ET = new EnemyTrack();
         StatusTrack ST = new StatusTrack();
-        ArrayList<Cartas> Baralho = new ArrayList<Cartas>();
-        Dado dado = null;
+        ArrayList<Cartas> Baralho = new ArrayList<>();
         boolean sair = false;
         
         Contexto c1 = new Contexto();
@@ -57,6 +56,18 @@ public class TP {
             Collections.shuffle(Baralho);   
 
             while(!sair){
+                
+                if(ST.getTunnel() == 3){
+                    Dado d;
+                    int valor = d.rodaDado();
+                    if (valor == 1){
+                        ST.setTunnel(0);
+                        ST.setMorale(ST.getMorale() - 1);
+                        ST.setRaidedSupplies(0);
+                    }
+                }
+                
+                
                 System.out.print(ET.toString());
                 System.out.print(ST.toString());
                 System.out.print("\n\n[1] - TIRAR CARTA\n[2] - GRAVAR\n[3] - SAIR\n>");
@@ -73,10 +84,10 @@ public class TP {
                          i.evento(Baralho, ST);
                      }else if(Baralho.get(0).sss().equals("Supplies Spoiled")){
                          SuppliesSpoiled ss = new SuppliesSpoiled();
-                         ss.evento(Baralho, ST);
+                         ss.evento(ST);
                      }else if(Baralho.get(0).sss().equals("Death of a Leader")){
                          DeathOfALeader doal = new DeathOfALeader();
-                         doal.evento(Baralho, ST);
+                         doal.evento(ST);
                      }else if(Baralho.get(0).sss().equals("Volley of Arrows")){
                          VolleyOfArrows voa = new VolleyOfArrows();
                          voa.evento(Baralho, ET);
@@ -194,6 +205,9 @@ public class TP {
                         }
                                  
                      }
+                     
+                     
+                     
                     Baralho.remove(0);
                     System.out.print("\n\n[1] - TIRAR CARTA\n[2] - GRAVAR\n[3] - SAIR\n>");
                     
