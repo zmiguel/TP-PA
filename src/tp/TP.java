@@ -81,7 +81,7 @@ public class TP {
                 
                 while(getInput() == 1){
 
-                     System.out.print(Baralho.get(0));
+                     System.out.println(Baralho.get(0));
                      
                      if(Baralho.get(0).sss().equals("Trebuchet Attack")){ 
                         TrebuchetAttack ta = new TrebuchetAttack();
@@ -173,8 +173,8 @@ public class TP {
                      for(int n = 0;n < Baralho.get(0).getNumActions(); n++){
                          
                          
-                        System.out.println("AÇÕES POR REALIZAR: " + (Baralho.get(0).getNumActions() - n));
-                        System.out.println("\n[1] - Archers Attack");
+                        System.out.println("\nAÇÕES POR REALIZAR: " + (Baralho.get(0).getNumActions() - n));
+                        System.out.println("[1] - Archers Attack");
                         System.out.println("[2] - Boiling Water Attack");
                         System.out.println("[3] - Close Combat Attack");
                         System.out.println("[4] - Coupure");
@@ -182,6 +182,7 @@ public class TP {
                         System.out.println("[6] - Tunnel Movement");
                         System.out.println("[7] - Supply Raid");
                         System.out.println("[8] - Sabotage");
+                        System.out.println(">");
 
                     Scanner scan = new Scanner(System.in);
                     int choice = scan.nextInt();
@@ -228,6 +229,9 @@ public class TP {
                         default: System.out.print("Escolha Inválida");
 
                         }
+                    
+                    System.out.print(ET.toString());
+                    System.out.print(ST.toString());
                                  
                      }
                      
