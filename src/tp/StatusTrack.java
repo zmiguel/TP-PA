@@ -16,6 +16,7 @@ public class StatusTrack {
     private int tunnel;
     private int raidedsupplies;
     private boolean badWeather = false;
+    private int stolenSupplies;
 
     public StatusTrack() {
         this.wall = 4;
@@ -72,6 +73,21 @@ public class StatusTrack {
     public void setRaidedSupplies(int rs){
         raidedsupplies = rs;
     }
+    
+    public int getStolenSupplies(){
+        return stolenSupplies;
+    }
+    
+    public void setStolenSupplies(int ss){
+        stolenSupplies = ss;
+    }
+    
+    public void captured(){
+        setStolenSupplies(0);
+        setMorale(getMorale() - 1);
+        setTunnel(0);
+    }
+    
     
      @Override
     public String toString(){
