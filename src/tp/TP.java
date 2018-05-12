@@ -170,6 +170,10 @@ public class TP {
   
                      for(int n = 0;n < Baralho.get(0).getNumActions(); n++){
                          
+                         boolean acaoRealizada = false;
+                         System.out.print("\n" + ET.toString());
+                         System.out.print(ST.toString());
+                         
                          
                         System.out.println("\nAÇÕES POR REALIZAR: " + (Baralho.get(0).getNumActions() - n));
                         System.out.println("[1] - Archers Attack");
@@ -181,65 +185,86 @@ public class TP {
                         System.out.println("[7] - Supply Raid");
                         System.out.println("[8] - Sabotage");
                         System.out.print("> ");
+                                      
+                        while(!acaoRealizada){
+                            Scanner scan = new Scanner(System.in);
+                            int choice = scan.nextInt();
 
-                    Scanner scan = new Scanner(System.in);
-                    int choice = scan.nextInt();
-
-                    switch (choice) {
-                        case 1: if(ET.getPosLadder() == 4 && ET.getPosBatteringRam() == 4 && ET.getPosSiegeTower() == 4){
-                                    
+                            if(choice == 1){
+                                if(ET.getPosLadder() == 4 && ET.getPosBatteringRam() == 4 && ET.getPosSiegeTower() == 4){
+                                    System.out.println("Não é possivel executar um ataque");
                                 }else{
+                                    acaoRealizada = true;
                                     ArchersAttack at = new ArchersAttack();
                                     at.acao(ET, drm);
                                     break;
                                 } 
-                            
-                                
-                        case 2: if(ET.getPosLadder() != 1 && ET.getPosBatteringRam() != 1 && ET.getPosSiegeTower() != 1){
+                            }else if(choice == 2){
+                                if(ET.getPosLadder() != 1 && ET.getPosBatteringRam() != 1 && ET.getPosSiegeTower() != 1){
+                                    System.out.println("Não é possivel visto que nenhum está nos círculos");
                                 }else{ 
-                                    BoilingWaterAttack bwa = new BoilingWaterAttack();
-                                    bwa.acao(ET, drm);
-                                    break;
-                                }
-                                 
-                        case 3:  if(ET.getPosLadder() == 0 || ET.getPosBatteringRam() == 0 || ET.getPosSiegeTower() == 0){
-                                    CloseCombatAttack cca = new CloseCombatAttack();
-                                    cca.acao(ET, drm);
-                                    break;
-                        }
-                        
-                        case 4: Coupure c = new Coupure();
+                                        acaoRealizada = true;
+                                        BoilingWaterAttack bwa = new BoilingWaterAttack();
+                                        bwa.acao(ET, drm);
+                                        break;
+                                    }
+                                }else if(choice == 3){
+                                    if(ET.getPosLadder() == 0 || ET.getPosBatteringRam() == 0 || ET.getPosSiegeTower() == 0){
+                                        acaoRealizada = true;
+                                        CloseCombatAttack cca = new CloseCombatAttack();
+                                        cca.acao(ET, drm);
+                                        break;
+                                }else{
+                                      System.out.println("Nenhum está no Close Combat");   
+                                    }
+
+                        }else if(choice == 4){
+                            if(ST.getWall() >= 4){
+                                System.out.println("Wall maxed out");
+                            }else{
+                                acaoRealizada = true;
+                                Coupure c = new Coupure();
                                 c.acao(ST, drm);
                                 break;
-                                
-                        case 5: RallyTroops rt = new RallyTroops();
+                            }
+    
+                        }else if(choice == 5){
+                            if(ST.getMorale() >= 4){
+                            System.out.println("Morale maxed out");
+                            
+                            }else{
+                                acaoRealizada = true;
+                                RallyTroops rt = new RallyTroops();
                                 rt.acao(ST, drm);
                                 break;
-                                
-                        case 6: TunnelMovement tm = new TunnelMovement();
+                            }                            
+
+                        }else if(choice == 6){
+                                acaoRealizada = true;
+                                TunnelMovement tm = new TunnelMovement();
                                 tm.acao(ST);
                                 break;
-                                
-                        case 7: if(ST.getTunnel() == 3){
+                        }else if(choice == 7){
+                            if(ST.getTunnel() == 3){
+                                acaoRealizada = true;
                                 SupplyRaid sr = new SupplyRaid();
                                 sr.acao(drm, ST);
                                 break;
-                        }
-                                    
-                        case 8: Sabotage s = new Sabotage();
+                            }
+                        }else if(choice == 8){
+                            if(ST.getTunnel() == 3 && ST.getStolenSupplies() < 2){
+                                acaoRealizada = true;
+                                Sabotage s = new Sabotage();
                                 s.acao(ST, ET, drm);
                                 break;
-                                
-                        default: System.out.print("Escolha Inválida");
-
+                            }
                         }
+                   }
+                   
                     
-                    System.out.print("\n" + ET.toString());
-                    System.out.print(ST.toString());
                                  
                      }
                      
-                    
                     drm.resetDRM();
                     ST.setBadWeather(false);
                     Baralho.remove(0);
