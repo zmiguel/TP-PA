@@ -5,8 +5,6 @@
  */
 package Eventos;
 
-import java.util.ArrayList;
-import tp.Cartas;
 import tp.StatusTrack;
 import tp.EnemyTrack;
 import tp.Dado;
@@ -18,7 +16,7 @@ import tp.Dado;
  */
 public class TrebuchetAttack {  
     
-    public void evento(ArrayList<Cartas> Baralho, StatusTrack ST, EnemyTrack ET){
+    public void evento(StatusTrack ST, EnemyTrack ET){
         int valor;
         Dado dado = null;
 

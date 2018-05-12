@@ -11,9 +11,9 @@ package tp;
  */
 public class Cartas {
     
-    private int id;
-    private int dia = 0;
-    Eventos[] Evento = new Eventos[3];
+    private final int id;
+    private final int dia = 0;
+    private final Eventos[] Evento = new Eventos[3];
     
     public Cartas(int i){
         this.id = i + 1;

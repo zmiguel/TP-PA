@@ -5,7 +5,6 @@
  */
 package Acoes;
 
-import java.util.Scanner;
 import tp.Dado;
 import tp.EnemyTrack;
 
@@ -35,4 +34,4 @@ public class CloseCombatAttack {
        
                     
         }
-} 
+    } 
