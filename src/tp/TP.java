@@ -10,6 +10,9 @@ import Acoes.BoilingWaterAttack;
 import Acoes.CloseCombatAttack;
 import Acoes.Coupure;
 import Acoes.RallyTroops;
+import Acoes.Sabotage;
+import Acoes.SupplyRaid;
+import Acoes.TunnelMovement;
 import java.util.ArrayList;
 import java.util.Collections;
 import Estados.Contexto;
@@ -198,12 +201,28 @@ public class TP {
                         
                         case 4: Coupure c = new Coupure();
                                 c.acao(ST);
+                                break;
                                 
                         case 5: RallyTroops rt = new RallyTroops();
                                 rt.acao();
-                               
-                        //case 6
-                        //case 7
+                                break;
+                                
+                        case 6: TunnelMovement tm = new TunnelMovement();
+                                tm.acao();
+                                break;
+                                
+                        case 7: if(ST.getTunnel() == 3){
+                                SupplyRaid sr = new SupplyRaid();
+                                sr.acao(ST);
+                                break;
+                        }
+                            
+                                
+                                
+                        case 8: Sabotage s = new Sabotage();
+                                s.acao();
+                                break;
+                                
                         default: System.out.print("Escolha Inválida");
 
                         }
