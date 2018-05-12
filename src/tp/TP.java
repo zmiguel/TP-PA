@@ -68,9 +68,7 @@ public class TP {
                     
                     int valor = dado.rodaDado();
                     if (valor == 1){
-                        ST.setTunnel(0);
-                        ST.setMorale(ST.getMorale() - 1);
-                        ST.setRaidedSupplies(0);
+                        ST.captured();
                     }
                 }
                 
@@ -230,12 +228,12 @@ public class TP {
 
                         }
                     
-                    System.out.print(ET.toString());
+                    System.out.print("\n" + ET.toString());
                     System.out.print(ST.toString());
                                  
                      }
                      
-                     
+                    
                     drm.resetDRM();
                     ST.setBadWeather(false);
                     Baralho.remove(0);

@@ -34,16 +34,19 @@ public class ArchersAttack {
             
             case 1:  if(valor + drm.getLadders() > ET.getStrenghtLadder()){
                         ET.setPosLadder(ET.getPosLadder() + 1);
+                        System.out.println("Ataque às Ladders Efetivo");
                         break;
                      }
                      
             case 2:  if(valor + drm.getBatteringRam() > ET.getStrenghtBatteringRam()){
                         ET.setPosBatteringRam(ET.getPosBatteringRam() + 1);
+                        System.out.println("Ataque às Battering Ram Efetivo");
                         break;
             }
             
             case 3: if(valor + drm.getSiegeTower() > ET.getStrenghtSiegeTower()){
                         ET.setPosSiegeTower(ET.getPosSiegeTower() + 1);
+                        System.out.println("Ataque às Siege Tower");
                         break;
             } 
                      
