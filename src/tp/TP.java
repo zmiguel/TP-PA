@@ -200,27 +200,25 @@ public class TP {
                         }
                         
                         case 4: Coupure c = new Coupure();
-                                c.acao(ST);
+                                c.acao(ST, drm);
                                 break;
                                 
                         case 5: RallyTroops rt = new RallyTroops();
-                                rt.acao();
+                                rt.acao(ST, drm);
                                 break;
                                 
                         case 6: TunnelMovement tm = new TunnelMovement();
-                                tm.acao();
+                                tm.acao(ST);
                                 break;
                                 
                         case 7: if(ST.getTunnel() == 3){
                                 SupplyRaid sr = new SupplyRaid();
-                                sr.acao(ST);
+                                sr.acao(drm, ST);
                                 break;
                         }
-                            
-                                
-                                
+                                    
                         case 8: Sabotage s = new Sabotage();
-                                s.acao();
+                                s.acao(ST, ET, drm);
                                 break;
                                 
                         default: System.out.print("Escolha Inválida");
