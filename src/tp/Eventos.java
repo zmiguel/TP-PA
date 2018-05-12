@@ -29,7 +29,7 @@ class Eventos {
         return numAcoes;
     }    
     
-    public String[] combo(){
+    public String[] getCombo(){
         return mov;
     }
     
