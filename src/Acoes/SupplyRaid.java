@@ -22,9 +22,12 @@ public class SupplyRaid {
            
            if(valor +  drm.getRaidAction() > 5){
                ST.setStolenSupplies(ST.getStolenSupplies() + 2);
+               System.out.println("Two Supplies Stolen with sucess");
            }else if(valor + drm.getRaidAction() <= 5 && valor + drm.getRaidAction() >= 3){
                ST.setStolenSupplies(ST.getStolenSupplies() + 1);
+               System.out.println("One Supplie stolen with sucess");
            }else if(valor + drm.getRaidAction() == 1){
+               System.out.println("Unit Captured :(");
                ST.captured();
            }
         }
