@@ -13,6 +13,7 @@ import Acoes.RallyTroops;
 import java.util.ArrayList;
 import java.util.Collections;
 import Estados.Contexto;
+import Eventos.BadWeather;
 import Eventos.BoilingOil;
 import Eventos.Collapsed;
 import Eventos.CoverOfDarkness;
@@ -95,42 +96,43 @@ public class TP {
                          voa.evento(drm);
                      }else if(Baralho.get(0).sss().equals("Cover Of Darkness")){
                          CoverOfDarkness cod = new CoverOfDarkness();
-                         cod.evento(Baralho, ST,ET);
+                         cod.evento(drm);
                      }else if(Baralho.get(0).sss().equals("Determined Enemy")){
                          DeterminedEnemy de = new DeterminedEnemy();
-                         de.evento(Baralho, ST, ET);
+                         de.evento(drm);
                      }else if(Baralho.get(0).sss().equals("Guards Distracted")){
                          GuardsDistracted gd = new GuardsDistracted();
                          gd.evento(drm);
                      }else if(Baralho.get(0).sss().equals("Bad Weather")){
-                         //ONLY RAID AND SABOTAGE ACTIONS ALLOWED THIS TURN
+                         BadWeather bw = new BadWeather();
+                         bw.evento(ST);
                      }else if(Baralho.get(0).sss().equals("Gate Fortified")){
                          GateFortified gf = new GateFortified();
-                         gf.evento(Baralho, ST);
+                         gf.evento(drm);
                      }else if(Baralho.get(0).sss().equals("Collapsed")){
                          Collapsed c = new Collapsed();
-                         c.evento(Baralho, ST, ET);
+                         c.evento(ET);
                      }else if(Baralho.get(0).sss().equals("Enemy Fatigue")){
                          EnemyFatigue ef = new EnemyFatigue();
-                         ef.evento(Baralho, ST, ET);
+                         ef.evento(drm);
                      }else if(Baralho.get(0).sss().equals("Iron Shields")){
                          IronShields is = new IronShields();
-                         is.evento(Baralho, ST, ET);
+                         is.evento(drm);
                      }else if(Baralho.get(0).sss().equals("Boiling Oil")){
                          BoilingOil bo = new BoilingOil();
-                         bo.evento(Baralho, ST, ET);
+                         bo.evento(drm);
                      }else if(Baralho.get(0).sss().equals("Flaming Arrows")){
                          FlamingArrows fa = new FlamingArrows();
-                         fa.evento(Baralho, ST, ET);
+                         fa.evento(drm);
                      }else if(Baralho.get(0).sss().equals("Repaired Trebuchet")){
                          RepairedTrebuchet rt = new RepairedTrebuchet();
-                         rt.evento(Baralho, ST, ET);
+                         rt.evento(drm, ET);
                      }else if(Baralho.get(0).sss().equals("Rally!")){
                          Rally r = new Rally();
-                         r.evento(Baralho, ST, ET);
+                         r.evento(drm);
                      }else if(Baralho.get(0).sss().equals("Faith")){
                          Faith f = new Faith();
-                         f.evento(Baralho, ST, ET);
+                         f.evento(drm);
                      }
                      
                      for(String movs: Baralho.get(0).combo()){
