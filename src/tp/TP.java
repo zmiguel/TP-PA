@@ -267,6 +267,8 @@ public class TP {
                                  
                      }
                      
+                    System.out.print("\n" + ET.toString());
+                    System.out.print(ST.toString());
                     drm.resetDRM();
                     ST.setBadWeather(false);
                     Baralho.remove(0);
