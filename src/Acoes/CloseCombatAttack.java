@@ -7,6 +7,7 @@ package Acoes;
 
 import tp.Dado;
 import tp.EnemyTrack;
+import tp.DRM;
 
 import java.util.Scanner;
 
@@ -15,7 +16,7 @@ import java.util.Scanner;
  * @author Ricardo Marques
  */
 public class CloseCombatAttack {
-    public void acao(EnemyTrack ET){
+    public void acao(EnemyTrack ET, DRM drm){
         Dado dado = null;
         int valor;
 
@@ -31,7 +32,7 @@ public class CloseCombatAttack {
 
         switch (choice) {
             case 1: if(ET.getPosLadder()==0){
-                if(valor > 4){
+                if(valor + drm.getClose() > 4){
                     ET.setPosLadder(1);
                     break;
                 }
@@ -39,7 +40,7 @@ public class CloseCombatAttack {
                 System.out.print("Escolha Inválida");
             }
             case 2: if(ET.getPosBatteringRam()==0){
-                if(valor > 4){
+                if(valor + drm.getClose() > 4){
                     ET.setPosBatteringRam(1);
                     break;
                 }
@@ -47,7 +48,7 @@ public class CloseCombatAttack {
                 System.out.print("Escolha Inválida");
             }
             case 3: if(ET.getPosSiegeTower()==0){
-                if(valor > 4){
+                if(valor + drm.getClose() > 4){
                     ET.setPosSiegeTower(1);
                     break;
                 }
