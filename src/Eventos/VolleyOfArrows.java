@@ -18,6 +18,4 @@ public class VolleyOfArrows {
         drm.setBatteringRam(1);
         drm.setLadders(1);
     }
-
-
 }

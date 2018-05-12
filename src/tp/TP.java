@@ -83,7 +83,7 @@ public class TP {
                         ta.evento(ST, ET);  
                      }else if(Baralho.get(0).sss().equals("Illness")){
                          Illness i = new Illness();
-                         i.evento(Baralho, ST);
+                         i.evento(ST);
                      }else if(Baralho.get(0).sss().equals("Supplies Spoiled")){
                          SuppliesSpoiled ss = new SuppliesSpoiled();
                          ss.evento(ST);
@@ -101,7 +101,7 @@ public class TP {
                          de.evento(Baralho, ST, ET);
                      }else if(Baralho.get(0).sss().equals("Guards Distracted")){
                          GuardsDistracted gd = new GuardsDistracted();
-                         gd.evento(Baralho, ST);
+                         gd.evento(drm);
                      }else if(Baralho.get(0).sss().equals("Bad Weather")){
                          //ONLY RAID AND SABOTAGE ACTIONS ALLOWED THIS TURN
                      }else if(Baralho.get(0).sss().equals("Gate Fortified")){
@@ -209,7 +209,8 @@ public class TP {
                      }
                      
                      
-                     
+                    drm.resetDRM();
+                    ST.setBadWeather(false);
                     Baralho.remove(0);
                     System.out.print("\n\n[1] - TIRAR CARTA\n[2] - GRAVAR\n[3] - SAIR\n>");
                     
