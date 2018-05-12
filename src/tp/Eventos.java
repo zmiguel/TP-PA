@@ -29,4 +29,8 @@ class Eventos {
         return numAcoes;
     }    
     
+    public String[] combo(){
+        return mov;
+    }
+    
 }

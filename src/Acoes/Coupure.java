@@ -20,11 +20,9 @@ public class Coupure {
            valor = dado.rodaDado();
            
            if(valor > 4){
-               ST.setWall(ST.getWall() );
-           
+               ST.setWall(ST.getWall() );          
            }
-           
-                    
+             
         }
     } 
 }

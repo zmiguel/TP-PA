@@ -8,6 +8,8 @@ package tp;
 import Acoes.ArchersAttack;
 import Acoes.BoilingWaterAttack;
 import Acoes.CloseCombatAttack;
+import Acoes.Coupure;
+import Acoes.RallyTroops;
 import java.util.ArrayList;
 import java.util.Collections;
 import Estados.Contexto;
@@ -65,7 +67,7 @@ public class TP {
                      
                      if(Baralho.get(0).sss().equals("Trebuchet Attack")){ 
                         TrebuchetAttack ta = new TrebuchetAttack();
-                        ta.evento(Baralho, ST, ET);  
+                        ta.evento(ST, ET);  
                      }else if(Baralho.get(0).sss().equals("Illness")){
                          Illness i = new Illness();
                          i.evento(Baralho, ST);
@@ -117,16 +119,47 @@ public class TP {
                          Faith f = new Faith();
                          f.evento(Baralho, ST, ET);
                      }
-
                      
-                    System.out.println("[1] - Archers Attack");
-                    System.out.println("[2] - Boiling Water Attack");
-                    System.out.println("[3] - Close Combat Attack");
-                    System.out.println("[4] - Coupure");
-                    System.out.println("[5] - Rally Troops");
-                    System.out.println("[6] - Tunnel Movement");
-                    System.out.println("[7] - Supply Raid");
-                    System.out.println("[8] - Sabotage");
+                     for(String movs: Baralho.get(0).combo()){
+                         if(movs.equals("Ladders")){
+                             ET.setPosLadder(ET.getPosLadder() - 1);
+                         }
+                         if(movs.equals("Battering Ram")){
+                             ET.setPosBatteringRam(ET.getPosBatteringRam() - 1);
+                         }
+                         
+                         if(movs.equals("SiegeTower")){
+                             ET.setPosSiegeTower(ET.getPosSiegeTower() - 1);
+                         }
+                         
+                         if(movs.equals("Slowest Unit Movement")){
+                             if(ET.getPosLadder() > ET.getPosBatteringRam() && ET.getPosLadder() > ET.getPosSiegeTower()){
+                                 ET.setPosLadder(ET.getPosLadder() - 1);
+                             }else if(ET.getPosBatteringRam() > ET.getPosLadder() && ET.getPosBatteringRam() > ET.getPosSiegeTower()){
+                                 ET.setPosBatteringRam(ET.getPosBatteringRam() - 1);
+                             }else if(ET.getPosSiegeTower() > ET.getPosLadder() && ET.getPosSiegeTower() > ET.getStrenghtBatteringRam()){
+                                 ET.setPosSiegeTower(ET.getPosSiegeTower() -1);
+                             }else if(ET.getPosLadder() > ET.getPosBatteringRam() && ET.getPosLadder() == ET.getPosSiegeTower()){
+                                 ET.setPosLadder(ET.getPosLadder() - 1);
+                                ET.setPosSiegeTower(ET.getPosSiegeTower() -1);
+                             }else if(ET.getPosBatteringRam() > ET.getPosLadder() && ET.getPosBatteringRam() == ET.getPosSiegeTower()){
+                                ET.setPosSiegeTower(ET.getPosSiegeTower() -1);
+                                ET.setPosBatteringRam(ET.getPosBatteringRam() - 1);
+                             }else if(ET.getPosLadder() > ET.getPosSiegeTower() && ET.getPosLadder() == ET.getStrenghtBatteringRam())
+                                    ET.setPosLadder(ET.getPosLadder() - 1);
+                                    ET.setPosBatteringRam(ET.getPosBatteringRam() - 1);
+                            }
+                     }
+  
+                     for(int n = 0;n < Baralho.get(0).getNumActions(); n++){
+                        System.out.println("[1] - Archers Attack");
+                        System.out.println("[2] - Boiling Water Attack");
+                        System.out.println("[3] - Close Combat Attack");
+                        System.out.println("[4] - Coupure");
+                        System.out.println("[5] - Rally Troops");
+                        System.out.println("[6] - Tunnel Movement");
+                        System.out.println("[7] - Supply Raid");
+                        System.out.println("[8] - Sabotage");
 
                     Scanner scan = new Scanner(System.in);
                     int choice = scan.nextInt();
@@ -147,11 +180,20 @@ public class TP {
                                     cca.acao(ET);
                                     break;
                         }
-                 
+                        
+                        case 4: Coupure c = new Coupure();
+                                c.acao(ST);
+                                
+                        case 5: RallyTroops rt = new RallyTroops();
+                                rt.acao();
+                               
+                        //case 6
+                        //case 7
                         default: System.out.print("Escolha Inválida");
 
-                    }
+                        }
                                  
+                     }
                     Baralho.remove(0);
                     System.out.print("\n\n[1] - TIRAR CARTA\n[2] - GRAVAR\n[3] - SAIR\n>");
                     
