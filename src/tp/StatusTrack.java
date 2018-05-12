@@ -17,6 +17,7 @@ public class StatusTrack {
     private int raidedsupplies;
     private boolean badWeather = false;
     private int stolenSupplies;
+    private boolean sairTunnel;
 
     public StatusTrack() {
         this.wall = 4;
@@ -24,6 +25,7 @@ public class StatusTrack {
         this.supplies = 4;   
         this.tunnel = 0;
         this.raidedsupplies = 0;
+        this.sairTunnel = true;
     }
     
     public int getWall(){
@@ -81,7 +83,15 @@ public class StatusTrack {
     public void setStolenSupplies(int ss){
         stolenSupplies = ss;
     }
-    
+
+    public boolean isSairTunnel() {
+        return sairTunnel;
+    }
+
+    public void setSairTunnel(boolean sairTunnel) {
+        this.sairTunnel = sairTunnel;
+    }
+
     public void captured(){
         setStolenSupplies(0);
         setMorale(getMorale() - 1);
