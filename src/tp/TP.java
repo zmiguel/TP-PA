@@ -48,6 +48,7 @@ public class TP {
         ArrayList<Cartas> Baralho = new ArrayList<>();
         boolean sair = false;
         DRM drm = new DRM();
+        Dado dado = new Dado();
 
 
         Contexto c1 = new Contexto();
@@ -64,8 +65,8 @@ public class TP {
             while(!sair){
                 
                 if(ST.getTunnel() == 3){
-                    Dado d = null;
-                    int valor = d.rodaDado();
+                    
+                    int valor = dado.rodaDado();
                     if (valor == 1){
                         ST.setTunnel(0);
                         ST.setMorale(ST.getMorale() - 1);
