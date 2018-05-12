@@ -5,6 +5,7 @@
  */
 package Acoes;
 
+import tp.DRM;
 import tp.Dado;
 import tp.StatusTrack;
 
@@ -13,14 +14,14 @@ import tp.StatusTrack;
  * @author Ricardo Marques
  */
 public class Coupure {
-     public void acao(StatusTrack ST){
+     public void acao(StatusTrack ST, DRM drm){
            Dado dado = null;
            int valor = 0;
            
            valor = dado.rodaDado();
            
-           if(valor > 4){
-               ST.setWall(ST.getWall() );          
+           if(valor + drm.getCompureAction() > 4){
+               ST.setWall(ST.getWall() + 1);
            }
              
         }

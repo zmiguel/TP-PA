@@ -5,10 +5,15 @@
  */
 package Acoes;
 
+import tp.StatusTrack;
+
 /**
  *
  * @author Ricardo Marques
  */
 public class TunnelMovement {
+    public void acao(StatusTrack ST){
+
+    }
     
 }
