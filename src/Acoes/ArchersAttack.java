@@ -8,14 +8,16 @@ package Acoes;
 import java.util.Scanner;
 import tp.Dado;
 import tp.EnemyTrack;
+import tp.DRM;
 
 /**
  *
  * @author Ricardo Marques
  */
 public class ArchersAttack {
-    public void acao(EnemyTrack ET){
-           Dado dado;
+    public void acao(EnemyTrack ET, DRM drm){
+           Dado dado = null;
+           int valor = 0;
            
             System.out.println("Archers Attack!\n");
             System.out.println("[1] - Ladders\n");
@@ -25,16 +27,27 @@ public class ArchersAttack {
            
            Scanner scan = new Scanner(System.in);
            int choice = scan.nextInt();
+           valor = dado.rodaDado();
            
         switch (choice) {
-            case 1:  ET.setPosLadder(ET.getPosLadder() + 1);
-                     break;
-            case 2:  ET.setPosBatteringRam(ET.getPosBatteringRam() + 1);
-                     break;
-            case 3:  ET.setPosSiegeTower(ET.getPosBatteringRam() + 1);
-                     break;
+           
+            
+            case 1:  if(valor + drm.getLadders() > ET.getStrenghtLadder()){
+                        ET.setPosLadder(ET.getPosLadder() + 1);
+                        break;
+                     }
+                     
+            case 2:  if(valor + drm.getBatteringRam() > ET.getStrenghtBatteringRam()){
+                        ET.setPosBatteringRam(ET.getPosBatteringRam() + 1);
+                        break;
+            }
+            
+            case 3: if(valor + drm.getSiegeTower() > ET.getStrenghtSiegeTower()){
+                        ET.setPosSiegeTower(ET.getPosSiegeTower() + 1);
+                        break;
+            } 
+                     
             default: System.out.print("Escolha Inválida");
-                    
         }
     } 
 }
