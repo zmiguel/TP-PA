@@ -42,10 +42,6 @@ public class TP {
         EnemyTrack ET = new EnemyTrack();
         StatusTrack ST = new StatusTrack();
         ArrayList<Cartas> Baralho = new ArrayList<>();
-<<<<<<< Updated upstream
-=======
-        Dado dado = null;
->>>>>>> Stashed changes
         boolean sair = false;
         
         Contexto c1 = new Contexto();
