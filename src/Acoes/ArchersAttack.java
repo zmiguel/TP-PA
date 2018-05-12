@@ -30,8 +30,7 @@ public class ArchersAttack {
            valor = dado.rodaDado();
            
         switch (choice) {
-           
-            
+      
             case 1:  if(valor + drm.getLadders() > ET.getStrenghtLadder()){
                         ET.setPosLadder(ET.getPosLadder() + 1);
                         System.out.println("Ataque às Ladders Efetivo");
@@ -49,8 +48,6 @@ public class ArchersAttack {
                         System.out.println("Ataque às Siege Tower");
                         break;
             } 
-                     
-            default: System.out.print("Escolha Inválida");
         }
     } 
 }

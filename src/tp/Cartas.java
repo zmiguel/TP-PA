@@ -20,12 +20,12 @@ public class Cartas {
         String []enemyCombo = {"Nothing"};
         String []enemyCombo1 = {"Ladders"};
         String []enemyCombo2 = {"Battering Ram"};
-        String []enemyCombo3 = {"Tower Siege"};
+        String []enemyCombo3 = {"Siege Tower"};
         String []enemyCombo4 = {"Slowest Unit Movement"};
         String []enemyCombo5 = {"Ladders", "Battering Ram"};
-        String []enemyCombo6 = {"Ladders", "Tower Siege"};
-        String []enemyCombo7 = {"Battering Ram", "Tower Siege"};
-        String []enemyCombo8 = {"Ladders","Battering Ram", "Tower Siege"};
+        String []enemyCombo6 = {"Ladders", "Siege Tower"};
+        String []enemyCombo7 = {"Battering Ram", "Siege Tower"};
+        String []enemyCombo8 = {"Ladders","Battering Ram", "Siege Tower"};
   
         if(i == 0){
             this.Evento[0] = new Eventos(3, enemyCombo, "Trebuchet Attack", "Later");

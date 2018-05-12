@@ -145,7 +145,7 @@ public class TP {
                              ET.setPosBatteringRam(ET.getPosBatteringRam() - 1);
                          }
                          
-                         if(movs.equals("SiegeTower")){
+                         if(movs.equals("Siege Tower")){
                              ET.setPosSiegeTower(ET.getPosSiegeTower() - 1);
                          }
                          
@@ -180,7 +180,7 @@ public class TP {
                         System.out.println("[6] - Tunnel Movement");
                         System.out.println("[7] - Supply Raid");
                         System.out.println("[8] - Sabotage");
-                        System.out.println(">");
+                        System.out.print("> ");
 
                     Scanner scan = new Scanner(System.in);
                     int choice = scan.nextInt();
