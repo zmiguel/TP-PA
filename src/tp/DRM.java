@@ -5,6 +5,8 @@
  */
 package tp;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Ricardo Marques
@@ -13,6 +15,8 @@ public class DRM {
     private int Ladders;
     private int BatteringRam;
     private int SiegeTower;
+    private int MoraleAction;
+    private int SabotageAction;
 
     DRM(){
         this.Ladders = 0;
@@ -33,6 +37,14 @@ public class DRM {
         return SiegeTower;
     }
 
+    public int getMoraleAction(){
+        return MoraleAction;
+    }
+
+    public int getSabotageAction(){
+        return SabotageAction;
+    }
+
     public void setLadders(int l){
         Ladders = l;
     }
@@ -45,8 +57,16 @@ public class DRM {
         SiegeTower = st;
     }
 
+    public void setMoraleAction(int ma){
+        MoraleAction = ma;
+    }
+
+    public void setSabotageAction(int sa){
+        SabotageAction = sa;
+    }
+
     public void resetDRM(){
-        Ladders = SiegeTower = BatteringRam = 0;
+        Ladders = SiegeTower = BatteringRam = MoraleAction = SabotageAction = 0;
     }
     
 }

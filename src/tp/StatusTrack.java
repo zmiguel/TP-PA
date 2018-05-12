@@ -15,6 +15,7 @@ public class StatusTrack {
     private int supplies;
     private int tunnel;
     private int raidedsupplies;
+    private boolean badWeather = false;
 
     public StatusTrack() {
         this.wall = 4;
@@ -55,7 +56,15 @@ public class StatusTrack {
     public void setTunnel(int t){
         tunnel = t;
     }
-    
+
+    public boolean getWeather(){
+        return badWeather;
+    }
+
+    public void setBadWeather(boolean cena){
+        badWeather = cena;
+    }
+
     public int getRaidedSupplies(){
         return raidedsupplies;
     }
