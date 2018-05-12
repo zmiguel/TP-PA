@@ -17,6 +17,7 @@ public class EnemyTrack {
     private int posSiegeTower;
     private int strenghtSiegeTower;
     private int trebuchet;
+    private boolean SiegeTower = true;
 
     public EnemyTrack() {
         this.posLadder = 4;
@@ -93,8 +94,15 @@ public class EnemyTrack {
     public void setTrebuchet(int t){
         trebuchet = t;
     }
-    
-    
+
+    public boolean isSiegeTower() {
+        return SiegeTower;
+    }
+
+    public void setSiegeTower(boolean v){
+        SiegeTower = v;
+    }
+
     @Override
     public String toString(){
         return ("ENEMY TRACK\nPosition Ladders: " + posLadder + "\nPosition Battering Ram: " + posBatteringRam + "\nPosition Siege Tower: " + posSiegeTower + "\n");

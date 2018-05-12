@@ -5,21 +5,14 @@
  */
 package Eventos;
 
-import java.util.ArrayList;
-import tp.Cartas;
-import tp.StatusTrack;
+import tp.DRM;
 
 /**
  *
  * @author Ricardo Marques
  */
 public class GateFortified {
-    public void evento(ArrayList<Cartas> Baralho, StatusTrack ST){
-           
-        ST.setMorale(ST.getMorale() - 1);
-        ST.setSupplies(ST.getSupplies() - 1);
-      
-        System.out.print("\nMORALE: " + ST.getMorale() + " SUPPLIES: " + ST.getSupplies());
-
+    public void evento(DRM drm){
+        drm.setBatteringRam(1);
     }  
 }

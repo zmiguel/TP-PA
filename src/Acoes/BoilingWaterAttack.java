@@ -8,13 +8,14 @@ package Acoes;
 import java.util.Scanner;
 import tp.Dado;
 import tp.EnemyTrack;
+import tp.DRM;
 
 /**
  *
  * @author Ricardo Marques
  */
 public class BoilingWaterAttack {
-    public void acao(EnemyTrack ET){
+    public void acao(EnemyTrack ET, DRM drm){
            
         int valor = 0;
         Dado dado = null;
@@ -31,7 +32,7 @@ public class BoilingWaterAttack {
                     switch (choice) {
                         case 1:  if(ET.getPosLadder() == 1){
                                     valor = dado.rodaDado();
-                                    if(valor + 1 > ET.getStrenghtLadder()){
+                                    if(valor + 1 + drm.getCircle() > ET.getStrenghtLadder()){
                                         ET.setPosLadder(ET.getPosLadder()+ 1);
                                         break;
                                     }
@@ -39,15 +40,15 @@ public class BoilingWaterAttack {
                                  
                         case 2: if(ET.getPosBatteringRam() == 1){
                                     valor = dado.rodaDado();
-                                    if(valor  + 1 > ET.getStrenghtBatteringRam()){
+                                    if(valor  + 1 + drm.getCircle() > ET.getStrenghtBatteringRam()){
                                         ET.setPosBatteringRam(ET.getPosBatteringRam() + 1);
                                         break;
-                                    }                    
+                                    }
                               }
           
                         case 3: if(ET.getPosSiegeTower() == 1){
                                 valor = dado.rodaDado();
-                                 if(valor + 1 > ET.getPosSiegeTower()){
+                                 if(valor + 1 + drm.getCircle() > ET.getPosSiegeTower()){
                                      ET.setPosSiegeTower(ET.getPosSiegeTower() + 1);
                                      break;
                                  }

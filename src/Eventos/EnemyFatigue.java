@@ -5,19 +5,16 @@
  */
 package Eventos;
 
-import java.util.ArrayList;
-import tp.Cartas;
-import tp.EnemyTrack;
-import tp.StatusTrack;
+import tp.DRM;
 
 /**
  *
  * @author Ricardo Marques
  */
 public class EnemyFatigue {
-    public void evento(ArrayList<Cartas> Baralho, StatusTrack ST, EnemyTrack ET){
-           
-        //A IMPLEMENTAR
-
+    public void evento(DRM drm){
+        drm.setSabotageAction(1);
+        drm.setCompureAction(1);
+        drm.setRaidAction(1);
     } 
 }

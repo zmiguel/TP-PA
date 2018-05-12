@@ -5,6 +5,7 @@
  */
 package tp;
 
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -17,11 +18,21 @@ public class DRM {
     private int SiegeTower;
     private int MoraleAction;
     private int SabotageAction;
+    private int CompureAction;
+    private int RaidAction;
+    private int Circle;
+    private int Close;
 
     DRM(){
         this.Ladders = 0;
         this.BatteringRam = 0;
         this.SiegeTower = 0;
+        this.SabotageAction = 0;
+        this.MoraleAction = 0;
+        this.CompureAction = 0;
+        this.RaidAction = 0;
+        this.Circle = 0;
+        this.Close = 0;
 
     }
     
@@ -45,6 +56,24 @@ public class DRM {
         return SabotageAction;
     }
 
+    public int getCompureAction(){
+        return CompureAction;
+    }
+
+    public int getRaidAction(){
+        return RaidAction;
+    }
+
+    public int getCircle() {
+        return Circle;
+    }
+
+    public int getClose() {
+        return Close;
+    }
+
+    ///-----------------------------///
+
     public void setLadders(int l){
         Ladders = l;
     }
@@ -65,8 +94,24 @@ public class DRM {
         SabotageAction = sa;
     }
 
+    public void setCompureAction(int ca){
+        CompureAction = ca;
+    }
+
+    public void setRaidAction(int raidAction) {
+        RaidAction = raidAction;
+    }
+
+    public void setCircle(int circle) {
+        Circle = circle;
+    }
+
+    public void setClose(int close) {
+        Close = close;
+    }
+
     public void resetDRM(){
-        Ladders = SiegeTower = BatteringRam = MoraleAction = SabotageAction = 0;
+        Ladders = SiegeTower = BatteringRam = MoraleAction = SabotageAction = CompureAction = RaidAction = Circle = Close = 0;
     }
     
 }

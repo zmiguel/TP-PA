@@ -5,20 +5,17 @@
  */
 package Eventos;
 
-import java.util.ArrayList;
-import tp.Cartas;
 import tp.EnemyTrack;
-import tp.StatusTrack;
 
 /**
  *
  * @author Ricardo Marques
  */
 public class Collapsed {
-     public void evento(ArrayList<Cartas> Baralho, StatusTrack ST, EnemyTrack ET){
+     public void evento(EnemyTrack ET){
            
         if(ET.getPosSiegeTower() == 4){
-         ET.setStrenghtSiegeTower(-1);
+            ET.setSiegeTower(false);
         }
     } 
 }

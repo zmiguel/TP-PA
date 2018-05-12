@@ -5,18 +5,16 @@
  */
 package Eventos;
 
-import java.util.ArrayList;
-import tp.Cartas;
-import tp.EnemyTrack;
-import tp.StatusTrack;
+import tp.DRM;
 
 /**
  *
  * @author Ricardo Marques
  */
 public class Faith {
-    public void evento(ArrayList<Cartas> Baralho, StatusTrack ST, EnemyTrack ET){
-           
-        //A IMPLEMENTAR
+    public void evento(DRM drm){
+        drm.setBatteringRam(1);
+        drm.setLadders(1);
+        drm.setMoraleAction(1);
     } 
 }

@@ -5,18 +5,20 @@
  */
 package Eventos;
 
-import java.util.ArrayList;
-import tp.Cartas;
 import tp.EnemyTrack;
-import tp.StatusTrack;
+import tp.DRM;
 
 /**
  *
  * @author Ricardo Marques
  */
 public class RepairedTrebuchet {
-    public void evento(ArrayList<Cartas> Baralho, StatusTrack ST, EnemyTrack ET){
+    public void evento(DRM drm, EnemyTrack ET){
            
-        //A IMPLEMENTAR
+        drm.setCompureAction(1);
+
+        if(ET.getTrebuchet() < 3){
+            ET.setTrebuchet(ET.getTrebuchet() + 1);
+        }
     } 
 }

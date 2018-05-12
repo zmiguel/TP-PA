@@ -5,18 +5,15 @@
  */
 package Eventos;
 
-import java.util.ArrayList;
-import tp.Cartas;
-import tp.EnemyTrack;
-import tp.StatusTrack;
+import tp.DRM;
 
 /**
  *
  * @author Ricardo Marques
  */
 public class Rally {
-    public void evento(ArrayList<Cartas> Baralho, StatusTrack ST, EnemyTrack ET){
-           
-        //A IMPLEMENTAR
+    public void evento(DRM drm){
+        drm.setCircle(1);
+        drm.setClose(1);
     } 
 }
