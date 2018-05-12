@@ -9,9 +9,6 @@ package Estados;
  *
  * @author Ricardo Marques
  */
-public interface IEstados {
-    //void aguardaInicio();
-    void aguardaRetiradaDeCarta();
-    /*void aguardaEscolhaDaAcao();
-    void aguardaEscolhaDeInimigoParaAtacar();*/
+public class aguardaRetiradaDeCarta {
+    
 }

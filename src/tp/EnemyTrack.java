@@ -10,8 +10,8 @@ package tp;
  * @author Ricardo Marques
  */
 public class EnemyTrack {
-    private int posLadders;
-    private int streightLadder;
+    private int posLadder;
+    private int strenghtLadder;
     private int posBatteringRam;
     private int strenghtBatteringRam;
     private int posSiegeTower;
@@ -19,8 +19,8 @@ public class EnemyTrack {
     private int trebuchet;
 
     public EnemyTrack() {
-        this.posLadders = 4;
-        this.streightLadder = 2;
+        this.posLadder = 4;
+        this.strenghtLadder = 2;
         
         this.posBatteringRam = 4;
         this.strenghtBatteringRam = 3;
@@ -31,4 +31,73 @@ public class EnemyTrack {
         this.trebuchet = 3;
     }
    
+    public int getPosLadder(){
+        return posLadder;
+    }
+    
+    public void setPosLadder(int pl){
+        posLadder = pl;
+    }
+    
+    
+    public int getStrenghtLadder(){
+        return strenghtLadder;
+    }
+    
+    public void setStrenghtLadder(int sl){
+        strenghtLadder = sl;
+    }
+    
+    
+    
+    public int getPosBatteringRam(){
+        return posBatteringRam;
+    }
+    
+    public void setPosBatteringRam(int pbr){
+        posBatteringRam = pbr;
+    }
+    
+    
+    public int getStrenghtBatteringRam(){
+        return strenghtBatteringRam;
+    }
+    
+    public void setStrenghtBatteringRam(int srm){
+        strenghtBatteringRam = srm;
+    } 
+    
+    
+    public int getPosSiegeTower(){
+        return posSiegeTower;
+    }
+    
+    public void setPosSiegeTower(int pst){
+        posSiegeTower = pst;
+    }
+    
+    
+    public int getStrenghtSiegeTower(){
+        return strenghtSiegeTower;
+    }
+    
+    public void setStrenghtSiegeTower(int sst){
+        strenghtSiegeTower = sst;
+    }
+    
+    
+    public int getTrebuchet(){
+        return trebuchet;
+    }
+    
+    public void setTrebuchet(int t){
+        trebuchet = t;
+    }
+    
+    
+    @Override
+    public String toString(){
+        return ("ENEMY TRACK\nPosition Ladders: " + posLadder + "\nPosition Battering Ram: " + posBatteringRam + "\nPosition Siege Tower: " + posSiegeTower + "\n");
+    }
+    
 }

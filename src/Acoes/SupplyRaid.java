@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Estados;
+package Acoes;
 
 /**
  *
  * @author Ricardo Marques
  */
-public interface IEstados {
-    //void aguardaInicio();
-    void aguardaRetiradaDeCarta();
-    /*void aguardaEscolhaDaAcao();
-    void aguardaEscolhaDeInimigoParaAtacar();*/
+public class SupplyRaid {
+    
 }
