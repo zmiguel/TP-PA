@@ -5,9 +5,6 @@
  */
 package tp;
 
-import java.util.Collections;
-import java.util.Scanner;
-
 /**
  *
  * @author Ricardo Marques
