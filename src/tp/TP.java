@@ -186,13 +186,13 @@ public class TP {
                         case 2: if(ET.getPosLadder() != 1 && ET.getPosBatteringRam() != 1 && ET.getPosSiegeTower() != 1){
                                 }else{ 
                                     BoilingWaterAttack bwa = new BoilingWaterAttack();
-                                    bwa.acao(ET);
+                                    bwa.acao(ET, drm);
                                     break;
                                 }
                                  
                         case 3:  if(ET.getPosLadder() == 0 || ET.getPosBatteringRam() == 0 || ET.getPosSiegeTower() == 0){
                                     CloseCombatAttack cca = new CloseCombatAttack();
-                                    cca.acao(ET);
+                                    cca.acao(ET, drm);
                                     break;
                         }
                         
