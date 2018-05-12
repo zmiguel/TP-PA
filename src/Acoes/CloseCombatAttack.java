@@ -17,7 +17,7 @@ import java.util.Scanner;
  */
 public class CloseCombatAttack {
     public void acao(EnemyTrack ET, DRM drm){
-        Dado dado = null;
+        Dado dado = new Dado();
         int valor;
 
         System.out.println("Close Combat Attack!\n");

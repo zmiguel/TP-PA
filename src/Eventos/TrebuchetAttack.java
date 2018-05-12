@@ -18,7 +18,7 @@ public class TrebuchetAttack {
     
     public void evento(StatusTrack ST, EnemyTrack ET){
         int valor;
-        Dado dado = null;
+        Dado dado = new Dado();
 
             if(ET.getTrebuchet() == 3){
                 ST.setWall(ST.getWall() - 2);

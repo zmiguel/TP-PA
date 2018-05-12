@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b06f8995-442e-4d8b-b838-5d51c47e7bc0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Acoes/TunnelMovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Acoes/TunnelMovement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tp/StatusTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tp/StatusTrack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Acoes/ArchersAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Acoes/ArchersAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Acoes/BoilingWaterAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Acoes/BoilingWaterAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Acoes/CloseCombatAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Acoes/CloseCombatAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Acoes/Coupure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Acoes/Coupure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Acoes/RallyTroops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Acoes/RallyTroops.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Acoes/Sabotage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Acoes/Sabotage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Acoes/SupplyRaid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Acoes/SupplyRaid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Eventos/TrebuchetAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Eventos/TrebuchetAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tp/TP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tp/TP.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +24,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.49174312">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="TP.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="TP.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/tp/TP.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="736">
-                  <caret line="72" column="21" lean-forward="true" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
+                <state relative-caret-position="175">
+                  <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
@@ -88,8 +95,8 @@
           <file leaf-file-name="ArchersAttack.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Acoes/ArchersAttack.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="527">
-                  <caret line="50" column="9" lean-forward="true" selection-start-line="49" selection-start-column="58" selection-end-line="50" selection-end-column="9" />
+                <state relative-caret-position="187">
+                  <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
@@ -139,7 +146,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TunnelMovement.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="TunnelMovement.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Acoes/TunnelMovement.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="272">
@@ -261,8 +268,8 @@
           <file leaf-file-name="RepairedTrebuchet.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Eventos/RepairedTrebuchet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+                <state relative-caret-position="323">
+                  <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -281,6 +288,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Dado dado = null;</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Dado dado = new Dado();</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -292,7 +307,6 @@
         <option value="$PROJECT_DIR$/src/tp/Cartas.java" />
         <option value="$PROJECT_DIR$/src/Eventos/SuppliesSpoiled.java" />
         <option value="$PROJECT_DIR$/src/Eventos/DeathOfALeader.java" />
-        <option value="$PROJECT_DIR$/src/tp/TP.java" />
         <option value="$PROJECT_DIR$/src/Eventos/VolleyOfArrows.java" />
         <option value="$PROJECT_DIR$/src/Eventos/Illness.java" />
         <option value="$PROJECT_DIR$/src/Eventos/GuardsDistracted.java" />
@@ -317,6 +331,8 @@
         <option value="$PROJECT_DIR$/src/Acoes/Sabotage.java" />
         <option value="$PROJECT_DIR$/src/tp/StatusTrack.java" />
         <option value="$PROJECT_DIR$/src/Acoes/TunnelMovement.java" />
+        <option value="$PROJECT_DIR$/src/Acoes/ArchersAttack.java" />
+        <option value="$PROJECT_DIR$/src/tp/TP.java" />
       </list>
     </option>
   </component>
@@ -455,12 +471,12 @@
       <option name="presentableId" value="Default" />
       <updated>1523552360108</updated>
       <workItem from="1523552363755" duration="396000" />
-      <workItem from="1526145482084" duration="13128000" />
+      <workItem from="1526145482084" duration="13791000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13524000" />
+    <option name="totallyTimeSpent" value="14187000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -476,11 +492,11 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Run" order="4" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.43007362" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1484375" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1484375" />
       <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32912722" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32912722" />
@@ -702,16 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Eventos/RepairedTrebuchet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tp/DRM.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -757,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/TP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="72" column="21" lean-forward="true" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Acoes/BoilingWaterAttack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -771,13 +770,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Acoes/ArchersAttack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="50" column="9" lean-forward="true" selection-start-line="49" selection-start-column="58" selection-end-line="50" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -833,10 +825,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Eventos/RepairedTrebuchet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Acoes/TunnelMovement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Acoes/ArchersAttack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tp/TP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
         </state>
       </provider>
     </entry>

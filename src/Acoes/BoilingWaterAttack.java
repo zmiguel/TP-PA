@@ -18,7 +18,7 @@ public class BoilingWaterAttack {
     public void acao(EnemyTrack ET, DRM drm){
            
         int valor = 0;
-        Dado dado = null;
+        Dado dado = new Dado();
                      
                     System.out.println("Boiling Water Attack");
                     System.out.println("[1] - Ladder");

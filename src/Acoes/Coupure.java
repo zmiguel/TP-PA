@@ -15,7 +15,7 @@ import tp.StatusTrack;
  */
 public class Coupure {
      public void acao(StatusTrack ST, DRM drm){
-           Dado dado = null;
+           Dado dado = new Dado();
            int valor = 0;
            
            valor = dado.rodaDado();

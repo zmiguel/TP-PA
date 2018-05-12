@@ -15,7 +15,7 @@ import tp.StatusTrack;
  */
 public class SupplyRaid {
     public void acao(DRM drm, StatusTrack ST){
-           Dado dado = null;
+           Dado dado = new Dado();
            int valor = 0;
            
            valor = dado.rodaDado();

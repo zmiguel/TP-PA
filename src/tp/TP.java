@@ -64,7 +64,7 @@ public class TP {
             while(!sair){
                 
                 if(ST.getTunnel() == 3){
-                    Dado d;
+                    Dado d = null;
                     int valor = d.rodaDado();
                     if (valor == 1){
                         ST.setTunnel(0);

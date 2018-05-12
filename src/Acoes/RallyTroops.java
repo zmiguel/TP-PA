@@ -26,7 +26,7 @@ public class RallyTroops {
             drm.setMoraleAction(drm.getMoraleAction() + 1);
         }
 
-        Dado dado = null;
+        Dado dado = new Dado();
         int valor = dado.rodaDado();
 
         if(valor + drm.getMoraleAction() > 4){

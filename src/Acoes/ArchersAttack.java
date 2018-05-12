@@ -16,7 +16,7 @@ import tp.DRM;
  */
 public class ArchersAttack {
     public void acao(EnemyTrack ET, DRM drm){
-           Dado dado = null;
+           Dado dado = new Dado();
            int valor = 0;
            
             System.out.println("Archers Attack!\n");

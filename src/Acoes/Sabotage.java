@@ -16,7 +16,7 @@ import tp.StatusTrack;
  */
 public class Sabotage {
     public void acao(StatusTrack ST, EnemyTrack ET, DRM drm){
-        Dado dado = null;
+        Dado dado = new Dado();
         int valor = dado.rodaDado();
 
         if(valor == 1){
