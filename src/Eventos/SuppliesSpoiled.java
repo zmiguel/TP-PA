@@ -5,8 +5,6 @@
  */
 package Eventos;
 
-import java.util.ArrayList;
-import tp.Cartas;
 import tp.StatusTrack;
 
 /**
@@ -15,7 +13,7 @@ import tp.StatusTrack;
  */
 public class SuppliesSpoiled {
     
-    public void evento(ArrayList<Cartas> Baralho, StatusTrack ST){
+    public void evento( StatusTrack ST){
            
         ST.setSupplies(ST.getSupplies() - 1);
         System.out.print("\nSUPPLIES: " + ST.getSupplies());

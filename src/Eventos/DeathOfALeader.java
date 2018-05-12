@@ -5,8 +5,6 @@
  */
 package Eventos;
 
-import java.util.ArrayList;
-import tp.Cartas;
 import tp.StatusTrack;
 
 /**
@@ -14,7 +12,7 @@ import tp.StatusTrack;
  * @author Ricardo Marques
  */
 public class DeathOfALeader {
-    public void evento(ArrayList<Cartas> Baralho, StatusTrack ST){
+    public void evento( StatusTrack ST){
            
         ST.setMorale(ST.getMorale() - 1);
       
