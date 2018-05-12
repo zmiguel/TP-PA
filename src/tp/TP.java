@@ -170,7 +170,10 @@ public class TP {
                      }
   
                      for(int n = 0;n < Baralho.get(0).getNumActions(); n++){
-                        System.out.println("[1] - Archers Attack");
+                         
+                         
+                        System.out.println("AÇÕES POR REALIZAR: " + (Baralho.get(0).getNumActions() - n));
+                        System.out.println("\n[1] - Archers Attack");
                         System.out.println("[2] - Boiling Water Attack");
                         System.out.println("[3] - Close Combat Attack");
                         System.out.println("[4] - Coupure");
@@ -232,7 +235,6 @@ public class TP {
                     ST.setBadWeather(false);
                     Baralho.remove(0);
                     System.out.print("\n\n[1] - TIRAR CARTA\n[2] - GRAVAR\n[3] - SAIR\n>");
-                    
                 }
                 
             }
