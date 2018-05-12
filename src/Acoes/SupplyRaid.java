@@ -19,6 +19,8 @@ public class SupplyRaid {
            int valor = 0;
            
            valor = dado.rodaDado();
+
+           System.out.println("Dado: " + valor);
            
            if(valor +  drm.getRaidAction() > 5){
                ST.setStolenSupplies(ST.getStolenSupplies() + 2);
