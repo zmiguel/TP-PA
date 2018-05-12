@@ -45,7 +45,7 @@ public class TP {
     public static void main(String[] args) {
         EnemyTrack ET = new EnemyTrack();
         StatusTrack ST = new StatusTrack();
-        ArrayList<Cartas> Baralho = new ArrayList<>();
+        
         boolean sair = false;
         DRM drm = new DRM();
         Dado dado = new Dado();
@@ -54,15 +54,19 @@ public class TP {
         Contexto c1 = new Contexto();
         
         //CRIAR CARTAS  
-        for(int i = 0; i < 7; i++){
-            Baralho.add(new Cartas(i));
-        }
+        
     
         while(getInput() != 1){}
-
-            Collections.shuffle(Baralho);
+            
 
             while(!sair){
+                ArrayList<Cartas> Baralho = new ArrayList<>();
+                    for(int i = 0; i < 7; i++){
+                         Baralho.add(new Cartas(i));
+                    }
+            
+                    Collections.shuffle(Baralho);
+                
                 
                 if(ST.getTunnel() == 3){
                     
@@ -217,7 +221,6 @@ public class TP {
                                 }else{
                                       System.out.println("Nenhum está no Close Combat");   
                                     }
-
                         }else if(choice == 4){
                             if(ST.getWall() >= 4){
                                 System.out.println("Wall maxed out");
@@ -259,20 +262,27 @@ public class TP {
                                 break;
                             }
                         }
-                   }
+                    }
                    
-                    
-                                 
-                     }
+                    }
                      
                     System.out.print("\n" + ET.toString());
                     System.out.print(ST.toString());
+                    
                     drm.resetDRM();
                     ST.setBadWeather(false);
-                    Baralho.remove(0);
-                    System.out.print("\n\n[1] - TIRAR CARTA\n[2] - GRAVAR\n[3] - SAIR\n>");
+                    
+                    
+                    if(Baralho.isEmpty()){
+                        break;
+                    }else{
+                        Baralho.remove(0);
+                        System.out.print("\n\n[1] - TIRAR CARTA\n[2] - GRAVAR\n[3] - SAIR\n>");
+                    }
+                    
                 }
                 
+                Baralho.get(0).incDia();
             }
     }
     
