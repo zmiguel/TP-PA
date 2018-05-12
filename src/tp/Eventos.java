@@ -33,4 +33,8 @@ class Eventos {
         return mov;
     }
     
+    public String getDesc(){
+        return descricao;
+    }
+    
 }

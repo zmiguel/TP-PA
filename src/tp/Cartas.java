@@ -12,7 +12,7 @@ package tp;
 public class Cartas {
     
     private final int id;
-    private final int dia = 0;
+    private int dia = 0;
     private final Eventos[] Evento = new Eventos[3];
     
     public Cartas(int i){
@@ -73,9 +73,13 @@ public class Cartas {
       return (Evento[dia].nome);
   }
   
+  public void incDia(){
+      dia = dia++;
+  }
+  
    @Override
    public String toString() {
-        return ("Carta: "+ id + " Evento: " + Evento[dia].nome);
+        return ("Carta: "+ id + " Evento: " + Evento[dia].nome + " Descrição: " + Evento[dia].getDesc());
    }
    
 }
