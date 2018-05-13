@@ -12,11 +12,12 @@ package tp;
 public class Cartas {
     
     private final int id;
-    private int dia = 0;
+    private int dia;
     private final Eventos[] Evento = new Eventos[3];
     
-    public Cartas(int i){
+    public Cartas(int i, int dd){
         this.id = i + 1;
+        this.dia = dd;
         String []enemyCombo = {"Nothing"};
         String []enemyCombo1 = {"Ladders"};
         String []enemyCombo2 = {"Battering Ram"};

@@ -17,6 +17,7 @@ public class StatusTrack {
     private boolean badWeather = false;
     private int stolenSupplies;
     private boolean sairTunnel;
+    private int dia;
 
     public StatusTrack() {
         this.wall = 4;
@@ -25,6 +26,7 @@ public class StatusTrack {
         this.tunnel = 0;
         this.stolenSupplies = 0;
         this.sairTunnel = true;
+        this.dia = 0;
     }
     
     public int getWall(){
@@ -83,10 +85,19 @@ public class StatusTrack {
         this.sairTunnel = sairTunnel;
     }
 
+    public int getDia() {
+        return dia;
+    }
+
+    public void setDia(int dia) {
+        this.dia = dia;
+    }
+
     public void captured(){
         setStolenSupplies(0);
         setMorale(getMorale() - 1);
         setTunnel(0);
+        sairTunnel = true;
     }
 
     public void saveRaided(){

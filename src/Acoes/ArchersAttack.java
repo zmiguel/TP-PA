@@ -38,6 +38,7 @@ public class ArchersAttack {
                         acaoRealizada = true;
                     }else{
                         System.out.println("Ataque ineficaz");
+                        acaoRealizada = true;
                     } 
                }else if(choice == 2 && ET.getPosBatteringRam() != 4){
                     if(valor + drm.getBatteringRam() > ET.getStrenghtBatteringRam() ){
@@ -46,6 +47,7 @@ public class ArchersAttack {
                         acaoRealizada = true;
                     }else{
                         System.out.println("Ataque ineficaz");
+                        acaoRealizada = true;
                     } 
                }else if(choice == 3  && ET.getPosSiegeTower() != 4){
                     if(valor + drm.getSiegeTower() > ET.getStrenghtSiegeTower()){
@@ -54,6 +56,7 @@ public class ArchersAttack {
                         acaoRealizada = true;
                     }else{
                         System.out.println("Ataque ineficaz");
+                        acaoRealizada = true;
                     } 
                 }
             }

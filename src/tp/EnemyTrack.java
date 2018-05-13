@@ -103,6 +103,18 @@ public class EnemyTrack {
         SiegeTower = v;
     }
 
+    public boolean perdaJogoInsta(){
+        if(posBatteringRam ==0 && posLadder == 0 && posSiegeTower == 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean perdaJogoFimTurno(){
+        if(posLadder == 0 && posBatteringRam == 0 || posLadder == 0)
+    }
+
     @Override
     public String toString(){
         return ("ENEMY TRACK\nPosition Ladders: " + posLadder + "\nPosition Battering Ram: " + posBatteringRam + "\nPosition Siege Tower: " + posSiegeTower + "\n");
