@@ -112,7 +112,11 @@ public class EnemyTrack {
     }
 
     public boolean perdaJogoFimTurno(){
-        if(posLadder == 0 && posBatteringRam == 0 || posLadder == 0)
+        if(posLadder == 0 && posBatteringRam == 0 || posLadder == 0 && posSiegeTower == 0 || posBatteringRam == 0 && posSiegeTower == 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     @Override
