@@ -131,6 +131,20 @@ public class StatusTrack {
         }
     }
     
+    public boolean perdaJogoInsta(){
+        if(wall == 0 && morale == 0 || wall == 0 && supplies == 0 || morale == 0 && supplies == 0){
+            return true;
+        }
+        return false;
+    }
+    
+    public boolean perdaJogoFimTurno(){
+        if(wall == 0 || morale == 0 || supplies == 0){
+            return true;
+        }
+        return false;
+    }
+    
     
      @Override
     public String toString(){
