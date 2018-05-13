@@ -5,10 +5,15 @@
  */
 package Estados;
 
+import java.io.Serializable;
+import tp.Mundo;
 /**
  *
  * @author Ricardo Marques
  */
-public class aguardaRetiradaDeCarta {
+public class JogoTerminado extends Adapter implements Serializable {
     
+    public JogoTerminado(Mundo mundo){
+        super(mundo);
+    }
 }
