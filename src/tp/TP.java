@@ -82,6 +82,7 @@ public class TP {
             while (getInput() == 1) {
                 if (Baralho.isEmpty()) {
                     System.out.println("Final do dia.");
+                    ST.setSupplies(ST.getSupplies()-1);
                     ST.setDia(ST.getDia() + 1);
                     break;
                 }
@@ -174,6 +175,10 @@ public class TP {
                     }
                 }
 
+                if(ST.perdaJogoInsta() || ET.perdaJogoInsta()){
+                    sair=true;
+                    break;
+                }
                 ST.TunnelFree();
 
                 for (int n = 0; n < Baralho.get(0).getNumActions(); n++) {
@@ -267,7 +272,10 @@ public class TP {
                             }
                         }
                     }
-
+                    if(ST.perdaJogoInsta() || ET.perdaJogoInsta()){
+                        sair=true;
+                        break;
+                    }
                 }
 
                 System.out.print("\n" + ET.toString());
@@ -275,6 +283,9 @@ public class TP {
 
                 drm.resetDRM();
                 ST.setBadWeather(false);
+                if(ST.perdaJogoFimTurno() || ET.perdaJogoFimTurno()){
+                    sair = true;
+                }
 
                 Baralho.remove(0);
                 System.out.print("\n\n[1] - TIRAR CARTA\n[2] - GRAVAR\n[3] - SAIR\n>");

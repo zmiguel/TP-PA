@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b06f8995-442e-4d8b-b838-5d51c47e7bc0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/tp/EnemyTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tp/EnemyTrack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tp/TP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tp/TP.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,16 +19,16 @@
     <splitter split-orientation="horizontal" split-proportion="0.49174312">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="TP.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="TP.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/tp/TP.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-760">
-                  <caret line="178" column="74" lean-forward="true" selection-start-line="178" selection-start-column="74" selection-end-line="178" selection-end-column="74" />
+                <state relative-caret-position="408">
+                  <caret line="84" column="53" selection-start-line="84" selection-start-column="53" selection-end-line="84" selection-end-column="53" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="EnemyTrack.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="EnemyTrack.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/tp/EnemyTrack.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="719">
@@ -270,8 +270,8 @@
         <option value="$PROJECT_DIR$/src/tp/StatusTrack.java" />
         <option value="$PROJECT_DIR$/src/tp/Cartas.java" />
         <option value="$PROJECT_DIR$/src/Acoes/ArchersAttack.java" />
-        <option value="$PROJECT_DIR$/src/tp/TP.java" />
         <option value="$PROJECT_DIR$/src/tp/EnemyTrack.java" />
+        <option value="$PROJECT_DIR$/src/tp/TP.java" />
       </list>
     </option>
   </component>
@@ -410,12 +410,12 @@
       <option name="presentableId" value="Default" />
       <updated>1523552360108</updated>
       <workItem from="1523552363755" duration="396000" />
-      <workItem from="1526145482084" duration="23654000" />
+      <workItem from="1526145482084" duration="24175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24050000" />
+    <option name="totallyTimeSpent" value="24571000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -818,13 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tp/TP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-760">
-          <caret line="178" column="74" lean-forward="true" selection-start-line="178" selection-start-column="74" selection-end-line="178" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tp/EnemyTrack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="719">
@@ -833,6 +826,13 @@
             <element signature="e#2019#2020#0" expanded="true" />
             <element signature="e#2052#2053#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tp/TP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="84" column="53" selection-start-line="84" selection-start-column="53" selection-end-line="84" selection-end-column="53" />
         </state>
       </provider>
     </entry>
