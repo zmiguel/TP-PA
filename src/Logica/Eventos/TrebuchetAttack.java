@@ -24,12 +24,15 @@ public class TrebuchetAttack implements Serializable {
 
             if(ET.getTrebuchet() == 3){
                 ST.setWall(ST.getWall() - 2);
+                if(ST.getWall() <0) ST.setWall(0);
             }else if(ET.getTrebuchet() == 2){
                 ST.setWall(ST.getWall() - 1);
+                if(ST.getWall() <0) ST.setWall(0);
             }else if(ET.getTrebuchet() == 1){
                 valor = dado.rodaDado();
                 if(valor >= 4){
-                    ST.setWall(ST.getWall() - 1); 
+                    ST.setWall(ST.getWall() - 1);
+                    if(ST.getWall() <0) ST.setWall(0);
                 }
             }
             

@@ -20,6 +20,7 @@ public class StatusTrack implements Serializable {
     private int stolenSupplies;
     private boolean sairTunnel;
     private int dia;
+    private int accoes;
 
     public StatusTrack() {
         this.wall = 4;
@@ -29,6 +30,7 @@ public class StatusTrack implements Serializable {
         this.stolenSupplies = 0;
         this.sairTunnel = true;
         this.dia = 0;
+        this.accoes = 0;
     }
     
     public int getWall(){
@@ -93,6 +95,14 @@ public class StatusTrack implements Serializable {
 
     public void setDia(int dia) {
         this.dia = dia;
+    }
+
+    public void setAccoes(int accoes) {
+        this.accoes = accoes;
+    }
+
+    public int getAccoes() {
+        return accoes;
     }
 
     public void captured(){

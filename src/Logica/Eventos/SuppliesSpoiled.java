@@ -18,6 +18,7 @@ public class SuppliesSpoiled implements Serializable {
     public void evento( StatusTrack ST){
            
         ST.setSupplies(ST.getSupplies() - 1);
+        if(ST.getSupplies()<0) ST.setSupplies(0);
         System.out.print("\nSUPPLIES: " + ST.getSupplies());
     }  
 }

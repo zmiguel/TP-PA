@@ -17,7 +17,7 @@ public class DeathOfALeader implements Serializable {
     public void evento( StatusTrack ST){
            
         ST.setMorale(ST.getMorale() - 1);
-      
+        if(ST.getMorale()<0) ST.setMorale(0);
         System.out.print("\nMORALE: " + ST.getMorale());
 
     }   

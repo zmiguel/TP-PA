@@ -80,6 +80,8 @@ public class Mundo implements Serializable {
 
         verificaTunel();
 
+        ST.setAccoes(Baralho.get(0).getNumActions());
+
         System.out.println(Baralho.get(0).toString());
 
         if (Baralho.get(0).sss().equals("Trebuchet Attack")) {
@@ -294,6 +296,14 @@ public class Mundo implements Serializable {
     public void showETST(EnemyTrack ET, StatusTrack ST) {
         System.out.print(ET.toString());
         System.out.print(ST.toString());
+    }
+
+    public int getAccoes(){
+        return ST.getAccoes();
+    }
+
+    public void setAccoes(int a){
+        ST.setAccoes(a);
     }
 }
     

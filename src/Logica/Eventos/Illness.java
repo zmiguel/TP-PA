@@ -18,7 +18,9 @@ public class Illness implements Serializable {
     public void evento( StatusTrack ST){
            
         ST.setMorale(ST.getMorale() - 1);
+        if(ST.getMorale()<0) ST.setMorale(0);
         ST.setSupplies(ST.getSupplies() - 1);
+        if(ST.getSupplies()<0) ST.setSupplies(0);
       
         System.out.print("\nMORALE: " + ST.getMorale() + " SUPPLIES: " + ST.getSupplies());
 
