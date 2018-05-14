@@ -1,5 +1,5 @@
 
-package tp;
+package Logica;
 
 
 import java.io.Serializable;
