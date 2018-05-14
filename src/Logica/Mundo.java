@@ -12,7 +12,6 @@ import Logica.Eventos.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Scanner;
 
 /**
  * @author Ricardo Marques
@@ -177,100 +176,113 @@ public class Mundo implements Serializable {
         ST.TunnelFree();
         setEstado(estadoAtual.ProximoEstado());
     }
-
-    public void acoes() {
-        for (int n = 0; n < Baralho.get(0).getNumActions(); n++) {
-
-            boolean acaoRealizada = false;
-            showETST(ET, ST);
-
-            System.out.println("\nAÇÕES POR REALIZAR: " + (Baralho.get(0).getNumActions() - n));
-            System.out.println("[1] - Archers Attack");
-            System.out.println("[2] - Boiling Water Attack");
-            System.out.println("[3] - Close Combat Attack");
-            System.out.println("[4] - Coupure");
-            System.out.println("[5] - Rally Troops");
-            System.out.println("[6] - Tunnel Movement");
-            System.out.println("[7] - Supply Raid");
-            System.out.println("[8] - Sabotage");
-            System.out.println("[9] - Passo (nao fazer nada)");
-            System.out.print("> ");
-
-            while (!acaoRealizada) {
-                Scanner scan = new Scanner(System.in);
-                int choice = scan.nextInt();
-
-                if (choice == 1 && !ST.getWeather()) {
-                    if (ET.getPosLadder() == 4 && ET.getPosBatteringRam() == 4 && ET.getPosSiegeTower() == 4) {
-                        System.out.println("Não é possivel executar um ataque");
-                    } else {
-                        acaoRealizada = true;
-                        ArchersAttack at = new ArchersAttack();
-                        at.acao(ET, drm);
-                        break;
-                    }
-                } else if (choice == 2 && !ST.getWeather()) {
-                    if (ET.getPosLadder() != 1 && ET.getPosBatteringRam() != 1 && ET.getPosSiegeTower() != 1) {
-                        System.out.println("Não é possivel visto que nenhum está nos círculos");
-                    } else {
-                        acaoRealizada = true;
-                        BoilingWaterAttack bwa = new BoilingWaterAttack();
-                        bwa.acao(ET, drm);
-                        break;
+    
+    public boolean verificaAcao(int choice){
+    
+        if (choice == 1 && !ST.getWeather()) {
+            if (ET.getPosLadder() == 4 && ET.getPosBatteringRam() == 4 && ET.getPosSiegeTower() == 4) {
+                System.out.println("Não é possivel executar um ataque");
+                return false;
+            } else {
+                return true;
+            }
+            } else if (choice == 2 && !ST.getWeather()) {
+                if (ET.getPosLadder() != 1 && ET.getPosBatteringRam() != 1 && ET.getPosSiegeTower() != 1) {
+                    System.out.println("Não é possivel visto que nenhum está nos círculos");
+                    return false;
+                } else {
+                    return true;
                     }
                 } else if (choice == 3 && !ST.getWeather()) {
                     if (ET.getPosLadder() == 0 || ET.getPosBatteringRam() == 0 || ET.getPosSiegeTower() == 0) {
-                        acaoRealizada = true;
-                        CloseCombatAttack cca = new CloseCombatAttack();
-                        cca.acao(ET, drm);
-                        break;
+                        return true;
                     } else {
                         System.out.println("Nenhum está no Close Combat");
+                        return false;
                     }
                 } else if (choice == 4 && !ST.getWeather()) {
                     if (ST.getWall() >= 4) {
                         System.out.println("Wall maxed out");
+                        return false;
                     } else {
-                        acaoRealizada = true;
-                        Coupure c = new Coupure();
-                        c.acao(ST, drm);
-                        break;
+                        return true;
                     }
 
                 } else if (choice == 5 && !ST.getWeather()) {
                     if (ST.getMorale() >= 4) {
                         System.out.println("Morale maxed out");
-
+                        return false;
                     } else {
-                        acaoRealizada = true;
-                        RallyTroops rt = new RallyTroops();
-                        rt.acao(ST, drm);
-                        break;
+                        return true;
                     }
                 } else if (choice == 6 && !ST.getWeather()) {
-                    acaoRealizada = true;
-                    TunnelMovement tm = new TunnelMovement();
-                    tm.acao(ST);
-                    break;
+                    return true;
                 } else if (choice == 7) {
                     if (ST.getTunnel() == 3 && ST.getStolenSupplies() < 2) {
-                        acaoRealizada = true;
-                        SupplyRaid sr = new SupplyRaid();
-                        sr.acao(drm, ST);
-                        break;
+                        return true;
+                    }else{
+                        System.out.println("Supplis Maxed out or you are not in the end of the tunnel");
+                        return false;
                     }
                 } else if (choice == 8) {
                     if (ST.getTunnel() == 3) {
-                        acaoRealizada = true;
-                        Sabotage s = new Sabotage();
-                        s.acao(ST, ET, drm);
-                        break;
+                        return true;
+                    }else{
+                        System.out.println("You are not in the end of the tunnel");
+                        return false;
                     }
                 } else if (choice == 9) {
-                    acaoRealizada = true;
-                    break;
+                    return true;
                 }
+        return false;
+}
+    
+    public boolean informaAlvo(int op){
+        if(op == 1){
+            System.out.println("Archers Attack!\n");
+            System.out.println("[1] - Ladders\n");
+            System.out.println("[2] - Battering Ram\n");
+            System.out.println("[3] - Siege Tower\n");
+        }
+        
+        if(op == 2)
+    
+    }
+    
+    
+    
+    
+    public void acoes(int choice, int choice2) {
+        for (int n = 0; n < Baralho.get(0).getNumActions(); n++) {       
+            
+            switch(choice){
+                case 1: ArchersAttack at = new ArchersAttack();
+                        at.acao(ET, drm);
+                        break;
+                case 2: BoilingWaterAttack bwa = new BoilingWaterAttack();
+                        bwa.acao(ET, drm);
+                        break;
+                case 3: CloseCombatAttack cca = new CloseCombatAttack();
+                        cca.acao(ET, drm);
+                case 4: Coupure c = new Coupure();
+                        c.acao(ST, drm);
+                        break;
+                case 5: RallyTroops rt = new RallyTroops();
+                        rt.acao(ST, drm);
+                        break;
+                case 6: TunnelMovement tm = new TunnelMovement();
+                        tm.acao(ST);
+                        break;
+                case 7: SupplyRaid sr = new SupplyRaid();
+                        sr.acao(drm, ST);
+                        break;
+                case 8: Sabotage s = new Sabotage();
+                        s.acao(ST, ET, drm);
+                        break;
+                case 9: break;
+
             }
+
             if (ST.perdaJogoInsta() || ET.perdaJogoInsta()) {
                 setEstado(estadoAtual.FimDeJogo());
             }
@@ -304,6 +316,10 @@ public class Mundo implements Serializable {
 
     public void setAccoes(int a){
         ST.setAccoes(a);
+    }
+    
+    public void showStatus(){
+        showETST(ET, ST);
     }
 }
     

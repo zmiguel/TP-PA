@@ -77,7 +77,47 @@ public class Main implements Serializable {
     }
     
     public void processaAcoes(){
-        m.acoes();
+        Scanner scan = new Scanner(System.in);
+        int choice;
+        int choice2;
+        boolean verificaAcao = false;
+        boolean verificaAlvo = false;
+        
+        m.showStatus();
+        System.out.println("\nAÇÕES POR REALIZAR: " + (m.getAccoes()));
+        System.out.println("[1] - Archers Attack");
+        System.out.println("[2] - Boiling Water Attack");
+        System.out.println("[3] - Close Combat Attack");
+        System.out.println("[4] - Coupure");
+        System.out.println("[5] - Rally Troops");
+        System.out.println("[6] - Tunnel Movement");
+        System.out.println("[7] - Supply Raid");
+        System.out.println("[8] - Sabotage");
+        System.out.println("[9] - Passo (nao fazer nada)");
+        System.out.print("> ");
+        
+        while(!verificaAcao){
+            choice = scan.nextInt();
+            verificaAcao = m.verificaAcao(choice);
+            
+            if(choice == 1 || choice == 2 || choice == 3){
+                while(!verificaAlvo){
+                    System.out.println("What target?\n");
+                    System.out.println("[1] - Ladders\n");
+                    System.out.println("[2] - Battering Ram\n");
+                    System.out.println("[3] - Siege Tower\n"); 
+                    System.out.println("> "); 
+                    choice2 = scan.nextInt();
+                    m.verificaAlvo(choice, choice2);
+                    
+                }
+                
+            
+            }
+            }
+        }
+        
+        m.acoes(choice);
     }
     
     public void fimDoDia(){
