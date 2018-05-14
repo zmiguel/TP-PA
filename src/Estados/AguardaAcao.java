@@ -22,8 +22,8 @@ public class AguardaAcao extends Adapter implements Serializable{
         if(mundo.getCards() == 0){
             return new FinalDoDia(this.getMundo());
         }else{
+            mundo.setAccoes(mundo.getAccoes()-1);
             if(mundo.getAccoes()>0){
-                mundo.setAccoes(mundo.getAccoes()-1);
                 return new AguardaAcao(mundo);
             }else{
                 return new EsperaCarta(mundo);

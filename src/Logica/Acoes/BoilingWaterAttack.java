@@ -6,7 +6,6 @@
 package Logica.Acoes;
 
 import java.io.Serializable;
-import java.util.Scanner;
 import Logica.Dado;
 import Logica.EnemyTrack;
 import Logica.DRM;
@@ -16,44 +15,40 @@ import Logica.DRM;
  * @author Ricardo Marques
  */
 public class BoilingWaterAttack implements Serializable {
-    public void acao(EnemyTrack ET, DRM drm){
-           
-        int valor = 0;
+    public void acao(EnemyTrack ET, DRM drm, int choice){
+
         Dado dado = new Dado();
-                     
-                    System.out.println("Boiling Water Attack");
-                    System.out.println("[1] - Ladder");
-                    System.out.println("[2] - Battering Ram");
-                    System.out.println("[3] - Tower Siege");
+        int valor = dado.rodaDado();
 
+        if(choice == 1){
+            if(valor + 1 + drm.getCircle() > ET.getStrenghtLadder()){
+                ET.setPosLadder(ET.getPosLadder()+ 1);
+                System.out.println("Ataque às Ladders Efetivo");
+            }else{
+                System.out.println("Ataque ineficaz");
+            }
+        }else if(choice == 2){
+            if(valor  + 1 + drm.getCircle() > ET.getStrenghtBatteringRam()){
+                ET.setPosBatteringRam(ET.getPosBatteringRam() + 1);
+                System.out.println("Ataque às Battering Ram Efetivo");
+            }else{
+                System.out.println("Ataque ineficaz");
+            }
+        }else if(choice == 3){
+            if(valor + 1 + drm.getCircle() > ET.getPosSiegeTower()){
+                ET.setPosSiegeTower(ET.getPosSiegeTower() + 1);
+                System.out.println("Ataque às Siege Tower");
+            }else{
+                System.out.println("Ataque ineficaz");
+            }
+        }
+    }
 
-                    Scanner scan = new Scanner(System.in);
-                    int choice = scan.nextInt();
-
-                    switch (choice) {
-                        case 1:  if(ET.getPosLadder() == 1){
-                                    valor = dado.rodaDado();
-                                    if(valor + 1 + drm.getCircle() > ET.getStrenghtLadder()){
-                                        ET.setPosLadder(ET.getPosLadder()+ 1);
-                                        break;
-                                    }
-                                 }
-                                 
-                        case 2: if(ET.getPosBatteringRam() == 1){
-                                    valor = dado.rodaDado();
-                                    if(valor  + 1 + drm.getCircle() > ET.getStrenghtBatteringRam()){
-                                        ET.setPosBatteringRam(ET.getPosBatteringRam() + 1);
-                                        break;
-                                    }
-                              }
-          
-                        case 3: if(ET.getPosSiegeTower() == 1){
-                                valor = dado.rodaDado();
-                                 if(valor + 1 + drm.getCircle() > ET.getPosSiegeTower()){
-                                     ET.setPosSiegeTower(ET.getPosSiegeTower() + 1);
-                                     break;
-                                 }
-                        }
-                    }
+    public boolean verificaAlvo(int c, EnemyTrack ET){
+        if(c == 1 && ET.getPosLadder() == 1 ){
+            return true;
+        }else if(c == 2 && ET.getPosBatteringRam() == 1){
+            return true;
+        }else return c == 3 && ET.getPosSiegeTower() == 1;
     }
 }

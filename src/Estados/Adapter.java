@@ -22,21 +22,9 @@ public class Adapter implements IEstados, Serializable {
     public Mundo getMundo(){
         return mundo;
     }
-    
-// --Commented out by Inspection START (14/05/2018 01:52):
-//    public void setMundo(Mundo mundo){
-//        this.mundo = mundo;
-//    }
-// --Commented out by Inspection STOP (14/05/2018 01:52)
 
-    
     @Override
     public IEstados ProximoEstado(){
-        return this;
-    }
-    
-    @Override
-    public IEstados FimDeDia(){
         return this;
     }
     

@@ -23,6 +23,15 @@ public class Mundo implements Serializable {
     private final Dado dado;
     private final ArrayList<Cartas> Baralho;
     private IEstados estadoAtual;
+    //acoes
+    ArchersAttack at;
+    BoilingWaterAttack bwa;
+    CloseCombatAttack cca;
+    Coupure c;
+    RallyTroops rt;
+    TunnelMovement tm;
+    SupplyRaid sr;
+    Sabotage s;
 
     public Mundo() {
         ET = new EnemyTrack();
@@ -31,6 +40,15 @@ public class Mundo implements Serializable {
         drm = new DRM();
         dado = new Dado();
         estadoAtual = new EsperaInicio(this);
+        //criar acoes
+        at = new ArchersAttack();
+        bwa = new BoilingWaterAttack();
+        cca = new CloseCombatAttack();
+        c = new Coupure();
+        rt = new RallyTroops();
+        tm = new TunnelMovement();
+        sr = new SupplyRaid();
+        s = new Sabotage();
     }
 
     public IEstados getEstado() {
@@ -142,13 +160,16 @@ public class Mundo implements Serializable {
         for (String movs : Baralho.get(0).combo()) {
             if (movs.equals("Ladders")) {
                 ET.setPosLadder(ET.getPosLadder() - 1);
+                if(ET.getPosLadder()<0) ET.setPosLadder(0);
             }
             if (movs.equals("Battering Ram")) {
                 ET.setPosBatteringRam(ET.getPosBatteringRam() - 1);
+                if(ET.getPosBatteringRam()<0) ET.setPosBatteringRam(0);
             }
 
             if (movs.equals("Siege Tower")) {
                 ET.setPosSiegeTower(ET.getPosSiegeTower() - 1);
+                if(ET.getPosSiegeTower()<0) ET.setPosSiegeTower(0);
             }
 
             if (movs.equals("Slowest Unit Movement")) {
@@ -174,11 +195,12 @@ public class Mundo implements Serializable {
             setEstado(estadoAtual.FimDeJogo());
         }
         ST.TunnelFree();
+        verifyClose();
         setEstado(estadoAtual.ProximoEstado());
     }
-    
-    public boolean verificaAcao(int choice){
-    
+
+    public boolean verificaAcao(int choice) {
+
         if (choice == 1 && !ST.getWeather()) {
             if (ET.getPosLadder() == 4 && ET.getPosBatteringRam() == 4 && ET.getPosSiegeTower() == 4) {
                 System.out.println("Não é possivel executar um ataque");
@@ -186,121 +208,123 @@ public class Mundo implements Serializable {
             } else {
                 return true;
             }
-            } else if (choice == 2 && !ST.getWeather()) {
-                if (ET.getPosLadder() != 1 && ET.getPosBatteringRam() != 1 && ET.getPosSiegeTower() != 1) {
-                    System.out.println("Não é possivel visto que nenhum está nos círculos");
-                    return false;
-                } else {
-                    return true;
-                    }
-                } else if (choice == 3 && !ST.getWeather()) {
-                    if (ET.getPosLadder() == 0 || ET.getPosBatteringRam() == 0 || ET.getPosSiegeTower() == 0) {
-                        return true;
-                    } else {
-                        System.out.println("Nenhum está no Close Combat");
-                        return false;
-                    }
-                } else if (choice == 4 && !ST.getWeather()) {
-                    if (ST.getWall() >= 4) {
-                        System.out.println("Wall maxed out");
-                        return false;
-                    } else {
-                        return true;
-                    }
+        } else if (choice == 2 && !ST.getWeather()) {
+            if (ET.getPosLadder() != 1 && ET.getPosBatteringRam() != 1 && ET.getPosSiegeTower() != 1) {
+                System.out.println("Não é possivel visto que nenhum está nos círculos");
+                return false;
+            } else {
+                return true;
+            }
+        } else if (choice == 3 && !ST.getWeather()) {
+            if (ET.getPosLadder() == 0 || ET.getPosBatteringRam() == 0 || ET.getPosSiegeTower() == 0) {
+                return true;
+            } else {
+                System.out.println("Nenhum está no Close Combat");
+                return false;
+            }
+        } else if (choice == 4 && !ST.getWeather()) {
+            if (ST.getWall() >= 4) {
+                System.out.println("Wall maxed out");
+                return false;
+            } else {
+                return true;
+            }
 
-                } else if (choice == 5 && !ST.getWeather()) {
-                    if (ST.getMorale() >= 4) {
-                        System.out.println("Morale maxed out");
-                        return false;
-                    } else {
-                        return true;
-                    }
-                } else if (choice == 6 && !ST.getWeather()) {
-                    return true;
-                } else if (choice == 7) {
-                    if (ST.getTunnel() == 3 && ST.getStolenSupplies() < 2) {
-                        return true;
-                    }else{
-                        System.out.println("Supplis Maxed out or you are not in the end of the tunnel");
-                        return false;
-                    }
-                } else if (choice == 8) {
-                    if (ST.getTunnel() == 3) {
-                        return true;
-                    }else{
-                        System.out.println("You are not in the end of the tunnel");
-                        return false;
-                    }
-                } else if (choice == 9) {
-                    return true;
-                }
+        } else if (choice == 5 && !ST.getWeather()) {
+            if (ST.getMorale() >= 4) {
+                System.out.println("Morale maxed out");
+                return false;
+            } else {
+                return true;
+            }
+        } else if (choice == 6 && !ST.getWeather()) {
+            return true;
+        } else if (choice == 7) {
+            if (ST.getTunnel() == 3 && ST.getStolenSupplies() < 2) {
+                return true;
+            } else {
+                System.out.println("Supplis Maxed out or you are not in the end of the tunnel");
+                return false;
+            }
+        } else if (choice == 8) {
+            if (ST.getTunnel() == 3) {
+                return true;
+            } else {
+                System.out.println("You are not in the end of the tunnel");
+                return false;
+            }
+        } else if(choice == 9){
+            return true;
+        }
         return false;
-}
-    
-    public boolean informaAlvo(int op){
-        if(op == 1){
-            System.out.println("Archers Attack!\n");
-            System.out.println("[1] - Ladders\n");
-            System.out.println("[2] - Battering Ram\n");
-            System.out.println("[3] - Siege Tower\n");
-        }
-        
-        if(op == 2)
-    
     }
-    
-    
-    
-    
+
+    public boolean verificaAlvo(int c1, int c2) {
+        if (c1 == 1) {
+            return at.verificaAlvo(c2, ET);
+        }
+        if (c1 == 2) {
+            return bwa.verificaAlvo(c2, ET);
+        }
+        if (c1 == 3) {
+            return cca.verificaAlvo(c2, ET);
+        }
+        return false;
+    }
+
     public void acoes(int choice, int choice2) {
-        for (int n = 0; n < Baralho.get(0).getNumActions(); n++) {       
-            
-            switch(choice){
-                case 1: ArchersAttack at = new ArchersAttack();
-                        at.acao(ET, drm);
-                        break;
-                case 2: BoilingWaterAttack bwa = new BoilingWaterAttack();
-                        bwa.acao(ET, drm);
-                        break;
-                case 3: CloseCombatAttack cca = new CloseCombatAttack();
-                        cca.acao(ET, drm);
-                case 4: Coupure c = new Coupure();
-                        c.acao(ST, drm);
-                        break;
-                case 5: RallyTroops rt = new RallyTroops();
-                        rt.acao(ST, drm);
-                        break;
-                case 6: TunnelMovement tm = new TunnelMovement();
-                        tm.acao(ST);
-                        break;
-                case 7: SupplyRaid sr = new SupplyRaid();
-                        sr.acao(drm, ST);
-                        break;
-                case 8: Sabotage s = new Sabotage();
-                        s.acao(ST, ET, drm);
-                        break;
-                case 9: break;
+        switch (choice) {
+            case 1:
+                at.acao(ET, drm, choice2);
+                break;
+            case 2:
+                bwa.acao(ET, drm, choice2);
+                break;
+            case 3:
+                cca.acao(ET, drm, choice2);
+                break;
+            case 4:
+                c.acao(ST, drm);
+                break;
+            case 5:
+                rt.acao(ST, drm, choice2);
+                break;
+            case 6:
+                tm.acao(ST);
+                break;
+            case 7:
+                sr.acao(drm, ST);
+                break;
+            case 8:
+                s.acao(ST, ET, drm);
+                break;
+            case 9:
+                break;
 
-            }
-
-            if (ST.perdaJogoInsta() || ET.perdaJogoInsta()) {
-                setEstado(estadoAtual.FimDeJogo());
-            }
         }
 
-        drm.resetDRM();
-        ST.setBadWeather(false);
-
-        if (ST.perdaJogoFimTurno() || ET.perdaJogoFimTurno()) {
+        if (ST.perdaJogoInsta() || ET.perdaJogoInsta()) {
             setEstado(estadoAtual.FimDeJogo());
         }
 
-        Baralho.remove(0);
+        if(ST.getAccoes()== 1){
+            drm.resetDRM();
+            resetClsoe();
+            ST.setBadWeather(false);
+
+            if (ST.perdaJogoFimTurno() || ET.perdaJogoFimTurno()) {
+                setEstado(estadoAtual.FimDeJogo());
+            }
+
+            Baralho.remove(0);
+        }
+
         setEstado(estadoAtual.ProximoEstado());
     }
 
     public void fimDoDia() {
         suppliesDrop();
+        resetTunnel();
         gerarBaralho();
         setEstado(getEstado().ProximoEstado());
     }
@@ -310,16 +334,50 @@ public class Mundo implements Serializable {
         System.out.print(ST.toString());
     }
 
-    public int getAccoes(){
+    public int getAccoes() {
         return ST.getAccoes();
     }
 
-    public void setAccoes(int a){
+    public void setAccoes(int a) {
         ST.setAccoes(a);
     }
-    
-    public void showStatus(){
+
+    public void showStatus() {
         showETST(ET, ST);
+    }
+
+    public void verifyClose(){
+        if(ET.getPosLadder()==0 && ET.getPosBatteringRam() == 0 || ET.getPosLadder() == 0 && ET.getPosSiegeTower() == 0 || ET.getPosBatteringRam() == 0 && ET.getPosSiegeTower() == 0){
+            ST.setClose(true);
+        }
+    }
+
+    public void resetClsoe(){
+        ST.setClose(false);
+    }
+
+    public boolean isClose(){
+        return ST.isClose();
+    }
+
+    public void resetTunnel(){
+        if(ST.getTunnel() == 1 || ST.getTunnel() ==2){
+            ST.saveRaided();
+        }
+        ST.setTunnel(0);
+        ST.setSairTunnel(true);
+    }
+
+    public int getSupplies() {
+        return ST.getSupplies();
+    }
+
+    public boolean ultimoDia(){
+        if(ST.getDia()==2){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
     

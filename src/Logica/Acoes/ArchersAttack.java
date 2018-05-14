@@ -6,7 +6,6 @@
 package Logica.Acoes;
 
 import java.io.Serializable;
-import java.util.Scanner;
 import Logica.Dado;
 import Logica.EnemyTrack;
 import Logica.DRM;
@@ -16,50 +15,39 @@ import Logica.DRM;
  * @author Ricardo Marques
  */
 public class ArchersAttack implements Serializable {
-    public void acao(EnemyTrack ET, DRM drm){
+    public void acao(EnemyTrack ET, DRM drm, int choice){
            Dado dado = new Dado();
-           int valor = 0;
-           boolean acaoRealizada = false;
-           
-            System.out.println("Archers Attack!\n");
-            System.out.println("[1] - Ladders\n");
-            System.out.println("[2] - Battering Ram\n");
-            System.out.println("[3] - Siege Tower\n");
-           
-           
-            while(!acaoRealizada){
-               Scanner scan = new Scanner(System.in);
-               int choice = scan.nextInt();
-               valor = dado.rodaDado();
-                    
-               if(choice == 1 && ET.getPosLadder() != 4 ){
-                    if(valor + drm.getLadders() > ET.getStrenghtLadder()){
-                        ET.setPosLadder(ET.getPosLadder() + 1);
-                        System.out.println("Ataque às Ladders Efetivo");
-                        acaoRealizada = true;
-                    }else{
-                        System.out.println("Ataque ineficaz");
-                        acaoRealizada = true;
-                    } 
-               }else if(choice == 2 && ET.getPosBatteringRam() != 4){
-                    if(valor + drm.getBatteringRam() > ET.getStrenghtBatteringRam() ){
-                        ET.setPosBatteringRam(ET.getPosBatteringRam() + 1);
-                        System.out.println("Ataque às Battering Ram Efetivo");
-                        acaoRealizada = true;
-                    }else{
-                        System.out.println("Ataque ineficaz");
-                        acaoRealizada = true;
-                    } 
-               }else if(choice == 3  && ET.getPosSiegeTower() != 4){
-                    if(valor + drm.getSiegeTower() > ET.getStrenghtSiegeTower()){
-                        ET.setPosSiegeTower(ET.getPosSiegeTower() + 1);
-                        System.out.println("Ataque às Siege Tower");
-                        acaoRealizada = true;
-                    }else{
-                        System.out.println("Ataque ineficaz");
-                        acaoRealizada = true;
-                    } 
-                }
+           int valor = dado.rodaDado();
+
+        if(choice == 1){
+            if(valor + drm.getLadders() > ET.getStrenghtLadder()){
+                ET.setPosLadder(ET.getPosLadder() + 1);
+                System.out.println("Ataque às Ladders Efetivo");
+            }else{
+                System.out.println("Ataque ineficaz");
             }
-    } 
+        }else if(choice == 2){
+            if(valor + drm.getBatteringRam() > ET.getStrenghtBatteringRam() ){
+                ET.setPosBatteringRam(ET.getPosBatteringRam() + 1);
+                System.out.println("Ataque às Battering Ram Efetivo");
+            }else{
+                System.out.println("Ataque ineficaz");
+            }
+        }else if(choice == 3){
+            if(valor + drm.getSiegeTower() > ET.getStrenghtSiegeTower()){
+                ET.setPosSiegeTower(ET.getPosSiegeTower() + 1);
+                System.out.println("Ataque às Siege Tower");
+            }else{
+                System.out.println("Ataque ineficaz");
+            }
+        }
+    }
+
+    public boolean verificaAlvo(int c, EnemyTrack ET){
+        if(c == 1 && ET.getPosLadder() <= 4 ){
+            return true;
+        }else if(c == 2 && ET.getPosBatteringRam() <= 4){
+            return true;
+        }else return c == 3 && ET.getPosSiegeTower() <= 4;
+    }
 }

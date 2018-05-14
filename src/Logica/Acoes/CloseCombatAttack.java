@@ -8,56 +8,46 @@ package Logica.Acoes;
 import Logica.Dado;
 import Logica.EnemyTrack;
 import Logica.DRM;
-
 import java.io.Serializable;
-import java.util.Scanner;
 
 /**
  *
  * @author Ricardo Marques
  */
 public class CloseCombatAttack implements Serializable {
-    public void acao(EnemyTrack ET, DRM drm){
+    public void acao(EnemyTrack ET, DRM drm, int choice){
         Dado dado = new Dado();
-        int valor;
+        int valor = dado.rodaDado();
 
-        System.out.println("Close Combat Attack!\n");
-        System.out.println("[1] - Ladders\n");
-        System.out.println("[2] - Battering Ram\n");
-        System.out.println("[3] - Siege Tower\n");
-
-        Scanner scan = new Scanner(System.in);
-        int choice = scan.nextInt();
-
-        valor = dado.rodaDado();
-
-        switch (choice) {
-            case 1: if(ET.getPosLadder()==0){
-                if(valor + drm.getClose() > 4){
-                    ET.setPosLadder(1);
-                    break;
-                }
+        if(choice == 1){
+            if(valor + drm.getClose() > 4){
+                ET.setPosLadder(1);
+                System.out.println("Ataque às Ladders Efetivo");
             }else{
-                System.out.print("Escolha Inválida");
+                System.out.println("Ataque ineficaz");
             }
-            case 2: if(ET.getPosBatteringRam()==0){
-                if(valor + drm.getClose() > 4){
-                    ET.setPosBatteringRam(1);
-                    break;
-                }
+        }else if(choice == 2){
+            if(valor + drm.getClose() > 4){
+                ET.setPosBatteringRam(1);
+                System.out.println("Ataque às Battering Ram Efetivo");
             }else{
-                System.out.print("Escolha Inválida");
+                System.out.println("Ataque ineficaz");
             }
-            case 3: if(ET.getPosSiegeTower()==0){
-                if(valor + drm.getClose() > 4){
-                    ET.setPosSiegeTower(1);
-                    break;
-                }
+        }else if(choice == 3){
+            if(valor + drm.getClose() > 4){
+                ET.setPosSiegeTower(1);
+                System.out.println("Ataque às Siege Tower");
             }else{
-                System.out.print("Escolha Inválida");
+                System.out.println("Ataque ineficaz");
             }
-            default: System.out.print("Escolha Inválida");
-
         }
+    }
+
+    public boolean verificaAlvo(int c, EnemyTrack ET){
+        if(c == 1 && ET.getPosLadder() == 0 ){
+            return true;
+        }else if(c == 2 && ET.getPosBatteringRam() == 0){
+            return true;
+        }else return c == 3 && ET.getPosSiegeTower() == 0;
     }
 }

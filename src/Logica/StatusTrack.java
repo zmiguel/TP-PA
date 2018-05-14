@@ -21,6 +21,7 @@ public class StatusTrack implements Serializable {
     private boolean sairTunnel;
     private int dia;
     private int accoes;
+    private boolean close;
 
     public StatusTrack() {
         this.wall = 4;
@@ -31,6 +32,7 @@ public class StatusTrack implements Serializable {
         this.sairTunnel = true;
         this.dia = 0;
         this.accoes = 0;
+        this.close = false;
     }
     
     public int getWall(){
@@ -103,6 +105,14 @@ public class StatusTrack implements Serializable {
 
     public int getAccoes() {
         return accoes;
+    }
+
+    public void setClose(boolean close) {
+        this.close = close;
+    }
+
+    public boolean isClose() {
+        return close;
     }
 
     public void captured(){

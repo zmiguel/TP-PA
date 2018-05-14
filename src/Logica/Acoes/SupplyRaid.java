@@ -18,21 +18,21 @@ import java.io.Serializable;
 public class SupplyRaid implements Serializable {
     public void acao(DRM drm, StatusTrack ST){
            Dado dado = new Dado();
-           int valor = 0;
-           
-           valor = dado.rodaDado();
+           int valor = dado.rodaDado();
 
-           System.out.println("Dado: " + valor);
-           
-           if(valor +  drm.getRaidAction() > 5){
-               ST.setStolenSupplies(ST.getStolenSupplies() + 2);
-               System.out.println("Two Supplies Stolen with sucess");
-           }else if(valor + drm.getRaidAction() <= 5 && valor + drm.getRaidAction() >= 3){
-               ST.setStolenSupplies(ST.getStolenSupplies() + 1);
-               System.out.println("One Supplie stolen with sucess");
-           }else if(valor + drm.getRaidAction() == 1){
+           if(valor == 1){
                System.out.println("Unit Captured :(");
                ST.captured();
+           }else {
+               if (valor + drm.getRaidAction() > 5) {
+                   ST.setStolenSupplies(ST.getStolenSupplies() + 2);
+                   System.out.println("Two Supplies Stolen with sucess");
+               } else if (valor + drm.getRaidAction() <= 5 && valor + drm.getRaidAction() >= 3) {
+                   ST.setStolenSupplies(ST.getStolenSupplies() + 1);
+                   System.out.println("One Supplie stolen with sucess");
+               }else{
+                   System.out.println("You get NOTHING!");
+               }
            }
         }
 }

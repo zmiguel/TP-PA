@@ -12,5 +12,4 @@ package Estados;
 public interface IEstados {
     IEstados ProximoEstado();
     IEstados FimDeJogo();
-    IEstados FimDeDia();
 }

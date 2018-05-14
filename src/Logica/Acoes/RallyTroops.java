@@ -8,22 +8,15 @@ package Logica.Acoes;
 import Logica.DRM;
 import Logica.Dado;
 import Logica.StatusTrack;
-
 import java.io.Serializable;
-import java.util.Scanner;
 
 /**
  *
  * @author Ricardo Marques
  */
 public class RallyTroops implements Serializable {
-    public void acao(StatusTrack ST, DRM drm) {
-        System.out.println("Spend 1 Supply for +1 DRM?? (you have " + ST.getSupplies() + " supplies) [N/y]");
-
-        Scanner scan = new Scanner(System.in);
-        char choice = scan.next().charAt(0);
-
-        if(choice == 'y' || choice == 'Y'){
+    public void acao(StatusTrack ST, DRM drm, int choice) {
+        if(choice == 1){
             ST.setSupplies(ST.getSupplies() -1);
             drm.setMoraleAction(drm.getMoraleAction() + 1);
         }
