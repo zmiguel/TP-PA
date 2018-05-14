@@ -3,17 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Estados;
+package Logica.Eventos;
+
+import Logica.DRM;
 
 import java.io.Serializable;
-import Logica.Mundo;
+
 /**
  *
  * @author Ricardo Marques
  */
-public class JogoTerminado extends Adapter implements Serializable {
-    
-    public JogoTerminado(Mundo mundo){
-        super(mundo);
+public class VolleyOfArrows implements Serializable {
+
+    public void evento(DRM drm){
+        drm.setSiegeTower(1);
+        drm.setBatteringRam(1);
+        drm.setLadders(1);
     }
 }

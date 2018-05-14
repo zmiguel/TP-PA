@@ -6,7 +6,7 @@
 package Estados;
 
 import java.io.Serializable;
-import tp.Mundo;
+import Logica.Mundo;
 /**
  *
  * @author Ricardo Marques

@@ -29,7 +29,7 @@
 ## Componentes
 
 ### 9 Cartas
-  - 7 Eventos
+  - 7 Logica.Evento
   - 1 inimigos
   - 1 Status
     

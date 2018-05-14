@@ -6,7 +6,7 @@
 package Estados;
 
 import java.io.Serializable;
-import tp.Mundo;
+import Logica.Mundo;
 
 /**
  *
@@ -18,7 +18,7 @@ public class AguardaAcao extends Adapter implements Serializable{
         super(mundo);
     }
     
-    public IEstados proximoEstado(){
+    public IEstados ProximoEstado(){
         if(mundo.getCards() == 0){
             return new FinalDoDia(this.getMundo());
         }else{
