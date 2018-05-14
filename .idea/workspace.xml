@@ -2,52 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b06f8995-442e-4d8b-b838-5d51c47e7bc0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Logica/Mundo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/built-jar.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Acoes/ArchersAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Acoes/ArchersAttack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Acoes/BoilingWaterAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Acoes/BoilingWaterAttack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Acoes/CloseCombatAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Acoes/CloseCombatAttack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Acoes/Coupure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Acoes/Coupure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Acoes/RallyTroops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Acoes/RallyTroops.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Acoes/Sabotage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Acoes/Sabotage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Acoes/SupplyRaid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Acoes/SupplyRaid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Acoes/TunnelMovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Acoes/TunnelMovement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Estados/Adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/Adapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Estados/AguardaAcao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/AguardaAcao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Estados/EsperaCarta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/EsperaCarta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Estados/EsperaInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/EsperaInicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Estados/FinalDoDia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/FinalDoDia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Estados/JogoTerminado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Estados/JogoTerminado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/BadWeather.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/BadWeather.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/BoilingOil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/BoilingOil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/Collapsed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/Collapsed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/CoverOfDarkness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/CoverOfDarkness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/DeathOfALeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/DeathOfALeader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/DeterminedEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/DeterminedEnemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/EnemyFatigue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/EnemyFatigue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/Faith.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/Faith.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/FlamingArrows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/FlamingArrows.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/GateFortified.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/GateFortified.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/GuardsDistracted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/GuardsDistracted.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/Illness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/Illness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/IronShields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/IronShields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/Rally.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/Rally.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/RepairedTrebuchet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/RepairedTrebuchet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/SuppliesSpoiled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/SuppliesSpoiled.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/TrebuchetAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/TrebuchetAttack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Eventos/VolleyOfArrows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Eventos/VolleyOfArrows.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tp/Cartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Cartas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tp/DRM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/DRM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tp/Dado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Dado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tp/EnemyTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/EnemyTrack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tp/Eventos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Evento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/texto/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tp/Mundo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tp/StatusTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/StatusTrack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/Mundo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Mundo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,8 +19,8 @@
           <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/ui/texto/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="226">
-                  <caret line="104" column="21" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
+                <state relative-caret-position="345">
+                  <caret line="79" column="18" lean-forward="true" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1783#1784#0" expanded="true" />
@@ -84,8 +39,8 @@
           <file leaf-file-name="Mundo.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Logica/Mundo.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="175">
-                  <caret line="196" column="19" selection-start-line="196" selection-start-column="19" selection-end-line="196" selection-end-column="19" />
+                <state relative-caret-position="243">
+                  <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -208,8 +163,8 @@
         <option value="$PROJECT_DIR$/src/Logica/Eventos.java" />
         <option value="$PROJECT_DIR$/src/Estados/Adapter.java" />
         <option value="$PROJECT_DIR$/src/Logica/Evento.java" />
-        <option value="$PROJECT_DIR$/src/Logica/Mundo.java" />
         <option value="$PROJECT_DIR$/src/ui/texto/Main.java" />
+        <option value="$PROJECT_DIR$/src/Logica/Mundo.java" />
       </list>
     </option>
   </component>
@@ -344,12 +299,12 @@
       <updated>1523552360108</updated>
       <workItem from="1523552363755" duration="396000" />
       <workItem from="1526145482084" duration="24219000" />
-      <workItem from="1526242717350" duration="6873000" />
+      <workItem from="1526242717350" duration="7723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31488000" />
+    <option name="totallyTimeSpent" value="32338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -369,7 +324,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1484375" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1484375" />
       <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.39747635" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32912722" />
@@ -840,8 +795,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/texto/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="104" column="21" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
+        <state relative-caret-position="345">
+          <caret line="79" column="18" lean-forward="true" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1783#1784#0" expanded="true" />
@@ -854,8 +809,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logica/Mundo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="196" column="19" selection-start-line="196" selection-start-column="19" selection-end-line="196" selection-end-column="19" />
+        <state relative-caret-position="243">
+          <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

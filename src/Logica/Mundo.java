@@ -264,7 +264,7 @@ public class Mundo implements Serializable {
                         s.acao(ST, ET, drm);
                         break;
                     }
-                } else if (choice == 9 && !ST.getWeather()) {
+                } else if (choice == 9) {
                     acaoRealizada = true;
                     break;
                 }
