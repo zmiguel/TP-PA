@@ -1,4 +1,4 @@
-package ui.graphic;
+package Logica;
 
 import Estados.*;
 import ui.graphic.*;
@@ -35,7 +35,7 @@ public class Controler implements ActionListener {
             if (estado instanceof EsperaInicio) {
                 mi.setVisible(true);
             } else if (estado instanceof EsperaCarta) {
-                //cartaVirada();
+                cartaVirada();
             } else if (estado instanceof AguardaAcao) {
                // processaAcoes();
             } else if (estado instanceof FinalDoDia) {
@@ -45,6 +45,13 @@ public class Controler implements ActionListener {
                 sair = true;
             }
         }
+    }
+
+    public void cartaVirada() {
+        mi.setVisible(false);
+        m.viraCarta();
+        j.updateActionCard();
+        j.setVisible(true);
     }
 
     @Override

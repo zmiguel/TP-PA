@@ -8,6 +8,7 @@ package Logica;
 import Estados.*;
 import Logica.Acoes.*;
 import Logica.Eventos.*;
+import java.util.Observable;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ import java.util.Collections;
 /**
  * @author Ricardo Marques
  */
-public class Mundo implements Serializable {
+public class Mundo extends Observable implements Serializable {
     private final EnemyTrack ET;
     private final StatusTrack ST;
     private final DRM drm;
@@ -91,6 +92,10 @@ public class Mundo implements Serializable {
                 ST.captured();
             }
         }
+    }
+
+    public int getCardID(){
+        return Baralho.get(0).getID();
     }
 
     public void viraCarta() {

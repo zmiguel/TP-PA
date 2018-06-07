@@ -225,10 +225,10 @@ public class Main implements Serializable {
             valido = true;
         } catch (FileNotFoundException ex) {
             System.out.println("Erro a abrir ficheiro de recuperação...");
-            //Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(Jogo.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             System.out.println("Erro a abrir ficheiro de recuperação...");
-            //Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(Jogo.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
                 System.out.println("Erro a recuperar dados do jogo...");
                 Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);

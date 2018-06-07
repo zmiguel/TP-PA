@@ -79,6 +79,10 @@ public class Cartas implements Serializable {
   public void incDia(){
       dia = dia++;
   }
+
+  public int getID(){
+        return id;
+  }
   
    @Override
    public String toString() {
