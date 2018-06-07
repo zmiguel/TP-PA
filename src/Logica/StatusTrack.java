@@ -118,6 +118,7 @@ public class StatusTrack implements Serializable {
     public void captured(){
         setStolenSupplies(0);
         setMorale(getMorale() - 1);
+        if(getMorale()<0) setMorale(0);
         setTunnel(0);
         sairTunnel = true;
     }
@@ -162,7 +163,7 @@ public class StatusTrack implements Serializable {
     }
     
     
-     @Override
+    @Override
     public String toString(){
         return ("\nSTATUS TRACK\nWall: " + wall + "\nMorale: " + morale + "\nSupplies: " + supplies + "\nTunnel: " + tunnel + "\nRaided Supplies: " + stolenSupplies + "\n");
     }
