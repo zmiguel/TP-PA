@@ -320,6 +320,6 @@ public class Jogo extends JFrame implements Observer {
     }
 
     public void updateValidActions(){
-        
+
     }
 }
