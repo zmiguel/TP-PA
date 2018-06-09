@@ -13,7 +13,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 
-public class Controler implements ActionListener {
+public class Controler implements ActionListener{
     private Mundo m;
     private MenuInicial mi;
     private Jogo j;
@@ -51,6 +51,7 @@ public class Controler implements ActionListener {
         mi.setVisible(false);
         m.viraCarta();
         j.updateActionCard();
+        j.updateTrackers();
         j.setVisible(true);
     }
 

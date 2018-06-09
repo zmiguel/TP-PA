@@ -21,6 +21,7 @@ public class MenuInicial extends JFrame {
 
         setLayout(new BorderLayout(5,5));
         setSize(500,500);
+        setLocationRelativeTo(null);
 
         JLabel logo = new JLabel(new ImageIcon("9css.png"));
         logo.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -35,7 +36,6 @@ public class MenuInicial extends JFrame {
 
         IniciarJogo = new JButton("Iniciar Jogo!",iconIniciar);
         IniciarJogo.setAlignmentX(Component.CENTER_ALIGNMENT);
-        //IniciarJogo.setPreferredSize(new Dimension(200,50));
         background.add(IniciarJogo);
 
     }

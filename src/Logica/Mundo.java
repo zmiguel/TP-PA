@@ -384,5 +384,13 @@ public class Mundo extends Observable implements Serializable {
             return false;
         }
     }
+
+    public StatusTrack ST(){
+        return ST;
+    }
+
+    public EnemyTrack ET(){
+        return ET;
+    }
 }
     
