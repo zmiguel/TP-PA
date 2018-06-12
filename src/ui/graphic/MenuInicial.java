@@ -1,18 +1,19 @@
 package ui.graphic;
 
-import com.sun.jdi.InconsistentDebugInfoException;
-import ui.graphic.*;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class MenuInicial extends JFrame {
     JPanel Painel;
     JButton IniciarJogo;
+    JButton ContinuarJogo;
+    JButton Sair;
 
     Icon iconIniciar = new ImageIcon("inicio.png");
+    Icon iconContinua = new ImageIcon("FloppyDisk.png");
+    Icon iconSair = new ImageIcon("sair.png");
 
     public MenuInicial(){
         this.setTitle("9Card Siege!");
@@ -34,10 +35,18 @@ public class MenuInicial extends JFrame {
         add(background,BorderLayout.CENTER);
 
 
-        IniciarJogo = new JButton("Iniciar Jogo!",iconIniciar);
+        IniciarJogo = new JButton("Iniciar Jogo",iconIniciar);
         IniciarJogo.setAlignmentX(Component.CENTER_ALIGNMENT);
         background.add(IniciarJogo);
-
+        
+        ContinuarJogo = new JButton("Continuar Jogo", iconContinua);
+        ContinuarJogo.setAlignmentX(Component.CENTER_ALIGNMENT);
+        background.add(ContinuarJogo);
+        
+        Sair = new JButton("Sair", iconSair);
+        Sair.setAlignmentX(Component.CENTER_ALIGNMENT);
+        background.add(Sair);
+        
     }
 
     public void addListener(ActionListener cont, JButton b){
