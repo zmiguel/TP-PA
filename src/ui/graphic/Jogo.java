@@ -5,8 +5,10 @@ import Logica.Mundo;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.*;
 import java.security.spec.RSAOtherPrimeInfo;
+import java.util.Dictionary;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.Scanner;
@@ -41,6 +43,9 @@ public class Jogo extends JFrame implements Observer {
 
     //botoes
     JLabel bArea = new JLabel();
+    JLabel bAreaAttack = new JLabel();
+    JLabel bAreaStatus = new JLabel();
+    JLabel bAreaOutside = new JLabel();
     JButton ArcAttack = new JButton("Archers Attack");
     JButton BoilAttack = new JButton("Boiling Water Attack");
     JButton CloseAttack = new JButton("Close Combat Attack");
@@ -49,6 +54,20 @@ public class Jogo extends JFrame implements Observer {
     JButton TunnelMovement = new JButton("Tunnel Movement");
     JButton Raid = new JButton("Supply Raid");
     JButton Sabotage = new JButton("Sabotage");
+
+    Dimension opsDim = new Dimension(200,32);
+    Dimension actDim = new Dimension(150,32);
+
+    //opçoes
+    JLabel ops = new JLabel();
+    JButton gravar = new JButton("Gravar Jogo");
+    JButton skipTurn = new JButton("Saltar turno");
+    JButton skipAction = new JButton("Saltar Acção");
+
+    //acçoes que faltam
+    JLabel actions = new JLabel();
+    JLabel actRemaining = new JLabel();
+    JLabel actText = new JLabel();
 
 
     public Jogo(Mundo m){
@@ -132,20 +151,68 @@ public class Jogo extends JFrame implements Observer {
 
         //botoes
         //area dos botoes
-        bArea.setBounds(0,450,600,200);
+        bArea.setBounds(0,450,525,200);
         bArea.setLayout(new FlowLayout());
+        bAreaAttack.setLayout(new FlowLayout());
+        bAreaAttack.setPreferredSize(new Dimension(500,42));
+        bAreaStatus.setLayout(new FlowLayout());
+        bAreaStatus.setPreferredSize(new Dimension(500,42));
+        bAreaOutside.setLayout(new FlowLayout());
+        bAreaOutside.setPreferredSize(new Dimension(500,42));
         //botoes em si
 
-        bArea.add(ArcAttack);
-        bArea.add(BoilAttack);
-        bArea.add(CloseAttack);
-        bArea.add(Coupure);
-        bArea.add(Rally);
-        bArea.add(TunnelMovement);
-        bArea.add(Raid);
-        bArea.add(Sabotage);
+        ArcAttack.setPreferredSize(actDim);
+        bAreaAttack.add(ArcAttack);
+        BoilAttack.setPreferredSize(actDim);
+        bAreaAttack.add(BoilAttack);
+        CloseAttack.setPreferredSize(actDim);
+        bAreaAttack.add(CloseAttack);
+        Coupure.setPreferredSize(actDim);
+        bAreaStatus.add(Coupure);
+        Rally.setPreferredSize(actDim);
+        bAreaStatus.add(Rally);
+        TunnelMovement.setPreferredSize(actDim);
+        bAreaStatus.add(TunnelMovement);
+        Raid.setPreferredSize(actDim);
+        bAreaOutside.add(Raid);
+        Sabotage.setPreferredSize(actDim);
+        bAreaOutside.add(Sabotage);
+        bArea.add(bAreaAttack);
+        bArea.add(bAreaStatus);
+        bArea.add(bAreaOutside);
         add(bArea);
 
+        //opçoes jogo
+        ops.setBounds(650,450,300,200);
+        ops.setLayout(new FlowLayout());
+
+        gravar.setPreferredSize(opsDim);
+        skipAction.setPreferredSize(opsDim);
+        skipTurn.setPreferredSize(opsDim);
+
+        ops.add(gravar);
+        ops.add(skipTurn);
+        ops.add(skipAction);
+
+        add(ops);
+
+        //action remaining
+        actions.setBounds(525,450,125,200);
+        actions.setLayout(new FlowLayout());
+
+        actRemaining.setText("0");
+        actRemaining.setPreferredSize(new Dimension(100,100));
+        actRemaining.setFont(new Font("Seriff",Font.BOLD, 128));
+        actRemaining.setHorizontalAlignment(SwingConstants.CENTER);
+
+        actText.setText("Ações Disponiveis.");
+        actText.setPreferredSize(new Dimension(120,48));
+        actText.setHorizontalAlignment(SwingConstants.CENTER);
+
+        actions.add(actRemaining);
+        actions.add(actText);
+
+        add(actions);
     }
 
     @Override
@@ -321,5 +388,53 @@ public class Jogo extends JFrame implements Observer {
 
     public void updateValidActions(){
 
+    }
+
+    public void addListener(ActionListener cont, JButton b){
+        b.addActionListener(cont);
+    }
+
+    public JButton getB_ArcAttack(){
+        return ArcAttack;
+    }
+
+    public JButton getB_BoilAttack(){
+        return BoilAttack;
+    }
+
+    public JButton getB_CloseAtack(){
+        return CloseAttack;
+    }
+
+    public JButton getB_Coupure(){
+        return Coupure;
+    }
+
+    public JButton getB_Rally(){
+        return Rally;
+    }
+
+    public JButton getB_TunnelMovement(){
+        return TunnelMovement;
+    }
+
+    public JButton getB_Sabotage(){
+        return Sabotage;
+    }
+
+    public JButton getB_SupplyRaid(){
+        return Raid;
+    }
+
+    public JButton getB_Gravar(){
+        return gravar;
+    }
+
+    public JButton getB_SkipTurn(){
+        return skipTurn;
+    }
+
+    public JButton getB_SkipAction(){
+        return skipAction;
     }
 }

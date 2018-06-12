@@ -25,7 +25,21 @@ public class Controler implements ActionListener{
         this.j = j;
         m.addObserver(j);
 
+        //menu iniciar listeners
         mi.addListener(this, mi.getB_Iniciar());
+
+        //jovo listeners
+        j.addListener(this,j.getB_ArcAttack());
+        j.addListener(this,j.getB_BoilAttack());
+        j.addListener(this,j.getB_CloseAtack());
+        j.addListener(this,j.getB_Coupure());
+        j.addListener(this,j.getB_Rally());
+        j.addListener(this,j.getB_TunnelMovement());
+        j.addListener(this,j.getB_Sabotage());
+        j.addListener(this,j.getB_SupplyRaid());
+        j.addListener(this,j.getB_Gravar());
+        j.addListener(this,j.getB_SkipTurn());
+        j.addListener(this,j.getB_SkipAction());
     }
 
     public void run(){
@@ -60,6 +74,9 @@ public class Controler implements ActionListener{
         Object origem = e.getSource();
         if(origem == (mi.getB_Iniciar())){
             m.jogo();
+        }
+        if(origem == (j.getB_ArcAttack())){
+            System.out.println("Arch Attack!!!");
         }
     }
 }
