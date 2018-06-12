@@ -387,7 +387,38 @@ public class Jogo extends JFrame implements Observer {
     }
 
     public void updateValidActions(){
-
+         if(m.verificaAcao(1) == false){
+             ArcAttack.setEnabled(false);
+         }
+         
+         if(m.verificaAcao(2) == false){
+             BoilAttack.setEnabled(false);
+         }
+         
+         if(m.verificaAcao(3) == false){
+             CloseAttack.setEnabled(false);
+         }
+         
+         if(m.verificaAcao(4) == false){
+             Coupure.setEnabled(false);
+         }
+         
+         if(m.verificaAcao(5) == false){
+             Rally.setEnabled(false);
+         }
+         
+         if(m.verificaAcao(6) == false){
+             TunnelMovement.setEnabled(false);
+         }
+         
+         if(m.verificaAcao(7) == false){
+             Raid.setEnabled(false);
+         }
+         
+         if(m.verificaAcao(8) == false){
+             Sabotage.setEnabled(false);
+         }
+         
     }
 
     public void addListener(ActionListener cont, JButton b){

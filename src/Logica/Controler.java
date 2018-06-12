@@ -30,7 +30,7 @@ public class Controler implements ActionListener{
         mi.addListener(this, mi.getB_Continuar());
         mi.addListener(this, mi.getB_Sair());
 
-        //jovo listeners
+        //jogo listeners
         j.addListener(this,j.getB_ArcAttack());
         j.addListener(this,j.getB_BoilAttack());
         j.addListener(this,j.getB_CloseAtack());
@@ -69,6 +69,8 @@ public class Controler implements ActionListener{
         j.updateActionCard();
         j.updateTrackers();
         j.setVisible(true);
+        
+        j.updateValidActions();
     }
 
     @Override
@@ -83,7 +85,6 @@ public class Controler implements ActionListener{
         }
         //Jogo
         if(origem == (j.getB_ArcAttack())){
-            System.out.println("Arch Attack!!!");
         }
     }
 }
