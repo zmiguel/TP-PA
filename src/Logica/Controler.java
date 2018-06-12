@@ -68,6 +68,7 @@ public class Controler implements ActionListener{
         m.viraCarta();
         j.updateActionCard();
         j.updateTrackers();
+        j.updateActionsRemaining();
         j.setVisible(true);
         
         j.updateValidActions();

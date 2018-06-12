@@ -220,6 +220,7 @@ public class Jogo extends JFrame implements Observer {
         updateActionCard();
         updateTrackers();
         updateValidActions();
+        updateActionsRemaining();
     }
 
     public void updateActionCard(){
@@ -419,6 +420,11 @@ public class Jogo extends JFrame implements Observer {
              Sabotage.setEnabled(false);
          }
          
+    }
+
+    public void updateActionsRemaining(){
+        actRemaining.setText(Integer.toString(m.getAccoes()));
+
     }
 
     public void addListener(ActionListener cont, JButton b){
