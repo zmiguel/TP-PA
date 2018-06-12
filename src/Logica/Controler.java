@@ -27,6 +27,8 @@ public class Controler implements ActionListener{
 
         //menu iniciar listeners
         mi.addListener(this, mi.getB_Iniciar());
+        mi.addListener(this, mi.getB_Continuar());
+        mi.addListener(this, mi.getB_Sair());
 
         //jovo listeners
         j.addListener(this,j.getB_ArcAttack());
@@ -72,9 +74,14 @@ public class Controler implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         Object origem = e.getSource();
+        //Menu iniciar
         if(origem == (mi.getB_Iniciar())){
             m.jogo();
         }
+        if(origem == (mi.getB_Sair())){
+            System.exit(0);
+        }
+        //Jogo
         if(origem == (j.getB_ArcAttack())){
             System.out.println("Arch Attack!!!");
         }

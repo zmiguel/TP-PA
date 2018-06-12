@@ -56,4 +56,12 @@ public class MenuInicial extends JFrame {
     public JButton getB_Iniciar(){
         return IniciarJogo;
     }
+
+    public JButton getB_Continuar(){
+        return ContinuarJogo;
+    }
+
+    public JButton getB_Sair(){
+        return Sair;
+    }
 }
