@@ -70,7 +70,6 @@ public class Controler implements ActionListener{
         j.updateTrackers();
         j.updateActionsRemaining();
         j.setVisible(true);
-        
         j.updateValidActions();
     }
 

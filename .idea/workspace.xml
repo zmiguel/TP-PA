@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b06f8995-442e-4d8b-b838-5d51c47e7bc0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/graphic/Jogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/graphic/Jogo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -79,8 +77,8 @@
           <file leaf-file-name="Jogo.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/ui/graphic/Jogo.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="562">
-                  <caret line="397" column="47" selection-start-line="397" selection-start-column="47" selection-end-line="397" selection-end-column="47" />
+                <state relative-caret-position="633">
+                  <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#7517#8276#0" />
@@ -416,12 +414,12 @@
       <workItem from="1528815498552" duration="4994000" />
       <workItem from="1528903614231" duration="33000" />
       <workItem from="1528903754104" duration="150000" />
-      <workItem from="1528904357450" duration="290000" />
+      <workItem from="1528904357450" duration="616000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73814000" />
+    <option name="totallyTimeSpent" value="74140000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1261" y="62" width="2272" height="1953" extended-state="0" />
@@ -783,8 +781,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/graphic/Jogo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="397" column="47" selection-start-line="397" selection-start-column="47" selection-end-line="397" selection-end-column="47" />
+        <state relative-caret-position="633">
+          <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#7517#8276#0" />

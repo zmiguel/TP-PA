@@ -56,7 +56,7 @@ public class Jogo extends JFrame implements Observer {
     JButton Sabotage = new JButton("Sabotage");
 
     Dimension opsDim = new Dimension(200,32);
-    Dimension actDim = new Dimension(150,32);
+    Dimension actDim = new Dimension(160,32);
 
     //opçoes
     JLabel ops = new JLabel();
@@ -400,7 +400,6 @@ public class Jogo extends JFrame implements Observer {
 
     public void updateActionsRemaining(){
         actRemaining.setText(Integer.toString(m.getAccoes()));
-
     }
 
     public void addListener(ActionListener cont, JButton b){
