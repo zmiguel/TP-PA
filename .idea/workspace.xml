@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b06f8995-442e-4d8b-b838-5d51c47e7bc0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ui/graphic/Jogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/graphic/Jogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +23,7 @@
           <file leaf-file-name="Mundo.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Logica/Mundo.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3315">
+                <state>
                   <caret line="216" column="102" selection-start-line="216" selection-start-column="102" selection-end-line="216" selection-end-column="102" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -61,11 +62,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Controler.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Controler.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Logica/Controler.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+                <state relative-caret-position="85">
+                  <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="493">
+                  <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -77,12 +87,13 @@
           <file leaf-file-name="Jogo.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/ui/graphic/Jogo.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="633">
-                  <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
+                <state relative-caret-position="855">
+                  <caret line="224" lean-forward="true" selection-start-line="224" selection-end-line="224" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#7517#8276#0" />
                     <element signature="e#8282#13458#0" />
+                    <element signature="e#13464#14331#0" />
                   </folding>
                 </state>
               </provider>
@@ -171,7 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Eventos/Collapsed.java" />
         <option value="$PROJECT_DIR$/src/Eventos/CoverOfDarkness.java" />
         <option value="$PROJECT_DIR$/src/Eventos/DeathOfALeader.java" />
         <option value="$PROJECT_DIR$/src/Eventos/DeterminedEnemy.java" />
@@ -220,8 +230,9 @@
         <option value="$PROJECT_DIR$/src/Logica/Cartas.java" />
         <option value="$PROJECT_DIR$/src/Logica/Mundo.java" />
         <option value="$PROJECT_DIR$/src/ui/graphic/MenuInicial.java" />
-        <option value="$PROJECT_DIR$/src/Logica/Controler.java" />
         <option value="$PROJECT_DIR$/src/ui/graphic/Jogo.java" />
+        <option value="$PROJECT_DIR$/src/Logica/Controler.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -414,12 +425,12 @@
       <workItem from="1528815498552" duration="4994000" />
       <workItem from="1528903614231" duration="33000" />
       <workItem from="1528903754104" duration="150000" />
-      <workItem from="1528904357450" duration="616000" />
+      <workItem from="1528904357450" duration="1039000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74140000" />
+    <option name="totallyTimeSpent" value="74563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1261" y="62" width="2272" height="1953" extended-state="0" />
@@ -435,13 +446,13 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.49947917" visible="true" weight="0.23526171" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49947917" weight="0.23526171" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6059078" visible="true" weight="0.15248227" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6060606" visible="true" weight="0.15248227" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info id="Structure" order="1" sideWeight="0.39409223" side_tool="true" visible="true" weight="0.15248227" />
+      <window_info id="Structure" order="1" sideWeight="0.3939394" side_tool="true" visible="true" weight="0.15248227" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
@@ -465,7 +476,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -478,13 +489,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/built-jar.properties" />
     <entry file="file://$PROJECT_DIR$/src/Estados/aguardaInicio.java" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tp/TP.java" />
     <entry file="file://$PROJECT_DIR$/src/Logica/Eventos/BadWeather.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -735,19 +739,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/graphic/MenuInicial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Logica/Mundo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3315">
+        <state>
           <caret line="216" column="102" selection-start-line="216" selection-start-column="102" selection-end-line="216" selection-end-column="102" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -772,22 +766,40 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/Logica/Controler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/graphic/Jogo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
+        <state relative-caret-position="855">
+          <caret line="224" lean-forward="true" selection-start-line="224" selection-end-line="224" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#7517#8276#0" />
             <element signature="e#8282#13458#0" />
+            <element signature="e#13464#14331#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/graphic/MenuInicial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logica/Controler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
         </state>
       </provider>
     </entry>
