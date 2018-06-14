@@ -4,9 +4,12 @@ import Estados.*;
 import ui.graphic.*;
 import Logica.*;
 
+import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.Observable;
@@ -55,17 +58,16 @@ public class Controler implements ActionListener{
         j.addListener(this,j.getB_SkipAction());
     }
 
-    public void run(){
+    public void run() {
         while (!sair) {
             IEstados estado = m.getEstado();
-            System.out.print("");
-            // System.out.println("PRECISO DISTO PARA FUNCIONAR ¯\\_(ツ)_/¯");
 
             if (estado instanceof EsperaInicio) {
                 mi.setVisible(true);
             } else if (estado instanceof EsperaCarta) {
                 cartaVirada();
             } else if (estado instanceof AguardaAcao) {
+                j.setVisible(true);
                 if(m.isUpdateDone()==false){
                     updates();
                     m.setUpdateDone(true);
@@ -75,6 +77,14 @@ public class Controler implements ActionListener{
             } else if (estado instanceof JogoTerminado) {
                 fimDoJogo();
                 sair = true;
+            }else{
+                System.out.println("¯\\_(ツ)_/¯");
+            }
+
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
     }
@@ -87,9 +97,13 @@ public class Controler implements ActionListener{
 
     }
     public void updates(){
+        System.out.println("Update Action");
         j.updateActionCard();
+        System.out.println("Update Trackers");
         j.updateTrackers();
+        System.out.println("Update actions remaining");
         j.updateActionsRemaining();
+        System.out.println("Update Valid");
         j.updateValidActions();
     }
 
@@ -99,6 +113,12 @@ public class Controler implements ActionListener{
         //Menu iniciar
         if(origem == (mi.getB_Iniciar())){
             m.jogo();
+        }
+        if(origem == (mi.getB_Continuar())){
+            LoadGame();
+            mi.setVisible(false);
+            m.setUpdateDone(false);
+            run();
         }
         if(origem == (mi.getB_Sair())){
             System.exit(0);
@@ -180,7 +200,15 @@ public class Controler implements ActionListener{
             System.out.println("Sabotagem.....");
             m.acoes(8,0);
         }
-
+        //ops
+        if(origem == (j.getB_Gravar())){
+            System.out.println("Gravar.....");
+            SaveGame();
+        }
+        if(origem == (j.getB_SkipTurn())){
+            System.out.println("Skip Turn.....");
+            m.skipTurn();
+        }
         if(origem == (j.getB_SkipAction())){
             System.out.println("Skip action.....");
             m.acoes(9,0);
@@ -192,4 +220,34 @@ public class Controler implements ActionListener{
         //System.exit(0);
     }
 
+    private void LoadGame(){
+        JFileChooser fc = new JFileChooser("./saves");
+        int returnVal = fc.showOpenDialog(mi);
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File file = fc.getSelectedFile();
+            try{
+                m = (Mundo)FileUtility.retrieveGameFromFile(file);
+            }catch(IOException | ClassNotFoundException ex){
+                JOptionPane.showMessageDialog(mi, "Operation failed: \r\n\r\n");
+            }
+
+        } else {
+            System.out.println("Operation canceled ");
+        }
+    }
+
+    private void SaveGame(){
+        JFileChooser fc = new JFileChooser("./saves");
+        int returnVal = fc.showSaveDialog(j);
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File file = fc.getSelectedFile();
+            try{
+                FileUtility.saveGameToFile(file, m);
+            }catch(IOException ex){
+                JOptionPane.showMessageDialog(j, "Operation failed: \r\n\r\n");
+            }
+        } else {
+            System.out.println("Operation canceled ");
+        }
+    }
 }

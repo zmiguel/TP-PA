@@ -19,11 +19,11 @@ import java.util.Collections;
  */
 public class Mundo extends Observable implements Serializable {
     private boolean updateDone;
-    private final EnemyTrack ET;
-    private final StatusTrack ST;
-    private final DRM drm;
-    private final Dado dado;
-    private final ArrayList<Cartas> Baralho;
+    private EnemyTrack ET;
+    private StatusTrack ST;
+    private DRM drm;
+    private Dado dado;
+    private ArrayList<Cartas> Baralho;
     private IEstados estadoAtual;
     //acoes
     ArchersAttack at;
@@ -340,6 +340,20 @@ public class Mundo extends Observable implements Serializable {
         resetTunnel();
         gerarBaralho();
         setEstado(getEstado().ProximoEstado());
+    }
+
+    public void skipTurn(){
+        drm.resetDRM();
+        resetClsoe();
+        ST.setBadWeather(false);
+
+        if (ST.perdaJogoFimTurno() || ET.perdaJogoFimTurno()) {
+            setEstado(estadoAtual.FimDeJogo());
+        }
+
+        Baralho.remove(0);
+        setUpdateDone(false);
+        setEstado(estadoAtual.ProximoEstado());
     }
 
     public void showETST(EnemyTrack ET, StatusTrack ST) {

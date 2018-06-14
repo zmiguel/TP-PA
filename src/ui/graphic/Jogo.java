@@ -451,14 +451,25 @@ public class Jogo extends JFrame implements Observer {
     }
 
     public void updateValidActions(){
-        ArcAttack.setEnabled(m.verificaAcao(1));
-        BoilAttack.setEnabled(m.verificaAcao(2));
-        CloseAttack.setEnabled(m.verificaAcao(3));
-        Coupure.setEnabled(m.verificaAcao(4));
-        Rally.setEnabled(m.verificaAcao(5));
-        TunnelMovement.setEnabled(m.verificaAcao(6));
-        Raid.setEnabled(m.verificaAcao(7));
-        Sabotage.setEnabled(m.verificaAcao(8));
+        if(m.isClose()){
+            ArcAttack.setEnabled(false);
+            BoilAttack.setEnabled(false);
+            CloseAttack.setEnabled(m.verificaAcao(3));
+            Coupure.setEnabled(false);
+            Rally.setEnabled(false);
+            TunnelMovement.setEnabled(false);
+            Raid.setEnabled(false);
+            Sabotage.setEnabled(false);
+        }else{
+            ArcAttack.setEnabled(m.verificaAcao(1));
+            BoilAttack.setEnabled(m.verificaAcao(2));
+            CloseAttack.setEnabled(m.verificaAcao(3));
+            Coupure.setEnabled(m.verificaAcao(4));
+            Rally.setEnabled(m.verificaAcao(5));
+            TunnelMovement.setEnabled(m.verificaAcao(6));
+            Raid.setEnabled(m.verificaAcao(7));
+            Sabotage.setEnabled(m.verificaAcao(8));
+        }
 
         ArcAttackLadder.setEnabled(m.verificaAlvo(1,1));
         ArcAttackRam.setEnabled(m.verificaAlvo(1,2));
