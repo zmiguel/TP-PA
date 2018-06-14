@@ -17,7 +17,7 @@ import java.util.Observer;
 
 
 public class Controler implements ActionListener{
-    private Mundo m;
+    private volatile Mundo m;
     private MenuInicial mi;
     private Jogo j;
     boolean sair;
@@ -80,12 +80,6 @@ public class Controler implements ActionListener{
             }else{
                 System.out.println("¯\\_(ツ)_/¯");
             }
-
-            try {
-                Thread.sleep(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         }
     }
 
@@ -97,6 +91,7 @@ public class Controler implements ActionListener{
 
     }
     public void updates(){
+        j.updateMundo(m);
         System.out.println("Update Action");
         j.updateActionCard();
         System.out.println("Update Trackers");
@@ -118,7 +113,6 @@ public class Controler implements ActionListener{
             LoadGame();
             mi.setVisible(false);
             m.setUpdateDone(false);
-            run();
         }
         if(origem == (mi.getB_Sair())){
             System.exit(0);

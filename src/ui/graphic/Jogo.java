@@ -4,16 +4,9 @@ import Estados.*;
 import Logica.Mundo;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.*;
-import java.security.spec.RSAOtherPrimeInfo;
-import java.util.Dictionary;
 import java.util.Observable;
 import java.util.Observer;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 
@@ -486,6 +479,10 @@ public class Jogo extends JFrame implements Observer {
 
     public void updateActionsRemaining(){
         actRemaining.setText(Integer.toString(m.getAccoes()));
+    }
+
+    public void updateMundo(Mundo mundo){
+        m = mundo;
     }
 
     public void openArcMenu(){
