@@ -48,6 +48,10 @@ public class CloseCombatAttack implements Serializable {
             return true;
         }else if(c == 2 && ET.getPosBatteringRam() == 0){
             return true;
-        }else return c == 3 && ET.getPosSiegeTower() == 0;
+        }else if(c == 3 && ET.getPosSiegeTower() == 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

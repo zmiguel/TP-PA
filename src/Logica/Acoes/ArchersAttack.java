@@ -44,10 +44,14 @@ public class ArchersAttack implements Serializable {
     }
 
     public boolean verificaAlvo(int c, EnemyTrack ET){
-        if(c == 1 && ET.getPosLadder() <= 4 ){
+        if(c == 1 && ET.getPosLadder() < 4 ){
             return true;
-        }else if(c == 2 && ET.getPosBatteringRam() <= 4){
+        }else if(c == 2 && ET.getPosBatteringRam() < 4){
             return true;
-        }else return c == 3 && ET.getPosSiegeTower() <= 4;
+        }else if(c == 3 && ET.getPosSiegeTower() < 4){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

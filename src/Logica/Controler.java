@@ -32,10 +32,21 @@ public class Controler implements ActionListener{
 
         //jogo listeners
         j.addListener(this,j.getB_ArcAttack());
+        j.addListener(this,j.getB_ArcAttackLadder());
+        j.addListener(this,j.getB_ArcAttackRam());
+        j.addListener(this,j.getB_ArcAttackSiege());
         j.addListener(this,j.getB_BoilAttack());
+        j.addListener(this,j.getB_BoilAttackLadder());
+        j.addListener(this,j.getB_BoilAttackRam());
+        j.addListener(this,j.getB_BoilAttackSiege());
         j.addListener(this,j.getB_CloseAtack());
+        j.addListener(this,j.getB_CloseAtackLadder());
+        j.addListener(this,j.getB_CloseAtackRam());
+        j.addListener(this,j.getB_CloseAtackSiege());
         j.addListener(this,j.getB_Coupure());
         j.addListener(this,j.getB_Rally());
+        j.addListener(this,j.getB_RallyNoSupp());
+        j.addListener(this,j.getB_RallySupp());
         j.addListener(this,j.getB_TunnelMovement());
         j.addListener(this,j.getB_Sabotage());
         j.addListener(this,j.getB_SupplyRaid());
@@ -47,17 +58,22 @@ public class Controler implements ActionListener{
     public void run(){
         while (!sair) {
             IEstados estado = m.getEstado();
+            System.out.print("");
+            // System.out.println("PRECISO DISTO PARA FUNCIONAR ¯\\_(ツ)_/¯");
 
             if (estado instanceof EsperaInicio) {
                 mi.setVisible(true);
             } else if (estado instanceof EsperaCarta) {
                 cartaVirada();
             } else if (estado instanceof AguardaAcao) {
-               // processaAcoes();
+                if(m.isUpdateDone()==false){
+                    updates();
+                    m.setUpdateDone(true);
+                }
             } else if (estado instanceof FinalDoDia) {
-                //fimDoDia();
+                m.fimDoDia();
             } else if (estado instanceof JogoTerminado) {
-                //fimDoJogo();
+                fimDoJogo();
                 sair = true;
             }
         }
@@ -66,10 +82,14 @@ public class Controler implements ActionListener{
     public void cartaVirada() {
         mi.setVisible(false);
         m.viraCarta();
+        j.setVisible(true);
+        updates();
+
+    }
+    public void updates(){
         j.updateActionCard();
         j.updateTrackers();
         j.updateActionsRemaining();
-        j.setVisible(true);
         j.updateValidActions();
     }
 
@@ -85,6 +105,91 @@ public class Controler implements ActionListener{
         }
         //Jogo
         if(origem == (j.getB_ArcAttack())){
+            System.out.println("Arc Attack.....");
+            j.openArcMenu();
+        }
+        if(origem == (j.getB_ArcAttackLadder())){
+            System.out.println("Arc Attack.....");
+            m.acoes(1,1);
+        }
+        if(origem == (j.getB_ArcAttackRam())){
+            System.out.println("Arc Attack.....");
+            m.acoes(1,2);
+        }
+        if(origem == (j.getB_ArcAttackSiege())){
+            System.out.println("Arc Attack.....");
+            m.acoes(1,3);
+        }
+        if(origem == (j.getB_BoilAttack())){
+            System.out.println("Boil Attack.....");
+            j.openBoilMenu();
+        }
+        if(origem == (j.getB_BoilAttackLadder())){
+            System.out.println("Boil Attack.....");
+            m.acoes(2,1);
+        }
+        if(origem == (j.getB_BoilAttackRam())){
+            System.out.println("Boil Attack.....");
+            m.acoes(2,2);
+        }
+        if(origem == (j.getB_BoilAttackSiege())){
+            System.out.println("Boil Attack.....");
+            m.acoes(2,3);
+        }
+        if(origem == (j.getB_CloseAtack())){
+            System.out.println("Close Attack.....");
+            j.openCloseMenu();
+        }
+        if(origem == (j.getB_CloseAtackLadder())){
+            System.out.println("Close Attack.....");
+            m.acoes(3,1);
+        }
+        if(origem == (j.getB_CloseAtackRam())){
+            System.out.println("Close Attack.....");
+            m.acoes(3,2);
+        }
+        if(origem == (j.getB_CloseAtackSiege())){
+            System.out.println("Close Attack.....");
+            m.acoes(3,3);
+        }
+        if(origem == (j.getB_Coupure())){
+            System.out.println("Coupure.....");
+            m.acoes(4,0);
+        }
+        if(origem == (j.getB_Rally())){
+            System.out.println("Rally.....");
+            j.openRallyMenu();
+        }
+        if(origem == (j.getB_RallyNoSupp())){
+            System.out.println("Rally.....");
+            m.acoes(5,0);
+        }
+        if(origem == (j.getB_RallySupp())){
+            System.out.println("Rally.....");
+            m.acoes(5,1);
+        }
+        if(origem == (j.getB_TunnelMovement())){
+            System.out.println("Tunnel Movement.....");
+            m.acoes(6,0);
+        }
+        if(origem == (j.getB_SupplyRaid())){
+            System.out.println("Raiding.....");
+            m.acoes(7,0);
+        }
+        if(origem == (j.getB_Sabotage())){
+            System.out.println("Sabotagem.....");
+            m.acoes(8,0);
+        }
+
+        if(origem == (j.getB_SkipAction())){
+            System.out.println("Skip action.....");
+            m.acoes(9,0);
         }
     }
+
+    public void fimDoJogo(){
+        System.out.println("O JOGO TERMINOU!");
+        //System.exit(0);
+    }
+
 }

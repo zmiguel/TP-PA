@@ -46,17 +46,44 @@ public class Jogo extends JFrame implements Observer {
     JLabel bAreaAttack = new JLabel();
     JLabel bAreaStatus = new JLabel();
     JLabel bAreaOutside = new JLabel();
+
+    JPopupMenu ArcMenu = new JPopupMenu();
     JButton ArcAttack = new JButton("Archers Attack");
+    JButton ArcAttackLadder = new JButton("Ladders");
+    JButton ArcAttackRam = new JButton("Battering Ram");
+    JButton ArcAttackSiege = new JButton("Siege Engine");
+
+    JPopupMenu BoilMenu = new JPopupMenu();
     JButton BoilAttack = new JButton("Boiling Water Attack");
+    JButton BoilAttackLadder = new JButton("Ladders");
+    JButton BoilAttackRam = new JButton("Battering Ram");
+    JButton BoilAttackSiege = new JButton("Siege Engine");
+
+    JPopupMenu CloseMenu = new JPopupMenu();
     JButton CloseAttack = new JButton("Close Combat Attack");
+    JButton CloseAttackLadder = new JButton("Ladders");
+    JButton CloseAttackRam = new JButton("Battering Ram");
+    JButton CloseAttackSiege = new JButton("Siege Engine");
+
     JButton Coupure = new JButton("Coupure");
+
+    JPopupMenu RallyMenu = new JPopupMenu();
     JButton Rally = new JButton("Rally Troops");
+    JButton RallyNoSupp = new JButton("Sem Supplies");
+    JButton RallySupp = new JButton("Com Supplies (+1)");
+
     JButton TunnelMovement = new JButton("Tunnel Movement");
     JButton Raid = new JButton("Supply Raid");
     JButton Sabotage = new JButton("Sabotage");
 
     Dimension opsDim = new Dimension(200,32);
     Dimension actDim = new Dimension(160,32);
+    Dimension actMenuItemDim = new Dimension(160,24);
+    Dimension actMenuDim = new Dimension(160,96);
+
+    Dimension rallyMenuItemDim = new Dimension(160,24);
+    Dimension rallyMenuDim = new Dimension(160,72);
+
 
     //opçoes
     JLabel ops = new JLabel();
@@ -162,15 +189,50 @@ public class Jogo extends JFrame implements Observer {
         //botoes em si
 
         ArcAttack.setPreferredSize(actDim);
+        ArcAttackLadder.setPreferredSize(actMenuItemDim);
+        ArcAttackRam.setPreferredSize(actMenuItemDim);
+        ArcAttackSiege.setPreferredSize(actMenuItemDim);
+        ArcMenu.setPreferredSize(actMenuDim);
+        ArcMenu.setLayout(new FlowLayout());
+        ArcMenu.add(ArcAttackLadder);
+        ArcMenu.add(ArcAttackRam);
+        ArcMenu.add(ArcAttackSiege);
         bAreaAttack.add(ArcAttack);
+
         BoilAttack.setPreferredSize(actDim);
+        BoilAttackLadder.setPreferredSize(actMenuItemDim);
+        BoilAttackRam.setPreferredSize(actMenuItemDim);
+        BoilAttackSiege.setPreferredSize(actMenuItemDim);
+        BoilMenu.setPreferredSize(actMenuDim);
+        BoilMenu.setLayout(new FlowLayout());
+        BoilMenu.add(BoilAttackLadder);
+        BoilMenu.add(BoilAttackRam);
+        BoilMenu.add(BoilAttackSiege);
         bAreaAttack.add(BoilAttack);
+
         CloseAttack.setPreferredSize(actDim);
+        CloseAttackLadder.setPreferredSize(actMenuItemDim);
+        CloseAttackRam.setPreferredSize(actMenuItemDim);
+        CloseAttackSiege.setPreferredSize(actMenuItemDim);
+        CloseMenu.setPreferredSize(actMenuDim);
+        CloseMenu.setLayout(new FlowLayout());
+        CloseMenu.add(CloseAttackLadder);
+        CloseMenu.add(CloseAttackRam);
+        CloseMenu.add(CloseAttackSiege);
         bAreaAttack.add(CloseAttack);
+
         Coupure.setPreferredSize(actDim);
         bAreaStatus.add(Coupure);
+
         Rally.setPreferredSize(actDim);
+        RallyNoSupp.setPreferredSize(rallyMenuItemDim);
+        RallySupp.setPreferredSize(rallyMenuItemDim);
+        RallyMenu.setPreferredSize(rallyMenuDim);
+        RallyMenu.setLayout(new FlowLayout());
+        RallyMenu.add(RallyNoSupp);
+        RallyMenu.add(RallySupp);
         bAreaStatus.add(Rally);
+
         TunnelMovement.setPreferredSize(actDim);
         bAreaStatus.add(TunnelMovement);
         Raid.setPreferredSize(actDim);
@@ -226,6 +288,7 @@ public class Jogo extends JFrame implements Observer {
     public void updateActionCard(){
         int cardid = m.getCardID();
         switch (cardid){
+            case 0: break;
             case 1: action.setIcon(new ImageIcon("cards/1.png"));
                 break;
             case 2: action.setIcon(new ImageIcon("cards/2.png"));
@@ -250,9 +313,9 @@ public class Jogo extends JFrame implements Observer {
         switch (dia){
             case 0: ActionTracker.setBounds(5,5,295,140);
                 break;
-            case 1: ActionTracker.setBounds(5,305,295,140);
+            case 1: ActionTracker.setBounds(5,140,295,140);
                 break;
-            case 2: ActionTracker.setBounds(5,605,295,140);
+            case 2: ActionTracker.setBounds(5,280,295,140);
                 break;
             default: ActionTracker.setBounds(5,5,295,140);
                 break;
@@ -396,10 +459,38 @@ public class Jogo extends JFrame implements Observer {
         TunnelMovement.setEnabled(m.verificaAcao(6));
         Raid.setEnabled(m.verificaAcao(7));
         Sabotage.setEnabled(m.verificaAcao(8));
+
+        ArcAttackLadder.setEnabled(m.verificaAlvo(1,1));
+        ArcAttackRam.setEnabled(m.verificaAlvo(1,2));
+        ArcAttackSiege.setEnabled(m.verificaAlvo(1,3));
+
+        BoilAttackLadder.setEnabled(m.verificaAlvo(2,1));
+        BoilAttackRam.setEnabled(m.verificaAlvo(2,2));
+        BoilAttackSiege.setEnabled(m.verificaAlvo(2,3));
+
+        CloseAttackLadder.setEnabled(m.verificaAlvo(3,1));
+        CloseAttackRam.setEnabled(m.verificaAlvo(3,2));
+        CloseAttackSiege.setEnabled(m.verificaAlvo(3,3));
     }
 
     public void updateActionsRemaining(){
         actRemaining.setText(Integer.toString(m.getAccoes()));
+    }
+
+    public void openArcMenu(){
+        ArcMenu.show(ArcAttack,ArcAttack.getBounds().x,ArcAttack.getBounds().y + ArcAttack.getBounds().height);
+    }
+
+    public void openBoilMenu(){
+        BoilMenu.show(BoilAttack,BoilAttack.getBounds().x,BoilAttack.getBounds().y + BoilAttack.getBounds().height);
+    }
+
+    public void openCloseMenu(){
+        CloseMenu.show(CloseAttack,CloseAttack.getBounds().x,CloseAttack.getBounds().y + CloseAttack.getBounds().height);
+    }
+
+    public void openRallyMenu(){
+        RallyMenu.show(Rally,Rally.getBounds().x,Rally.getBounds().y + Rally.getBounds().height);
     }
 
     public void addListener(ActionListener cont, JButton b){
@@ -410,12 +501,42 @@ public class Jogo extends JFrame implements Observer {
         return ArcAttack;
     }
 
+    public JButton getB_ArcAttackLadder(){return ArcAttackLadder;}
+
+    public JButton getB_ArcAttackRam(){return ArcAttackRam;}
+
+    public JButton getB_ArcAttackSiege(){return ArcAttackSiege;}
+
     public JButton getB_BoilAttack(){
         return BoilAttack;
     }
 
+    public JButton getB_BoilAttackLadder(){
+        return BoilAttackLadder;
+    }
+
+    public JButton getB_BoilAttackRam(){
+        return BoilAttackRam;
+    }
+
+    public JButton getB_BoilAttackSiege(){
+        return BoilAttackSiege;
+    }
+
     public JButton getB_CloseAtack(){
         return CloseAttack;
+    }
+
+    public JButton getB_CloseAtackLadder(){
+        return CloseAttackLadder;
+    }
+
+    public JButton getB_CloseAtackRam(){
+        return CloseAttackRam;
+    }
+
+    public JButton getB_CloseAtackSiege(){
+        return CloseAttackSiege;
     }
 
     public JButton getB_Coupure(){
@@ -424,6 +545,14 @@ public class Jogo extends JFrame implements Observer {
 
     public JButton getB_Rally(){
         return Rally;
+    }
+
+    public JButton getB_RallyNoSupp(){
+        return RallyNoSupp;
+    }
+
+    public JButton getB_RallySupp(){
+        return RallySupp;
     }
 
     public JButton getB_TunnelMovement(){

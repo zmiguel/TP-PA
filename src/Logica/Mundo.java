@@ -18,6 +18,7 @@ import java.util.Collections;
  * @author Ricardo Marques
  */
 public class Mundo extends Observable implements Serializable {
+    private boolean updateDone;
     private final EnemyTrack ET;
     private final StatusTrack ST;
     private final DRM drm;
@@ -50,6 +51,8 @@ public class Mundo extends Observable implements Serializable {
         tm = new TunnelMovement();
         sr = new SupplyRaid();
         s = new Sabotage();
+
+        updateDone = false;
     }
 
     public IEstados getEstado() {
@@ -95,7 +98,12 @@ public class Mundo extends Observable implements Serializable {
     }
 
     public int getCardID(){
-        return Baralho.get(0).getID();
+        if(!Baralho.isEmpty()){
+            return Baralho.get(0).getID();
+
+        }else{
+            return 0;
+        }
     }
 
     public void viraCarta() {
@@ -323,7 +331,7 @@ public class Mundo extends Observable implements Serializable {
 
             Baralho.remove(0);
         }
-
+        setUpdateDone(false);
         setEstado(estadoAtual.ProximoEstado());
     }
 
@@ -391,6 +399,14 @@ public class Mundo extends Observable implements Serializable {
 
     public EnemyTrack ET(){
         return ET;
+    }
+
+    public boolean isUpdateDone() {
+        return updateDone;
+    }
+
+    public void setUpdateDone(boolean update) {
+        updateDone = update;
     }
 }
     

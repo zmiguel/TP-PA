@@ -49,6 +49,10 @@ public class BoilingWaterAttack implements Serializable {
             return true;
         }else if(c == 2 && ET.getPosBatteringRam() == 1){
             return true;
-        }else return c == 3 && ET.getPosSiegeTower() == 1;
+        }else if(c == 3 && ET.getPosSiegeTower() == 1){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

@@ -20,16 +20,18 @@ public class AguardaAcao extends Adapter implements Serializable{
     
     public IEstados ProximoEstado(){
         if(mundo.getCards() == 0){
+            mundo.setUpdateDone(false);
             return new FinalDoDia(this.getMundo());
         }else{
             mundo.setAccoes(mundo.getAccoes()-1);
             if(mundo.getAccoes()>0){
+                mundo.setUpdateDone(false);
                 return new AguardaAcao(mundo);
             }else{
+                mundo.setUpdateDone(false);
                 return new EsperaCarta(mundo);
             }
         }
-    
     }
     
     
