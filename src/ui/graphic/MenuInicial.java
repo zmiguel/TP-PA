@@ -11,6 +11,10 @@ public class MenuInicial extends JFrame {
     JButton ContinuarJogo;
     JButton Sair;
 
+    JMenuBar menuBar;
+    JMenu menu;
+    JMenuItem menuItemLoad, menuItemSair;
+
     Icon iconIniciar = new ImageIcon("inicio.png");
     Icon iconContinua = new ImageIcon("FloppyDisk.png");
     Icon iconSair = new ImageIcon("sair.png");
@@ -34,6 +38,17 @@ public class MenuInicial extends JFrame {
         background.setLayout(new FlowLayout());
         add(background,BorderLayout.CENTER);
 
+        menuBar = new JMenuBar();
+
+        menu = new JMenu("Ficheiro");
+        menuBar.add(menu);
+        menuItemLoad = new JMenuItem("Carregar Jogo");
+        menu.add(menuItemLoad);
+        menuItemSair = new JMenuItem("Sair");
+        menu.add(menuItemSair);
+
+        setJMenuBar(menuBar);
+
 
         IniciarJogo = new JButton("Iniciar Jogo",iconIniciar);
         IniciarJogo.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -46,11 +61,14 @@ public class MenuInicial extends JFrame {
         Sair = new JButton("Sair", iconSair);
         Sair.setAlignmentX(Component.CENTER_ALIGNMENT);
         background.add(Sair);
-        
     }
 
     public void addListener(ActionListener cont, JButton b){
         b.addActionListener(cont);
+    }
+
+    public void addListener(ActionListener cont, JMenuItem i){
+        i.addActionListener(cont);
     }
 
     public JButton getB_Iniciar(){
@@ -60,6 +78,10 @@ public class MenuInicial extends JFrame {
     public JButton getB_Continuar(){
         return ContinuarJogo;
     }
+
+    public JMenuItem getM_Load(){return menuItemLoad;}
+
+    public JMenuItem getM_Sair(){return menuItemSair;}
 
     public JButton getB_Sair(){
         return Sair;

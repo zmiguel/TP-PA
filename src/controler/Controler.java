@@ -32,6 +32,8 @@ public class Controler implements ActionListener{
         mi.addListener(this, mi.getB_Iniciar());
         mi.addListener(this, mi.getB_Continuar());
         mi.addListener(this, mi.getB_Sair());
+        mi.addListener(this, mi.getM_Load());
+        mi.addListener(this, mi.getM_Sair());
 
         //jogo listeners
         j.addListener(this,j.getB_ArcAttack());
@@ -56,6 +58,8 @@ public class Controler implements ActionListener{
         j.addListener(this,j.getB_Gravar());
         j.addListener(this,j.getB_SkipTurn());
         j.addListener(this,j.getB_SkipAction());
+        j.addListener(this, j.getM_Save());
+        j.addListener(this, j.getM_Sair());
     }
 
     public void run() {
@@ -116,7 +120,15 @@ public class Controler implements ActionListener{
             mi.setVisible(false);
             m.setUpdateDone(false);
         }
+        if(origem == (mi.getM_Load())){
+            LoadGame();
+            mi.setVisible(false);
+            m.setUpdateDone(false);
+        }
         if(origem == (mi.getB_Sair())){
+            System.exit(0);
+        }
+        if(origem == (mi.getM_Sair())){
             System.exit(0);
         }
         //Jogo
@@ -201,6 +213,10 @@ public class Controler implements ActionListener{
             System.out.println("Gravar.....");
             SaveGame();
         }
+        if(origem == (j.getM_Save())){
+            System.out.println("Gravar.....");
+            SaveGame();
+        }
         if(origem == (j.getB_SkipTurn())){
             System.out.println("Skip Turn.....");
             m.skipTurn();
@@ -208,6 +224,10 @@ public class Controler implements ActionListener{
         if(origem == (j.getB_SkipAction())){
             System.out.println("Skip action.....");
             m.acoes(9,0);
+        }
+        if(origem == (j.getM_Sair())){
+            System.out.println("Sair.....");
+            System.exit(0);
         }
     }
 
@@ -235,7 +255,7 @@ public class Controler implements ActionListener{
                 m = (Mundo)FileUtility.retrieveGameFromFile(file);
             }catch(IOException | ClassNotFoundException ex){
                 JOptionPane.showMessageDialog(mi, "Operation failed: \r\n\r\n");
-            }
+        }
 
         } else {
             System.out.println("Operation canceled ");

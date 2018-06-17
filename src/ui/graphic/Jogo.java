@@ -81,6 +81,10 @@ public class Jogo extends JFrame implements Observer {
     Dimension rallyMenuItemDim = new Dimension(160,24);
     Dimension rallyMenuDim = new Dimension(160,72);
 
+    //menu
+    JMenuBar menuBar;
+    JMenu menu;
+    JMenuItem menuItemSave, menuItemSair;
 
     //opçoes
     JLabel ops = new JLabel();
@@ -108,7 +112,7 @@ public class Jogo extends JFrame implements Observer {
         int cardid;
         //window settings
         setLayout(null);
-        setSize(950,650);
+        setSize(950,670);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         //cards settings
@@ -294,6 +298,19 @@ public class Jogo extends JFrame implements Observer {
         actions.add(ddata);
 
         add(actions);
+
+        //menubar
+
+        menuBar = new JMenuBar();
+
+        menu = new JMenu("Ficheiro");
+        menuBar.add(menu);
+        menuItemSave = new JMenuItem("Garvar Jogo");
+        menu.add(menuItemSave);
+        menuItemSair = new JMenuItem("Sair");
+        menu.add(menuItemSair);
+
+        setJMenuBar(menuBar);
     }
 
     @Override
@@ -535,6 +552,10 @@ public class Jogo extends JFrame implements Observer {
         b.addActionListener(cont);
     }
 
+    public void addListener(ActionListener cont, JMenuItem i){
+        i.addActionListener(cont);
+    }
+
     public JButton getB_ArcAttack(){
         return ArcAttack;
     }
@@ -616,4 +637,8 @@ public class Jogo extends JFrame implements Observer {
     public JButton getB_SkipAction(){
         return skipAction;
     }
+
+    public JMenuItem getM_Save(){return menuItemSave;}
+
+    public JMenuItem getM_Sair(){return menuItemSair;}
 }
