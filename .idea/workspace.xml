@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b06f8995-442e-4d8b-b838-5d51c47e7bc0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Logica/Acoes/ArchersAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Acoes/ArchersAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/Acoes/BoilingWaterAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Acoes/BoilingWaterAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/Acoes/CloseCombatAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Acoes/CloseCombatAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/Acoes/Sabotage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Acoes/Sabotage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/Mundo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Mundo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controler/Controler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controler/Controler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/graphic/Jogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/graphic/Jogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/texto/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/texto/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,8 +83,8 @@
           <file leaf-file-name="Controler.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/controler/Controler.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="333">
-                  <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+                <state relative-caret-position="1581">
+                  <caret line="100" column="23" lean-forward="true" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -102,8 +108,8 @@
           <file leaf-file-name="Jogo.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/ui/graphic/Jogo.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="529" column="86" lean-forward="true" selection-start-line="529" selection-start-column="86" selection-end-line="529" selection-end-column="86" />
+                <state relative-caret-position="153">
+                  <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
                   <folding>
                     <element signature="e#17127#17128#0" expanded="true" />
                     <element signature="e#17196#17197#0" expanded="true" />
@@ -128,13 +134,9 @@
             <entry file="file://$PROJECT_DIR$/src/ui/graphic/MenuInicial.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="462">
-                  <caret line="81" selection-start-line="81" selection-end-line="83" selection-end-column="54" />
+                  <caret line="72" selection-start-line="72" selection-end-line="74" selection-end-column="54" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1613#1614#0" expanded="true" />
-                    <element signature="e#1654#1655#0" expanded="true" />
-                    <element signature="e#2093#2094#0" expanded="true" />
-                    <element signature="e#2129#2130#0" expanded="true" />
                     <element signature="e#1831#1832#0" expanded="true" />
                     <element signature="e#1858#1859#0" expanded="true" />
                   </folding>
@@ -491,12 +493,12 @@
       <workItem from="1528815498552" duration="5595000" />
       <workItem from="1528983138010" duration="18412000" />
       <workItem from="1529007341723" duration="2864000" />
-      <workItem from="1529258985164" duration="8921000" />
+      <workItem from="1529258985164" duration="9914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104139000" />
+    <option name="totallyTimeSpent" value="105132000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -511,14 +513,16 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5005208" side_tool="true" weight="0.23554154" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.49947917" visible="true" weight="0.21345952" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49947917" weight="0.21345952" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6096257" visible="true" weight="0.15520833" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6098843" visible="true" weight="0.15520833" />
+      <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.39747635" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info id="Structure" order="1" sideWeight="0.39037433" side_tool="true" visible="true" weight="0.15520833" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32912722" />
+      <window_info id="Structure" order="1" sideWeight="0.39011568" side_tool="true" visible="true" weight="0.15520833" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
@@ -526,12 +530,10 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32912722" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3296875" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.39747635" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -788,6 +790,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
           <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+          <folding>
+            <element signature="e#3789#3790#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -916,13 +921,9 @@
     <entry file="file://$PROJECT_DIR$/src/ui/graphic/MenuInicial.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
-          <caret line="81" selection-start-line="81" selection-end-line="83" selection-end-column="54" />
+          <caret line="72" selection-start-line="72" selection-end-line="74" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1613#1614#0" expanded="true" />
-            <element signature="e#1654#1655#0" expanded="true" />
-            <element signature="e#2093#2094#0" expanded="true" />
-            <element signature="e#2129#2130#0" expanded="true" />
             <element signature="e#1831#1832#0" expanded="true" />
             <element signature="e#1858#1859#0" expanded="true" />
           </folding>
@@ -971,15 +972,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controler/Controler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+        <state relative-caret-position="1581">
+          <caret line="100" column="23" lean-forward="true" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/graphic/Jogo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="529" column="86" lean-forward="true" selection-start-line="529" selection-start-column="86" selection-end-line="529" selection-end-column="86" />
+        <state relative-caret-position="153">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
           <folding>
             <element signature="e#17127#17128#0" expanded="true" />
             <element signature="e#17196#17197#0" expanded="true" />
