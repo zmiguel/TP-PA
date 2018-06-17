@@ -73,6 +73,7 @@ public class Controler implements ActionListener{
                     m.setUpdateDone(true);
                 }
             } else if (estado instanceof FinalDoDia) {
+                fimDoDia();
                 m.fimDoDia();
             } else if (estado instanceof JogoTerminado) {
                 fimDoJogo();
@@ -211,7 +212,17 @@ public class Controler implements ActionListener{
 
     public void fimDoJogo(){
         System.out.println("O JOGO TERMINOU!");
-        //System.exit(0);
+        JOptionPane.showMessageDialog(j,
+                "O Jogo Terminou!!",
+                "Aviso!",JOptionPane.WARNING_MESSAGE);
+        System.exit(0);
+    }
+
+    public void fimDoDia(){
+        System.out.println("final do dia");
+        JOptionPane.showMessageDialog(j,
+                "Final do Dia",
+                "Aviso!",JOptionPane.WARNING_MESSAGE);
     }
 
     private void LoadGame(){
