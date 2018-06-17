@@ -30,7 +30,6 @@ public class Controler implements ActionListener{
 
         //menu iniciar listeners
         mi.addListener(this, mi.getB_Iniciar());
-        mi.addListener(this, mi.getB_Continuar());
         mi.addListener(this, mi.getB_Sair());
         mi.addListener(this, mi.getM_Load());
         mi.addListener(this, mi.getM_Sair());
@@ -114,11 +113,6 @@ public class Controler implements ActionListener{
         //Menu iniciar
         if(origem == (mi.getB_Iniciar())){
             m.jogo();
-        }
-        if(origem == (mi.getB_Continuar())){
-            LoadGame();
-            mi.setVisible(false);
-            m.setUpdateDone(false);
         }
         if(origem == (mi.getM_Load())){
             LoadGame();
