@@ -6,7 +6,6 @@
 package Logica.Acoes;
 
 import Logica.StatusTrack;
-
 import java.io.Serializable;
 
 /**

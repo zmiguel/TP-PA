@@ -286,30 +286,36 @@ public class Mundo extends Observable implements Serializable {
     }
 
     public void acoes(int choice, int choice2) {
+        int v = 0;
+        
+        if(choice != 6){
+            v = dado.rodaDado();
+        }
+        
         switch (choice) {
             case 1:
-                at.acao(ET, drm, choice2);
+                at.acao(ET, drm, choice2, v);
                 break;
             case 2:
-                bwa.acao(ET, drm, choice2);
+                bwa.acao(ET, drm, choice2, v);
                 break;
             case 3:
-                cca.acao(ET, drm, choice2);
+                cca.acao(ET, drm, choice2, v);
                 break;
             case 4:
-                c.acao(ST, drm);
+                c.acao(ST, drm, v);
                 break;
             case 5:
-                rt.acao(ST, drm, choice2);
+                rt.acao(ST, drm, choice2, v);
                 break;
             case 6:
                 tm.acao(ST);
                 break;
             case 7:
-                sr.acao(drm, ST);
+                sr.acao(drm, ST, v);
                 break;
             case 8:
-                s.acao(ST, ET, drm);
+                s.acao(ST, ET, drm, v);
                 break;
             case 9:
                 break;

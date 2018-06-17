@@ -6,7 +6,6 @@
 package Logica.Acoes;
 
 import java.io.Serializable;
-import Logica.Dado;
 import Logica.EnemyTrack;
 import Logica.DRM;
 
@@ -15,9 +14,7 @@ import Logica.DRM;
  * @author Ricardo Marques
  */
 public class ArchersAttack implements Serializable {
-    public void acao(EnemyTrack ET, DRM drm, int choice){
-           Dado dado = new Dado();
-           int valor = dado.rodaDado();
+    public void acao(EnemyTrack ET, DRM drm, int choice, int valor){
 
         if(choice == 1){
             if(valor + drm.getLadders() > ET.getStrenghtLadder()){

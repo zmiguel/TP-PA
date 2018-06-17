@@ -6,7 +6,6 @@
 package Logica.Acoes;
 
 import Logica.DRM;
-import Logica.Dado;
 import Logica.StatusTrack;
 
 import java.io.Serializable;
@@ -16,9 +15,7 @@ import java.io.Serializable;
  * @author Ricardo Marques
  */
 public class SupplyRaid implements Serializable {
-    public void acao(DRM drm, StatusTrack ST){
-           Dado dado = new Dado();
-           int valor = dado.rodaDado();
+    public void acao(DRM drm, StatusTrack ST, int valor){
 
            if(valor == 1){
                System.out.println("Unit Captured :(");

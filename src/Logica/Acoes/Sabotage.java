@@ -17,9 +17,7 @@ import java.io.Serializable;
  * @author Ricardo Marques
  */
 public class Sabotage implements Serializable {
-    public void acao(StatusTrack ST, EnemyTrack ET, DRM drm){
-        Dado dado = new Dado();
-        int valor = dado.rodaDado();
+    public void acao(StatusTrack ST, EnemyTrack ET, DRM drm, int valor){
 
         if(valor == 1){
             ST.captured();

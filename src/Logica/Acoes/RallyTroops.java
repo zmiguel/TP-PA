@@ -6,7 +6,6 @@
 package Logica.Acoes;
 
 import Logica.DRM;
-import Logica.Dado;
 import Logica.StatusTrack;
 import java.io.Serializable;
 
@@ -15,14 +14,11 @@ import java.io.Serializable;
  * @author Ricardo Marques
  */
 public class RallyTroops implements Serializable {
-    public void acao(StatusTrack ST, DRM drm, int choice) {
+    public void acao(StatusTrack ST, DRM drm, int choice, int valor) {
         if(choice == 1){
             ST.setSupplies(ST.getSupplies() -1);
             drm.setMoraleAction(drm.getMoraleAction() + 1);
         }
-
-        Dado dado = new Dado();
-        int valor = dado.rodaDado();
 
         if(valor + drm.getMoraleAction() > 4){
             ST.setMorale(ST.getMorale() + 1);
