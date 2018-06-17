@@ -96,10 +96,15 @@ public class Jogo extends JFrame implements Observer {
 
     public Jogo(Mundo m){
         this.m = m;
+        
 
         this.setTitle("9Card Siege!");
         this.setResizable(false);
 
+        String s = null;
+        int v = m.getDado();
+        s.valueOf(v);
+        
         int cardid;
         //window settings
         setLayout(null);
@@ -273,9 +278,20 @@ public class Jogo extends JFrame implements Observer {
         actText.setText("Ações Disponiveis.");
         actText.setPreferredSize(new Dimension(120,48));
         actText.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        
+        dtext.setText("Resultado do Dado: ");
+        dtext.setPreferredSize(new Dimension(120,48));
+        dtext.setHorizontalAlignment(SwingConstants.LEFT);
+        
+        ddata.setText(s);
+        ddata.setPreferredSize(new Dimension(120,48));
+        ddata.setHorizontalAlignment(SwingConstants.LEFT);
 
         actions.add(actRemaining);
         actions.add(actText);
+        actions.add(dtext);
+        actions.add(ddata);
 
         add(actions);
     }
