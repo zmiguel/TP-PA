@@ -106,6 +106,7 @@ public class Controler implements ActionListener{
         System.out.println("Update Valid");
         j.updateValidActions();
         j.updateDado();
+        j.updateTurno();
     }
 
     @Override

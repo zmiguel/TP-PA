@@ -96,6 +96,8 @@ public class Jogo extends JFrame implements Observer {
     JLabel actions = new JLabel();
     JLabel actRemaining = new JLabel();
     JLabel actText = new JLabel();
+    JLabel turnoText = new JLabel();
+    JLabel turnoData = new JLabel();
 
 
     public Jogo(Mundo m){
@@ -248,7 +250,7 @@ public class Jogo extends JFrame implements Observer {
         add(bArea);
 
         //opçoes jogo
-        ops.setBounds(650,450,300,200);
+        ops.setBounds(700,450,200,220);
         ops.setLayout(new FlowLayout());
 
         gravar.setPreferredSize(opsDim);
@@ -258,6 +260,9 @@ public class Jogo extends JFrame implements Observer {
         dtext.setText("Resultado do Dado: ");
         ddata.setText("0");
 
+        turnoText.setText("Turno Actual: ");
+        turnoData.setText("1");
+
         ops.add(gravar);
         ops.add(skipTurn);
         ops.add(skipAction);
@@ -265,10 +270,13 @@ public class Jogo extends JFrame implements Observer {
         ops.add(dtext);
         ops.add(ddata);
 
+        ops.add(turnoText);
+        ops.add(turnoData);
+
         add(ops);
 
         //action remaining
-        actions.setBounds(525,450,125,200);
+        actions.setBounds(525,450,175,200);
         actions.setLayout(new FlowLayout());
 
         actRemaining.setText("0");
@@ -516,6 +524,10 @@ public class Jogo extends JFrame implements Observer {
 
     public void updateDado(){
         ddata.setText(Integer.toString(m.getDado()));
+    }
+
+    public void updateTurno(){
+        turnoData.setText(Integer.toString(((7-m.getCards())+(m.ST().getDia()*7))+1));
     }
 
     public void openArcMenu(){
