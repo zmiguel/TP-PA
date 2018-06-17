@@ -1,6 +1,5 @@
 package ui.graphic;
 
-import Estados.*;
 import Logica.Mundo;
 
 import java.awt.*;

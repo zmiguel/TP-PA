@@ -68,7 +68,6 @@ public class Main implements Serializable {
                     break;
                 case 3:
                     System.exit(0);
-                    return;
             }
         } else {
             sc.next();

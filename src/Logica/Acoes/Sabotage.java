@@ -6,7 +6,6 @@
 package Logica.Acoes;
 
 import Logica.DRM;
-import Logica.Dado;
 import Logica.EnemyTrack;
 import Logica.StatusTrack;
 

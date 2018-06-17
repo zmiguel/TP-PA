@@ -266,10 +266,7 @@ public class Mundo extends Observable implements Serializable {
                 System.out.println("You are not in the end of the tunnel");
                 return false;
             }
-        } else if(choice == 9){
-            return true;
-        }
-        return false;
+        } else return choice == 9;
     }
 
     public boolean verificaAlvo(int c1, int c2) {
@@ -406,11 +403,7 @@ public class Mundo extends Observable implements Serializable {
     }
 
     public boolean ultimoDia(){
-        if(ST.getDia()==2){
-            return true;
-        }else{
-            return false;
-        }
+        return ST.getDia() == 2;
     }
 
     public StatusTrack ST(){

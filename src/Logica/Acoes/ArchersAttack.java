@@ -45,10 +45,6 @@ public class ArchersAttack implements Serializable {
             return true;
         }else if(c == 2 && ET.getPosBatteringRam() < 4){
             return true;
-        }else if(c == 3 && ET.getPosSiegeTower() < 4){
-            return true;
-        }else{
-            return false;
-        }
+        }else return c == 3 && ET.getPosSiegeTower() < 4;
     }
 }

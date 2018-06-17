@@ -5,15 +5,9 @@ import ui.graphic.*;
 import Logica.*;
 
 import javax.swing.*;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.Observable;
-import java.util.Observer;
 
 
 public class Controler implements ActionListener{
