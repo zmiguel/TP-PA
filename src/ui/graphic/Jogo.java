@@ -101,9 +101,9 @@ public class Jogo extends JFrame implements Observer {
         this.setTitle("9Card Siege!");
         this.setResizable(false);
 
-        String s = null;
+
         int v = m.getDado();
-        s.valueOf(v);
+        String s = String.valueOf(v);
         
         int cardid;
         //window settings
