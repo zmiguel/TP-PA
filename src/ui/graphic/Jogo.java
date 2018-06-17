@@ -486,19 +486,19 @@ public class Jogo extends JFrame implements Observer {
     }
 
     public void openArcMenu(){
-        ArcMenu.show(ArcAttack,ArcAttack.getBounds().x,ArcAttack.getBounds().y + ArcAttack.getBounds().height);
+        ArcMenu.show(ArcAttack,0,ArcAttack.getBounds().y + ArcAttack.getBounds().height);
     }
 
     public void openBoilMenu(){
-        BoilMenu.show(BoilAttack,BoilAttack.getBounds().x,BoilAttack.getBounds().y + BoilAttack.getBounds().height);
+        BoilMenu.show(BoilAttack,0,BoilAttack.getBounds().y + BoilAttack.getBounds().height);
     }
 
     public void openCloseMenu(){
-        CloseMenu.show(CloseAttack,CloseAttack.getBounds().x,CloseAttack.getBounds().y + CloseAttack.getBounds().height);
+        CloseMenu.show(CloseAttack,0,CloseAttack.getBounds().y + CloseAttack.getBounds().height);
     }
 
     public void openRallyMenu(){
-        RallyMenu.show(Rally,Rally.getBounds().x,Rally.getBounds().y + Rally.getBounds().height);
+        RallyMenu.show(Rally,0,Rally.getBounds().y + Rally.getBounds().height);
     }
 
     public void addListener(ActionListener cont, JButton b){

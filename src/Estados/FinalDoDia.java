@@ -21,7 +21,7 @@ public class FinalDoDia extends Adapter implements Serializable{
     @Override 
     public IEstados ProximoEstado(){
         dia++;
-        if(dia == 2){
+        if(dia > 2){
             return new JogoTerminado(this.getMundo());
         }else{
             Mundo mundo = super.getMundo();

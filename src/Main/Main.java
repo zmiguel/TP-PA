@@ -1,6 +1,7 @@
 package Main;
 
 import Logica.*;
+import controler.Controler;
 import ui.graphic.*;
 
 public class Main {

@@ -1,4 +1,4 @@
-package Logica;
+package controler;
 
 import Estados.*;
 import ui.graphic.*;
