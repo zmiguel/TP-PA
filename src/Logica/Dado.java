@@ -11,6 +11,8 @@ import java.security.SecureRandom;
 public class Dado implements Serializable {
     private final SecureRandom random;
 
+    private int valor;
+
     public Dado(){
         random = new SecureRandom();
     }
@@ -20,6 +22,12 @@ public class Dado implements Serializable {
         int min = 1;
         int max = 6;
 
-        return random.nextInt(max) + min;
+        valor = random.nextInt(max) + min;
+
+        return valor;
+    }
+
+    public int getValor(){
+        return valor;
     }
 }

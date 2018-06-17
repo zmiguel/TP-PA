@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b06f8995-442e-4d8b-b838-5d51c47e7bc0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Logica/Dado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Dado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logica/Mundo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logica/Mundo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controler/Controler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controler/Controler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/graphic/Jogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/graphic/Jogo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +25,8 @@
           <file leaf-file-name="Mundo.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Logica/Mundo.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="233">
-                  <caret line="337" column="21" selection-start-line="337" selection-start-column="21" selection-end-line="337" selection-end-column="21" />
+                <state relative-caret-position="3644">
+                  <caret line="426" column="31" selection-start-line="426" selection-start-column="31" selection-end-line="426" selection-end-column="31" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1447#1448#0" expanded="true" />
@@ -54,20 +57,21 @@
                     <element signature="e#13128#13129#0" expanded="true" />
                     <element signature="e#13177#13178#0" expanded="true" />
                     <element signature="e#13212#13213#0" expanded="true" />
+                    <element signature="e#13239#13240#0" expanded="true" />
+                    <element signature="e#13276#13277#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ui/texto/Main.java">
+          <file leaf-file-name="Dado.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Logica/Dado.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3162">
-                  <caret line="200" column="28" selection-start-line="200" selection-start-column="28" selection-end-line="200" selection-end-column="28" />
+                <state relative-caret-position="336">
+                  <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
                   <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1806#1807#0" expanded="true" />
-                    <element signature="e#1835#1836#0" expanded="true" />
+                    <element signature="e#471#472#0" expanded="true" />
+                    <element signature="e#492#493#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -76,8 +80,8 @@
           <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+                <state relative-caret-position="238">
+                  <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -98,20 +102,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Controler.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Controler.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/controler/Controler.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="437">
-                  <caret line="224" column="54" selection-start-line="224" selection-start-column="54" selection-end-line="224" selection-end-column="54" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="JogoTerminado.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Estados/JogoTerminado.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+                <state relative-caret-position="197">
+                  <caret line="103" column="23" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -157,19 +152,21 @@
           <file leaf-file-name="Jogo.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/ui/graphic/Jogo.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="369">
-                  <caret line="461" column="33" selection-start-line="461" selection-start-column="33" selection-end-line="461" selection-end-column="33" />
+                <state relative-caret-position="583">
+                  <caret line="498" column="53" lean-forward="true" selection-start-line="498" selection-start-column="53" selection-end-line="498" selection-end-column="53" />
                   <folding>
+                    <element signature="e#17127#17128#0" expanded="true" />
+                    <element signature="e#17196#17197#0" expanded="true" />
                     <element signature="e#17239#17240#0" expanded="true" />
                     <element signature="e#17264#17265#0" expanded="true" />
+                    <element signature="e#17497#17498#0" expanded="true" />
+                    <element signature="e#17538#17539#0" expanded="true" />
                     <element signature="e#17296#17297#0" expanded="true" />
                     <element signature="e#17392#17393#0" expanded="true" />
                     <element signature="e#17447#17448#0" expanded="true" />
                     <element signature="e#17547#17548#0" expanded="true" />
                     <element signature="e#17766#17767#0" expanded="true" />
                     <element signature="e#17852#17853#0" expanded="true" />
-                    <element signature="e#18161#18162#0" expanded="true" />
-                    <element signature="e#18193#18194#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -274,7 +271,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Eventos/DeathOfALeader.java" />
         <option value="$PROJECT_DIR$/src/Eventos/DeterminedEnemy.java" />
         <option value="$PROJECT_DIR$/src/Eventos/EnemyFatigue.java" />
         <option value="$PROJECT_DIR$/src/Eventos/Faith.java" />
@@ -320,11 +316,12 @@
         <option value="$PROJECT_DIR$/src/Estados/AguardaAcao.java" />
         <option value="$PROJECT_DIR$/src/Logica/FileUtility.java" />
         <option value="$PROJECT_DIR$/src/Main/Main.java" />
-        <option value="$PROJECT_DIR$/src/Logica/Mundo.java" />
         <option value="$PROJECT_DIR$/src/Logica/Controler.java" />
         <option value="$PROJECT_DIR$/src/Estados/FinalDoDia.java" />
+        <option value="$PROJECT_DIR$/src/Logica/Mundo.java" />
         <option value="$PROJECT_DIR$/src/ui/graphic/Jogo.java" />
         <option value="$PROJECT_DIR$/src/controler/Controler.java" />
+        <option value="$PROJECT_DIR$/src/Logica/Dado.java" />
       </list>
     </option>
   </component>
@@ -523,12 +520,12 @@
       <workItem from="1528815498552" duration="5595000" />
       <workItem from="1528983138010" duration="18412000" />
       <workItem from="1529007341723" duration="2864000" />
-      <workItem from="1529258985164" duration="2107000" />
+      <workItem from="1529258985164" duration="3207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97325000" />
+    <option name="totallyTimeSpent" value="98425000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -536,21 +533,21 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="bottom" id="Messages" order="1" weight="0.3280757" />
+      <window_info active="true" anchor="bottom" id="Messages" order="1" visible="true" weight="0.3280757" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5005208" side_tool="true" weight="0.23554154" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.49947917" visible="true" weight="0.21345952" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49947917" weight="0.21345952" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6096257" visible="true" weight="0.15520833" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6087637" visible="true" weight="0.15520833" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info id="Structure" order="1" sideWeight="0.39037433" side_tool="true" visible="true" weight="0.15520833" />
+      <window_info id="Structure" order="1" sideWeight="0.3912363" side_tool="true" visible="true" weight="0.15520833" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
@@ -748,13 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logica/Dado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Logica/Acoes/Sabotage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -881,43 +871,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/texto/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3162">
-          <caret line="200" column="28" selection-start-line="200" selection-start-column="28" selection-end-line="200" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1806#1807#0" expanded="true" />
-            <element signature="e#1835#1836#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Logica/FileUtility.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/graphic/MenuInicial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1858#1859#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -927,25 +884,6 @@
           <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/graphic/Jogo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="461" column="33" selection-start-line="461" selection-start-column="33" selection-end-line="461" selection-end-column="33" />
-          <folding>
-            <element signature="e#17239#17240#0" expanded="true" />
-            <element signature="e#17264#17265#0" expanded="true" />
-            <element signature="e#17296#17297#0" expanded="true" />
-            <element signature="e#17392#17393#0" expanded="true" />
-            <element signature="e#17447#17448#0" expanded="true" />
-            <element signature="e#17547#17548#0" expanded="true" />
-            <element signature="e#17766#17767#0" expanded="true" />
-            <element signature="e#17852#17853#0" expanded="true" />
-            <element signature="e#18161#18162#0" expanded="true" />
-            <element signature="e#18193#18194#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -970,8 +908,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logica/Mundo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="337" column="21" selection-start-line="337" selection-start-column="21" selection-end-line="337" selection-end-column="21" />
+        <state relative-caret-position="3644">
+          <caret line="426" column="31" selection-start-line="426" selection-start-column="31" selection-end-line="426" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1447#1448#0" expanded="true" />
@@ -1002,14 +940,81 @@
             <element signature="e#13128#13129#0" expanded="true" />
             <element signature="e#13177#13178#0" expanded="true" />
             <element signature="e#13212#13213#0" expanded="true" />
+            <element signature="e#13239#13240#0" expanded="true" />
+            <element signature="e#13276#13277#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/graphic/Jogo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="498" column="53" lean-forward="true" selection-start-line="498" selection-start-column="53" selection-end-line="498" selection-end-column="53" />
+          <folding>
+            <element signature="e#17127#17128#0" expanded="true" />
+            <element signature="e#17196#17197#0" expanded="true" />
+            <element signature="e#17239#17240#0" expanded="true" />
+            <element signature="e#17264#17265#0" expanded="true" />
+            <element signature="e#17497#17498#0" expanded="true" />
+            <element signature="e#17538#17539#0" expanded="true" />
+            <element signature="e#17296#17297#0" expanded="true" />
+            <element signature="e#17392#17393#0" expanded="true" />
+            <element signature="e#17447#17448#0" expanded="true" />
+            <element signature="e#17547#17548#0" expanded="true" />
+            <element signature="e#17766#17767#0" expanded="true" />
+            <element signature="e#17852#17853#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/graphic/MenuInicial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1858#1859#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/texto/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="200" column="28" selection-start-line="200" selection-start-column="28" selection-end-line="200" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1806#1807#0" expanded="true" />
+            <element signature="e#1835#1836#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controler/Controler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="224" column="54" selection-start-line="224" selection-start-column="54" selection-end-line="224" selection-end-column="54" />
+        <state relative-caret-position="197">
+          <caret line="103" column="23" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logica/Dado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+          <folding>
+            <element signature="e#471#472#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

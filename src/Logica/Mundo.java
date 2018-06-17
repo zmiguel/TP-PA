@@ -422,5 +422,9 @@ public class Mundo extends Observable implements Serializable {
     public void setUpdateDone(boolean update) {
         updateDone = update;
     }
+
+    public int getDado(){
+        return dado.getValor();
+    }
 }
     

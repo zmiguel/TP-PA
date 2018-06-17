@@ -27,6 +27,10 @@ public class Jogo extends JFrame implements Observer {
     JLabel SiegeTrack = new JLabel();
     JLabel TreTrack = new JLabel();
 
+    //dado
+    JLabel dtext = new JLabel();
+    JLabel ddata = new JLabel();
+
     //status trackers
     JLabel WallTrack = new JLabel();
     JLabel MoraleTrack = new JLabel();
@@ -245,9 +249,15 @@ public class Jogo extends JFrame implements Observer {
         skipAction.setPreferredSize(opsDim);
         skipTurn.setPreferredSize(opsDim);
 
+        dtext.setText("Resultado do Dado: ");
+        ddata.setText("0");
+
         ops.add(gravar);
         ops.add(skipTurn);
         ops.add(skipAction);
+
+        ops.add(dtext);
+        ops.add(ddata);
 
         add(ops);
 
@@ -483,6 +493,10 @@ public class Jogo extends JFrame implements Observer {
 
     public void updateMundo(Mundo mundo){
         m = mundo;
+    }
+
+    public void updateDado(){
+        ddata.setText(Integer.toString(m.getDado()));
     }
 
     public void openArcMenu(){
