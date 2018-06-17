@@ -16,7 +16,6 @@ public class MenuInicial extends JFrame {
     JMenuItem menuItemLoad, menuItemSair;
 
     Icon iconIniciar = new ImageIcon("inicio.png");
-    Icon iconContinua = new ImageIcon("FloppyDisk.png");
     Icon iconSair = new ImageIcon("sair.png");
 
     public MenuInicial(){
@@ -54,10 +53,6 @@ public class MenuInicial extends JFrame {
         IniciarJogo.setAlignmentX(Component.CENTER_ALIGNMENT);
         background.add(IniciarJogo);
         
-        ContinuarJogo = new JButton("Continuar Jogo", iconContinua);
-        ContinuarJogo.setAlignmentX(Component.CENTER_ALIGNMENT);
-        background.add(ContinuarJogo);
-        
         Sair = new JButton("Sair", iconSair);
         Sair.setAlignmentX(Component.CENTER_ALIGNMENT);
         background.add(Sair);
@@ -73,10 +68,6 @@ public class MenuInicial extends JFrame {
 
     public JButton getB_Iniciar(){
         return IniciarJogo;
-    }
-
-    public JButton getB_Continuar(){
-        return ContinuarJogo;
     }
 
     public JMenuItem getM_Load(){return menuItemLoad;}
